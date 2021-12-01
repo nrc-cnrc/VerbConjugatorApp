@@ -1,0 +1,45 @@
+The following paths produce multiple conjugations: 
+--------------------------------------------------------------------------- 
+| preverb  |  time  |  context  |  subject  |  object | verb ex. | conj ex. | 
+ ---------------------------------------------------------------------------
+| time_fut_def | context_ind | subject_vta3pl.obv | object_vta3pl.obv | waapamvta,daweeyimvta,pakwaatvta | ka-kakwee-waapamikoyiwa & ka-kakwee-waapameeyiwa | 
+| time_fut_def | context_ind | subject_vta3pl.obv | object_vta3sg.obv | achimostaawvta,kiishkishwvta,yootenvta | ka-nohtee-achimostaaweeyiwa & ka-nohtee-achimostaawikoyiwa | 
+| time_fut_def | context_ind | subject_vta3sg.obv | object_vta3pl.obv | waapamvta,ashamvta,daweeyimvta | ka-kakwee-waapamikoyiwa & ka-kakwee-waapameeyiwa | 
+| time_fut_def | context_ind | subject_vta3sg.obv | object_vta3sg.obv | waapamvta,ashamvta,pakwaatvta | ka-kakwee-waapamikoyiwa & ka-kakwee-waapameeyiwa | 
+| time_fut_int | context_conj | subject_vta3pl.obv | object_vta3pl.obv | pawaatvta,mashinipeehiwvta,kiishishwvta | ee-wii-pawaataayit & ee-wii-pawaatikoyit | 
+| time_fut_int | context_conj | subject_vta3pl.obv | object_vta3sg.obv | shaaminvta,mashinipeehiwvta,miyeeyimvta | ee-wii-pooni-shaaminaayit & ee-wii-pooni-shaaminikoyit | 
+| time_fut_int | context_conj | subject_vta3sg.obv | object_vta3pl.obv | shaaminvta,pawaatvta,miyeeyimvta | ee-wii-pooni-shaaminaayit & ee-wii-pooni-shaaminikoyit | 
+| time_fut_int | context_conj | subject_vta3sg.obv | object_vta3sg.obv | shaaminvta,achimostaawvta,pawaatvta | ee-wii-pooni-shaaminaayit & ee-wii-pooni-shaaminikoyit | 
+| time_fut_int | context_conjcid | subject_vta3pl.obv | object_vta3pl.obv | ayaawvta,natohtaawvta,tootaawvta | chi-wii-ayaawaayit & chi-wii-ayaawikoyit | 
+| time_fut_int | context_conjcid | subject_vta3pl.obv | object_vta3sg.obv | ayaawvta,tootaawvta,ahvta | chi-wii-ayaawaayit & chi-wii-ayaawikoyit | 
+| time_fut_int | context_conjcid | subject_vta3sg.obv | object_vta3pl.obv | natohtaawvta,tootaawvta,ohpinvta | chi-wii-doo-natohtaawaayit & chi-wii-doo-natohtaawikoyit | 
+| time_fut_int | context_conjcid | subject_vta3sg.obv | object_vta3sg.obv | ayaawvta,mowvta,ahvta | chi-wii-ayaawaayit & chi-wii-ayaawikoyit | 
+| time_fut_int | context_conjrel | subject_vta3pl.obv | object_vta3pl.obv | waapamvta,kiishishwvta,ayaawvta | kaa-wii-nohtee-waapamikoyit & kaa-wii-nohtee-waapamaayit | 
+| time_fut_int | context_conjrel | subject_vta3pl.obv | object_vta3sg.obv | waapamvta,kiishishwvta,shaakihvta | kaa-wii-nohtee-waapamikoyit & kaa-wii-nohtee-waapamaayit | 
+| time_fut_int | context_conjrel | subject_vta3sg.obv | object_vta3pl.obv | kiishishwvta,shaakihvta,ayaawvta | kaa-wii-pee-kiishishokoyit & kaa-wii-pee-kiishishwaayit | 
+| time_fut_int | context_conjrel | subject_vta3sg.obv | object_vta3sg.obv | shaakihvta,mowvta,kiwokawvta | kaa-wii-kakwee-shaakihaayit & kaa-wii-kakwee-shaakihikoyit | 
+| time_fut_int | context_ind | subject_vta3pl.obv | object_vta3pl.obv | kishkeeyimvta,akimvta,ayaawvta | wii-pee-kishkeeyimikoyiwa & wii-pee-kishkeeyimeeyiwa | 
+| time_fut_int | context_ind | subject_vta3pl.obv | object_vta3sg.obv | kishkeeyimvta,akimvta,waapamvta | wii-pee-kishkeeyimikoyiwa & wii-pee-kishkeeyimeeyiwa | 
+| time_fut_int | context_ind | subject_vta3sg.obv | object_vta3pl.obv | kishkeeyimvta,oshihvta,ahvta | wii-pee-kishkeeyimikoyiwa & wii-pee-kishkeeyimeeyiwa | 
+| time_fut_int | context_ind | subject_vta3sg.obv | object_vta3sg.obv | kishkeeyimvta,ayaawvta,oshihvta | wii-pee-kishkeeyimikoyiwa & wii-pee-kishkeeyimeeyiwa | 
+| time_prs | context_conj | subject_vta3pl.obv | object_vta3pl.obv | peehtaawvta,mashinipeehiwvta,paahpihvta | ee-pooni-peehtaawikoyit & ee-pooni-peehtaawaayit | 
+| time_prs | context_conj | subject_vta3pl.obv | object_vta3sg.obv | peehtaawvta,pawaatvta,kiwokawvta | ee-pooni-peehtaawikoyit & ee-pooni-peehtaawaayit | 
+| time_prs | context_conj | subject_vta3sg.obv | object_vta3pl.obv | peehtaawvta,akimvta,manihvta | ee-pooni-peehtaawikoyit & ee-pooni-peehtaawaayit | 
+| time_prs | context_conj | subject_vta3sg.obv | object_vta3sg.obv | kiishishwvta,mashinipeehiwvta,paahpihvta | ee-kakwee-kiishishokoyit & ee-kakwee-kiishishwaayit | 
+| time_prs | context_conjcid | subject_vta3pl.obv | object_vta3pl.obv | kishiipeekinvta,peehtaawvta,miyvta | chi-pee-kishiipeekinikoyit & chi-pee-kishiipeekinaayit | 
+| time_prs | context_conjcid | subject_vta3pl.obv | object_vta3sg.obv | kipahvta,kipahvta,ohpinvta | chi-nohtee-kipahikoyit & chi-nohtee-kipahaayit | 
+| time_prs | context_conjcid | subject_vta3sg.obv | object_vta3pl.obv | ohpinvta,achimostaawvta,peehtaawvta | chi-pee-ohpinaayit & chi-pee-ohpinikoyit | 
+| time_prs | context_conjcid | subject_vta3sg.obv | object_vta3sg.obv | kiwokawvta,kipahvta,ohpinvta | chi-nohtee-kiwokawaayit & chi-nohtee-kiwokawikoyit | 
+| time_prs | context_conjrel | subject_vta3pl.obv | object_vta3pl.obv | daweeyimvta,kishkeeyimvta,manihvta | kaa-kakwee-daweeyimikoyit & kaa-kakwee-daweeyimaayit | 
+| time_prs | context_conjrel | subject_vta3pl.obv | object_vta3sg.obv | daweeyimvta,manihvta,shaakihvta | kaa-kakwee-daweeyimikoyit & kaa-kakwee-daweeyimaayit | 
+| time_prs | context_conjrel | subject_vta3sg.obv | object_vta3pl.obv | daweeyimvta,kishkeeyimvta,pawaatvta | kaa-kakwee-daweeyimikoyit & kaa-kakwee-daweeyimaayit | 
+| time_prs | context_conjrel | subject_vta3sg.obv | object_vta3sg.obv | kishkeeyimvta,pawaatvta,tahkonvta | kaa-maachi-kishkeeyimikoyit & kaa-maachi-kishkeeyimaayit | 
+| time_prs | context_ind | subject_vta3pl.obv | object_vta3pl.obv | manihvta,tahkonvta,kiishkishwvta | doo-manihikoyiwa & doo-maniheeyiwa | 
+| time_prs | context_ind | subject_vta3pl.obv | object_vta3sg.obv | mowvta,manihvta,kishiipeekinvta | mowikoyiwa & moweeyiwa | 
+| time_prs | context_ind | subject_vta3sg.obv | object_vta3pl.obv | mowvta,mashinipeehiwvta,kiwokawvta | mowikoyiwa & moweeyiwa | 
+| time_prs | context_ind | subject_vta3sg.obv | object_vta3sg.obv | mowvta,manihvta,kishiipeekinvta | mowikoyiwa & moweeyiwa | 
+| time_pst | context_ind | subject_vta3pl.obv | object_vta3pl.obv | manihvta,pakwaatvta,akimvta | kii-nohtee-maniheeyiwa & kii-nohtee-manihikoyiwa | 
+| time_pst | context_ind | subject_vta3pl.obv | object_vta3sg.obv | paahpihvta,tahkonvta,achimostaawvta | kii-paahpiheeyiwa & kii-paahpihikoyiwa | 
+| time_pst | context_ind | subject_vta3sg.obv | object_vta3pl.obv | paahpihvta,pakwaatvta,achimostaawvta | kii-paahpiheeyiwa & kii-paahpihikoyiwa | 
+| time_pst | context_ind | subject_vta3sg.obv | object_vta3sg.obv | tahkonvta,achimostaawvta,kiishishwvta | kii-pee-tahkonikoyiwa & kii-pee-tahkoneeyiwa | 
+---------------------------------------------------------------------------

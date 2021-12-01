@@ -1,0 +1,275 @@
+Details of the objects with duplicate translation,base pairs:
+
+Cateogry: VERB
+
+- Duplicates with translation,base pair: 'have', 'ayaaw'
+	----------------
+	id : ayaavai
+	base : ayaaw
+	translation : have
+	type : vai
+	----------------
+	id : ayaavait
+	base : ayaaw
+	translation : have
+	type : vait
+	----------------
+
+- Duplicates with translation,base pair: 'able to do', 'kashkihtaaw'
+	----------------
+	id : kashkihtaavai
+	base : kashkihtaaw
+	translation : able to do
+	type : vai
+	----------------
+	id : kashkihtaavait
+	base : kashkihtaaw
+	translation : able to do
+	type : vait
+	----------------
+
+- Duplicates with translation,base pair: 'hunt', 'maachiiw'
+	----------------
+	id : maachiivai
+	base : maachiiw
+	translation : hunt
+	type : vai
+	----------------
+	id : maachiivait
+	base : maachiiw
+	translation : hunt
+	type : vait
+	----------------
+
+- Duplicates with translation,base pair: 'make', 'oshihtaaw'
+	----------------
+	id : oshihtaavai
+	base : oshihtaaw
+	translation : make
+	type : vai
+	----------------
+	id : oshihtaavait
+	base : oshihtaaw
+	translation : make
+	type : vait
+	----------------
+
+Cateogry: SUBJECT
+
+- Duplicates with translation,base pair: 'we and not you', 'niyanaan'
+	----------------
+	id : vai1pl.excl
+	translation : we and not you
+	base : niyanaan
+	----------------
+	id : vait1pl.excl
+	translation : we and not you
+	base : niyanaan
+	----------------
+	id : vta1pl.excl
+	translation : we and not you
+	base : niyanaan
+	----------------
+	id : vti1pl.excl
+	translation : we and not you
+	base : niyanaan
+	----------------
+
+- Duplicates with translation,base pair: 'we and you', 'kiyanaw'
+	----------------
+	id : vai1pl.incl
+	translation : we and you
+	base : kiyanaw
+	----------------
+	id : vait1pl.incl
+	translation : we and you
+	base : kiyanaw
+	----------------
+	id : vta1pl.incl
+	translation : we and you
+	base : kiyanaw
+	----------------
+	id : vti1pl.incl
+	translation : we and you
+	base : kiyanaw
+	----------------
+
+- Duplicates with translation,base pair: 'i', 'niya'
+	----------------
+	id : vai1sg
+	translation : i
+	base : niya
+	----------------
+	id : vait1sg
+	translation : i
+	base : niya
+	----------------
+	id : vta1sg
+	translation : i
+	base : niya
+	----------------
+	id : vti1sg
+	translation : i
+	base : niya
+	----------------
+
+- Duplicates with translation,base pair: 'you all', 'kiyawaw'
+	----------------
+	id : vai2pl
+	translation : you all
+	base : kiyawaw
+	----------------
+	id : vait2pl
+	translation : you all
+	base : kiyawaw
+	----------------
+	id : vta2pl
+	translation : you all
+	base : kiyawaw
+	----------------
+	id : vti2pl
+	translation : you all
+	base : kiyawaw
+	----------------
+
+- Duplicates with translation,base pair: 'you', 'kiya'
+	----------------
+	id : vai2sg
+	translation : you
+	base : kiya
+	----------------
+	id : vait2sg
+	translation : you
+	base : kiya
+	----------------
+	id : vta2sg
+	translation : you
+	base : kiya
+	----------------
+	id : vti2sg
+	translation : you
+	base : kiya
+	----------------
+
+- Duplicates with translation,base pair: 'they', 'wiyawaw'
+	----------------
+	id : vai3pl
+	translation : they
+	base : wiyawaw
+	----------------
+	id : vait3pl
+	translation : they
+	base : wiyawaw
+	----------------
+	id : vta3pl
+	translation : they
+	base : wiyawaw
+	----------------
+	id : vti3pl
+	translation : they
+	base : wiyawaw
+	----------------
+
+- Duplicates with translation,base pair: 'grace's babies', 'grace sii beebii'
+	----------------
+	id : vai3pl.obv
+	translation : grace's babies
+	base : grace sii beebii
+	----------------
+	id : vait3pl.obv
+	translation : grace's babies
+	base : grace sii beebii
+	----------------
+	id : vta3pl.obv
+	translation : grace's babies
+	base : grace sii beebii
+	----------------
+	id : vti3pl.obv
+	translation : grace's babies
+	base : grace sii beebii
+	----------------
+
+- Duplicates with translation,base pair: 's/he/they sg', 'wiya'
+	----------------
+	id : vai3sg
+	translation : s/he/they sg
+	base : wiya
+	----------------
+	id : vait3sg
+	translation : s/he/they sg
+	base : wiya
+	----------------
+	id : vta3sg
+	translation : s/he/they sg
+	base : wiya
+	----------------
+	id : vti3sg
+	translation : s/he/they sg
+	base : wiya
+	----------------
+
+- Duplicates with translation,base pair: 'grace's baby', 'grace soñ beebii'
+	----------------
+	id : vai3sg.obv
+	translation : grace's baby
+	base : grace soñ beebii
+	----------------
+	id : vait3sg.obv
+	translation : grace's baby
+	base : grace soñ beebii
+	----------------
+	id : vta3sg.obv
+	translation : grace's baby
+	base : grace soñ beebii
+	----------------
+	id : vti3sg.obv
+	translation : grace's baby
+	base : grace soñ beebii
+	----------------
+
+Cateogry: OBJECT
+
+- Duplicates with translation,base pair: '', ''
+	----------------
+	id : vai
+	translation : 
+	base : 
+	----------------
+	id : vait
+	translation : 
+	base : 
+	----------------
+	id : vti
+	translation : 
+	base : 
+	----------------
+
+- Duplicates with translation,base pair: 'no object', '-'
+	----------------
+	id : vaino object
+	translation : no object
+	base : -
+	----------------
+	id : vaitno object
+	translation : no object
+	base : -
+	----------------
+	id : viino object
+	translation : no object
+	base : -
+	----------------
+	id : vtino object
+	translation : no object
+	base : -
+	----------------
+
+- Duplicates with translation,base pair: 'you all', 'kiyawaw'
+	----------------
+	id : vta2pl
+	translation : you all
+	base : kiyawaw
+	----------------
+	id : vti2pl
+	translation : you all
+	base : kiyawaw
+	----------------
