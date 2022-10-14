@@ -6,7 +6,7 @@ from copy import deepcopy
 individual = ".ion-color-{0} {{\n\t--ion-color-base: var(--ion-color-{0});\n\t--ion-color-base-rgb: var(--ion-color-{0}-rgb);\n\t--ion-color-contrast: var(--ion-color-{0}-contrast);\n\t--ion-color-contrast-rgb: var(--ion-color-{0}-contrast-rgb);\n\t--ion-color-shade: var(--ion-color-{0}-shade);\n\t--ion-color-tint: var(--ion-color-{0}-tint);\n}}"
 root_entry = {"color":{"hex":'--ion-color-{}: {}', "rgb":'--ion-color-{}-rgb: {}'}, "contrast":{"hex":'--ion-color-{}-contrast: {}', "rgb":'--ion-color-{}-contrast-rgb: {}'}, "shade":{"hex":'--ion-color-{}-shade: {}'}, "tint":{"hex":'--ion-color-{}-tint: {}'}}
 
-categories = ['verb', 'mode', 'tense', 'preverb', 'subject']
+categories = ['verb', 'preverb', 'tense', 'mode', 'subject', 'object']
 
 colours = sns.color_palette("rocket", len(categories))
 
