@@ -1,5 +1,5 @@
 import { FormsModule } from '@angular/forms';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 import { ConjugatorPage } from './conjugator.page';
 import { ComponentFactoryResolver } from '@angular/core';
@@ -11,7 +11,7 @@ describe('ConjugatorPage', () => {
   let component: ConjugatorPage;
   let fixture: ComponentFixture<ConjugatorPage>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ConjugatorPage ],
       imports: [IonicModule.forRoot(), FormsModule]
