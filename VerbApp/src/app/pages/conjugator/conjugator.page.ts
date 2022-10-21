@@ -28,6 +28,7 @@ export class ConjugatorPage implements OnInit {
   result = '';
   showVerb = '';
   selectedValues: any[];
+  morph_colours = {"verbvai": "#db5f57", "person":"#5f57db", "tense": "#57db5f", "preverb": "#d3db57", "spelling": "blue", "mode":"#57d3db"}
   automaticClose = false;
   information: Array<grammarCat> = [];
   myFunInformation$ = new BehaviorSubject(this.information);
@@ -208,12 +209,17 @@ export class ConjugatorPage implements OnInit {
     this.show_result = true;
     this.show_error = false;
     let results = this.service.conjugate(this.selectedOptions);
-    let s = '';
+    let coloured = '';
     for (let r of results){
-      s += r.toString();
-      s += ' ';
+      let rstr = r.toString();
+      rstr = rstr.replace(/'/g, '"');
+      coloured += this.colourCode(rstr);
+
     }
-    this.result = s;
+    
+    document.getElementById("result").innerHTML = coloured;
+    console.log(document.getElementById("result").innerHTML);
+    this.result = coloured;
     this.scroll("result");
     // this.scrollToBottom();
   }
@@ -270,6 +276,19 @@ export class ConjugatorPage implements OnInit {
     });
   }
 
+
+  colourCode(conj_breakdown:string){
+    let coloured = '';
+    let in_pieces = JSON.parse(conj_breakdown);
+    for (let piece = 0; piece < in_pieces.length; piece ++){
+      if (in_pieces[piece][1] in this.morph_colours){
+        coloured += '<span style="color: '+ this.morph_colours[in_pieces[piece][1]]+'">'+in_pieces[piece][0]+'</span>';
+      } else{
+        coloured += '<span style="color: white">'+in_pieces[piece][0]+'</span>';
+      }
+    }
+    return coloured
+  }
 
 
   ngOnDestory() {
