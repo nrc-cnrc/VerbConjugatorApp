@@ -1,0 +1,27 @@
+version: '3'
+services:
+  app:
+    container_name: verbapp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/VerbApp
+    ports:
+      - "8080:80"
+
+
+
+# version: '2'
+# services:
+#   app:
+#     container_name: karma2_ionic
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     volumes:
+#       - .:/myApp
+#       - ~/.gradle:/root/.gradle
+
+# docker-compose build
+# docker-compose run app ionic build android –release

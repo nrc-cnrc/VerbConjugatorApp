@@ -28,6 +28,7 @@ export class ConjugatorPage implements OnInit {
   result = '';
   showVerb = '';
   selectedValues: any[];
+  morph_colours = {"verbvai": "#db5f57", "person":"#5f57db", "tense": "#57db5f", "preverb": "#d3db57", "spelling": "blue", "mode":"#57d3db"}
   automaticClose = false;
   information: Array<grammarCat> = [];
   myFunInformation$ = new BehaviorSubject(this.information);
@@ -75,7 +76,6 @@ export class ConjugatorPage implements OnInit {
   }
 
   scroll(id) {
-    console.log(`scrolling to ${id}`);
     let el = document.getElementById(id);
     if (id == "result" || id == "error"){
     setTimeout(function () {el.scrollIntoView({ behavior: 'smooth', block: 'end' })}, 250);
@@ -114,9 +114,7 @@ export class ConjugatorPage implements OnInit {
       prev_pos = this.information[index - 1].name;
       n = this.selectedPath[prev_pos].getChild(selected.id);
     }
-    console.log("should be node", n);
     this.updateNodePath(n, pos);
-    console.log("Updated Path", this.selectedPath);
     this.updateInformation(index+1, pos)
   }
 
@@ -144,7 +142,6 @@ export class ConjugatorPage implements OnInit {
       this.selectedOptions[key] = {translation: '', id: '', base:''};  // reset so that there is no selected option at that name
       this.information[i].disabled=true; // disable access
     }
-    console.log(this.selectedOptions);
   }
 
   
@@ -165,7 +162,6 @@ export class ConjugatorPage implements OnInit {
     pos is the current category
      */
     this.selectedPath[pos] = n;
-    console.log("this.selectedPath[",pos,"]", this.selectedPath[pos]);
   }
 
 
@@ -174,7 +170,6 @@ export class ConjugatorPage implements OnInit {
     this.information[index].cat = [];
     
     let children = this.selectedPath[pos].getChildren();
-    console.log("Got children", children);
     selectFrom.forEach(element => {
       for (let i = 0; i < children.length; i++) {
         if (children[i].getId() == element.id){
@@ -183,12 +178,10 @@ export class ConjugatorPage implements OnInit {
         }
       }
     });
-    console.log("after this.information", this.information);
     this.myFunInformation$.next(this.information);
   }
 
   Conjugate(){
-    console.log("conjugate",this.selectedOptions);
     let canconjugate = true;
     Object.keys(this.selectedOptions).forEach(element => {
       if (this.selectedOptions[element].id === ''){
@@ -207,19 +200,26 @@ export class ConjugatorPage implements OnInit {
     this.error = '';
     this.show_result = true;
     this.show_error = false;
-    let results = this.service.conjugate(this.selectedOptions);
-    let s = '';
-    for (let r of results){
-      s += r.toString();
-      s += ' ';
+    let results = this.service.conjugate(this.selectedOptions)[0];
+    console.log("results", results);
+    let coloured = '';
+    for (let r = 0; r < results.length; r++){
+      let rstr = results[r].toString();
+      rstr = rstr.replace(/'/g, '"');
+      console.log("rstr", rstr);
+      coloured += this.colourCode(rstr);
+      coloured += "<br>"
+
     }
-    this.result = s;
+    
+    document.getElementById("result").innerHTML = coloured;
+    console.log(document.getElementById("result").innerHTML);
+    this.result = coloured;
     this.scroll("result");
     // this.scrollToBottom();
   }
 
   async openModalSearch(whichSearch, index) {
-    console.log("this.information[index].cat", this.information[index].cat);
     const modal = await this.modalController.create({
       component: SearchPage,
       componentProps: {
@@ -238,12 +238,10 @@ export class ConjugatorPage implements OnInit {
           this.selectedOptions[whichSearch].base = dataReturned.data.base;
           this.updateDisabled(whichSearch,index);
           this.updatePath(whichSearch,index, dataReturned.data);
-          console.log(this.selectedOptions);
           let id = this.information[index + 1].name;
           this.scroll(id);
         }
       }
-      console.log('Receive: ', dataReturned.data);
     });
 
     // Currently does actively send information, but could be a useful feater that if a user already picked a verb that it
@@ -254,7 +252,6 @@ export class ConjugatorPage implements OnInit {
 
   async openModalToolTip(whichtip) {
     // with data
-    console.log("Tooltip pressed", whichtip);
     const modal = await this.modalController.create({
       
       component: VerbTooltipPage,
@@ -270,6 +267,19 @@ export class ConjugatorPage implements OnInit {
     });
   }
 
+
+  colourCode(conj_breakdown:string){
+    let coloured = '';
+    let in_pieces = JSON.parse(conj_breakdown);
+    for (let piece = 0; piece < in_pieces.length; piece ++){
+      if (in_pieces[piece][1] in this.morph_colours){
+        coloured += '<span style="color: '+ this.morph_colours[in_pieces[piece][1]]+'">'+in_pieces[piece][0]+'</span>';
+      } else{
+        coloured += '<span style="color: white">'+in_pieces[piece][0]+'</span>';
+      }
+    }
+    return coloured
+  }
 
 
   ngOnDestory() {
