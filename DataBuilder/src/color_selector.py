@@ -8,7 +8,7 @@ root_entry = {"color":{"hex":'--ion-color-{}: {}', "rgb":'--ion-color-{}-rgb: {}
 
 categories = ['verb', 'preverb', 'tense', 'mode', 'subject', 'object']
 
-colours = sns.color_palette("rocket", len(categories))
+colours = sns.color_palette("hls", len(categories))
 
 sns.palplot(colours)
 
