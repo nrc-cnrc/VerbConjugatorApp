@@ -5,6 +5,8 @@
 #FROM here is the base image to build application (node.js)
 FROM node:14-alpine as build 
 
+
+
 # Node.js is a software platform for scalable server-side and networking applications. Node.js applications are written in JavaScript and can be run within the Node.js runtime on Mac OS X, Windows, and Linux without changes.
 # This image is based on the Alpine Linux project and is much smaller than most distribution base images (~5MB).
 
@@ -41,6 +43,9 @@ RUN npm run-script build
 
 #FROM here is the base image to run application (nginx)
 FROM nginx:alpine
+
 # Remove everything from nginx html and replace it with app build www/ folder
 RUN rm -rf /usr/share/nginx/html/*
+
 COPY --from=build /app/www/ /usr/share/nginx/html/
+# COPY ./.nginx/nginx.conf /etc/nginx/nginx.conf

@@ -28,7 +28,7 @@ export class ConjugatorPage implements OnInit {
   result = '';
   showVerb = '';
   selectedValues: any[];
-  morph_colours = {"verbvai": "#db5f57", "person":"#5f57db", "tense": "#57db5f", "preverb": "#d3db57", "spelling": "blue", "mode":"#57d3db"}
+  morph_colours = {"verb": "#db5f57", "person":"#5f57db", "tense": "#57db5f", "preverb": "#d3db57", "spelling": "blue", "mode":"#57d3db"}
   automaticClose = false;
   information: Array<grammarCat> = [];
   myFunInformation$ = new BehaviorSubject(this.information);
