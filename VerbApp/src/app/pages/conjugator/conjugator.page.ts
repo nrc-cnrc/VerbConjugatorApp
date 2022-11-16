@@ -207,8 +207,9 @@ export class ConjugatorPage implements OnInit {
       let rstr = results[r].toString();
       rstr = rstr.replace(/'/g, '"');
       console.log("rstr", rstr);
-      coloured += this.colourCode(rstr);
-      coloured += "<br>"
+      coloured += rstr;
+      // coloured += this.colourCode(rstr);
+      // coloured += "<br>"
 
     }
     
@@ -239,7 +240,7 @@ export class ConjugatorPage implements OnInit {
           this.updateDisabled(whichSearch,index);
           this.updatePath(whichSearch,index, dataReturned.data);
           let id = this.information[index + 1].name;
-          this.scroll(id);
+          // this.scroll(id);
         }
       }
     });

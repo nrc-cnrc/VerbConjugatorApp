@@ -1,6 +1,13 @@
+:root{
+    --holder: #FFFFFF;
+}
+
 ion-title{
     font-size: 24px !important;
     padding: 5% 0 2% 0;
+    color: white !important;
+    font-weight: bold;
+    text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
 }
 
 ion-toolbar{
@@ -41,15 +48,17 @@ ion-header{
     padding: 2% 5%;
 }
 
-ion-button.cancel{
-    color: white;
+ion-button{
+    color: white !important;
     font-weight: bold;
+    text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
     width: 45%;
     height: 80%;
     // margin-left: 7%;
     right: 0;
     font-size: 20px;
     text-transform:none!important;
+    background-color: var(--holder);
 }
 
 ion-content{
