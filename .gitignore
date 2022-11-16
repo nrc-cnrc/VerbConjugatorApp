@@ -131,3 +131,4 @@ dmypy.json
 
 DataBuilder/JSON
 VerbApp/src/assets/JSON
+DataBuilder/*.csv
