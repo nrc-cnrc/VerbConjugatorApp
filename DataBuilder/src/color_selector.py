@@ -8,7 +8,7 @@ root_entry = {"color":{"hex":'--ion-color-{}: {}', "rgb":'--ion-color-{}-rgb: {}
 
 categories = ['verb', 'preverb', 'tense', 'mode', 'subject', 'object']
 
-colours = sns.color_palette("hls", len(categories))
+colours = sns.color_palette("magma", len(categories))
 
 sns.palplot(colours)
 
@@ -31,7 +31,7 @@ for i in range(len(categories)):
     root["contrast"]["rgb"] = root["contrast"]["rgb"].format(cat, '0,0,0')
 
     c = rgb2hls(rgb[0], rgb[1], rgb[2], normalised=False)
-    tint = hls2rgb(c[0], c[1], c[2]+.1)
+    tint = hls2rgb(c[0], c[1], min(c[2]+.1,1,1))
     
     tint = rgb2hex(tint[0], tint[1], tint[2], normalised=True)
     root['tint']['hex'] = root['tint']['hex'].format(cat, tint)

@@ -14,16 +14,15 @@ import { SearchPage } from '../../modals/search/search.page';
 import { SearchPageModule } from 'src/app/modals/search/search.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    ConjugatorPageRoutingModule,
-    SharedComponentsModule,
-    VerbTooltipPageModule, 
-    SearchPageModule
-  ],
-  declarations: [ConjugatorPage],
-  entryComponents: [VerbTooltipPage, SearchPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        ConjugatorPageRoutingModule,
+        SharedComponentsModule,
+        VerbTooltipPageModule,
+        SearchPageModule
+    ],
+    declarations: [ConjugatorPage]
 })
 export class ConjugatorPageModule {}

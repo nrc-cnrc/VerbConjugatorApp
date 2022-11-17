@@ -19,8 +19,17 @@ export class VerbTooltipPage implements OnInit {
   ngOnInit() {
     console.log(this.conj_type);
     console.log("tips",this.tips);
+    this.formatSelected();
     // console.log("tip tense",this.tips.tense);
 
+  }
+
+  formatSelected(){
+    var r = (<HTMLElement>document.querySelector(':root'));
+    let var_name = "--ion-color-" + this.conj_type;
+    var rootStyle = getComputedStyle(r);
+    let getColor = rootStyle.getPropertyValue(var_name);
+    r.style.setProperty('--holder', getColor);
   }
 
   getTip(){

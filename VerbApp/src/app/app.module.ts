@@ -16,16 +16,15 @@ import { Network } from '@ionic-native/network/ngx';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  // imports: [AppRoutingModule, BrowserModule, IonicModule.forRoot(), HttpClientModule,
-  //   IonicStorageModule.forRoot(), FormsModule, RouterModule],
-  imports: [AppRoutingModule, BrowserModule, IonicModule.forRoot(), HttpClientModule, FormsModule, RouterModule],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, Network
-  ],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    // imports: [AppRoutingModule, BrowserModule, IonicModule.forRoot(), HttpClientModule,
+    //   IonicStorageModule.forRoot(), FormsModule, RouterModule],
+    imports: [AppRoutingModule, BrowserModule, IonicModule.forRoot(), HttpClientModule, FormsModule, RouterModule],
+    providers: [
+        StatusBar,
+        SplashScreen,
+        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, Network
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}

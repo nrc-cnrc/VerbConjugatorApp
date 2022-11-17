@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { AccordianComponent } from './accordian.component';
@@ -7,7 +7,7 @@ describe('AccordianComponent', () => {
   let component: AccordianComponent;
   let fixture: ComponentFixture<AccordianComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ AccordianComponent ],
       imports: [IonicModule.forRoot()]
