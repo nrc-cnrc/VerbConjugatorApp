@@ -3,25 +3,35 @@
 ## Requirements
 This project requires:
 
-    - [npm] (https://www.npmjs.com/get-npm) >= 6.14.7 
-    
-    - [ionic] (https://ionicframework.com/docs/intro/cli) >= 6.13.1 
-    
-    - [cordova] (https://ccoenraets.github.io/cordova-tutorial/create-cordova-project.html) >= 9.0.0
+- [docker](https://www.docker.com/) v20.10.21
 
-_Once this has all been installed_, run the following command to install necessary dependencies:
-    `npm install`
+- [docker-compose](https://docs.docker.com/compose/) 1.29.2
+
+
+
+_Once this has all been installed_, navigate to the `VerbConjugatorApp/VerbApp` directory and run the following command:
+    `docker-compose build`
+
+If this command runs successfully (i.e., says Successfully built and tagged), in the same directory, run the following command:
+    `docker-compose up`
+
+Afterwards, open your preferred internet browser and navigate to the following URL:
+    `http://localhost:8080/`
+
+
+## Packages
+This project uses the following packages:
+
+- [npm](https://www.npmjs.com/get-npm) v6.14.7 
+
+- [ionic](https://ionicframework.com/docs/intro/cli) v6.20.4 
+
+- [angular](https://angular.io/docs) v13.3.9
+
+
 
 ## Inital Test
-This project comes initialized as a French conjugator. To see how it looks, navigate to the current directory and run the following:
-    `ionic serve`
-This will open this ionic project in your browser. 
-
-If you would like to see it on a phone emulator, run the following:
-    `ionic cordova emulate ios` to emulate on an ios device (iphone or ipad)
-    `ionic cordova emulate andriod` to emulate on an andriod device
-
-**Please note that you can only emulate an iOS device if you have XTools, which is typically only available on Macs (OSX machines).
+This project comes initialized as a French conjugator. 
 
 ## Make Your Own App
 If you haven't already formatted your language's data, please navigate to the `VerbConjugator/DataBuilder` directory and following the instructions detailed in the instructions.

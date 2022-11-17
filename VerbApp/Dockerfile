@@ -9,7 +9,7 @@ FROM node:14-alpine as build
 # This image is based on the Alpine Linux project and is much smaller than most distribution base images (~5MB).
 
 
-# ENV IONIC_VERSION 6.2.0
+ENV IONIC_VERSION 6.20.4
 
 # ENV DEBIAN_FRONTEND=noninteractive \
 #     ANDROID_HOME=/opt/android-sdk-linux \
@@ -27,10 +27,9 @@ WORKDIR /app
 # Copies package.json (& package-lock) into working directory
 COPY package*.json /app/  
 
-# RUN npm install -g ionic@${IONIC_VERSION}
-
 # Installs ionic and project dependencies
-RUN npm install -g @ionic/cli
+RUN npm install -g @ionic/cli@${IONIC_VERSION}
+
 RUN npm install
 
 # Copy app contents from the root directory to app directory.
