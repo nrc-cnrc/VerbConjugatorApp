@@ -9,19 +9,25 @@
           <div>
           <ion-card-content id="{{item.name}}">
             <ion-item color="{{item.name}}" lines="none">
+              <div class="overlapping">
+                <ion-icon  id="tooltip" class ="bottom" name="help-circle-sharp" ></ion-icon>
+                <ion-icon (click)="openModalToolTip(item.name)" class ="top" name="help-circle-outline" ></ion-icon>
+              </div>
               <ion-card-title class="title">{{item.name | titlecase}}</ion-card-title>
-              <ion-icon (click)="openModalToolTip(item.name)" slot="end" class ="tooltip" name="help-circle-sharp" size="large"></ion-icon>
             </ion-item>
           </ion-card-content>
 
-          <ion-item color="{{item.name}}" class="selected" disabled="{{item.disabled}}">
-            <ion-icon (click)="openModalSearch(item.name, i)" class="tooltip" name="search-circle-sharp" size="large"></ion-icon>
-            <ion-label>{{selectedOptions[item.name].translation |titlecase}}</ion-label>
+          <ion-item (click)="openModalSearch(item.name, i)"  color="{{item.name}}" class="selected" disabled="{{item.disabled}}">
+            <div class="overlapping" slot="end">  
+              <ion-icon class ="bottom" name="search-circle-sharp"></ion-icon>
+              <ion-icon class ="top" name="search-circle-outline"></ion-icon>
+            </div>
+            <ion-label style="font-style: italic; padding-top: 5px;">{{selectedOptions[item.name].base |titlecase}}   </ion-label><ion-label>{{selectedOptions[item.name].translation |titlecase}}</ion-label>
           </ion-item>
           </div>
         </ion-card>
   
-        <ion-button (click)=Conjugate()>CONJUGATE</ion-button> <ion-button (click)=reset()>RESET</ion-button>
+        <ion-button (click)=reset()>RESET</ion-button> <ion-button (click)=Conjugate()>CONJUGATE</ion-button>
         <!-- <div *ngIf="show_error"> -->
           <div [hidden] = "!show_error">
           <p class="error" id="error">{{error}}</p>
