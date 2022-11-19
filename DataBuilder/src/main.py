@@ -4,65 +4,120 @@ from option_builder import OptionBuilder
 from JSON_test import TESTS
 from tooltip import *
 import sys
-import json
+import json, argparse
 
 
 def main():
     tree_order = None
-    app_order = None
     conjugation_order = None
 
-    if len(sys.argv) == 1:
-        print("Please include required input file")
-        exit()
-    if len(sys.argv) >= 2:
-        try:
-            f = open(sys.argv[1], 'r')
-            f.close()
-        except OSError:
-            print("Input file '", sys.argv[1], "' not found")
-            exit()
-        input_file = sys.argv[1]
-        if not input_file.endswith(".csv"):
-            print("Input file must be a comma separated file and have the .csv extension")
-            exit()
-    if len(sys.argv) >= 3:
-        tree_order = sys.argv[2]
-        if not tree_order.endswith(".csv"):
-            print("Selected tree order file must be a csv file (i.e. must have the .csv extension)")
-            exit()
-        try:
-            f = open(tree_order, 'r')
-            f.close()
-        except OSError:
-            print("Order file '", tree_order, "' not found")
-            exit()
-    
-        tree_order_file = open(tree_order, 'r')
-        orders = tree_order_file.readlines()
-        tree_order = orders[0].strip().split(',')
-        tree_order = [x.strip().lower() for x in tree_order]
-        if len(orders) >= 2:
-            conjugation_order = orders[1].strip().split(',')
-            conjugation_order = [x.strip().lower() for x in conjugation_order]
+    args = parseArgs()
+    input_file, order_file = argsCheck(args)
+    if args.order:
+        tree_order, conjugation_order = prepareInput(order_file)
+    if args.tooltip:
+        makeToolTips(tree_order)
+    if args.colour:
+        pass
 
-    print("Progress [=     ]",end='\r')
-    makeToolTips(tree_order)
+    buildFiles(input_file, tree_order, conjugation_order)
+    reorderJSON(conjugation_order)
+
+    # print("Progress [======]",end='\r')
+    print("Complete. See JSON folder.")
+
+    TESTS.runtests()
+
+
+def parseArgs():
+    '''
+    
+    '''
+
+
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("-f","--file_input", dest="input_file", help="Input file containing language model", required=True)
+    parser.add_argument("-o", "--order", dest="order", help="In-app category order")
+    parser.add_argument("-tt", "--tooltip", dest="tooltip", default=False, help="Autogenerate tooltip json file", action="store_true")
+    parser.add_argument("-c", "--colour", dest="colour", default=False, help="Autogenerate colours in scss file", action="store_true")
+
+    args = parser.parse_args()
+
+    return args
+    
+
+def argsCheck(args):
+    '''
+    
+    '''
+
+    order_file = None
+    args.input_file = args.input_file.strip()
+    try:
+        f = open(args.input_file, 'r')
+        f.close()
+    except OSError:
+        print("Input file '{}' not found".format(args.input_file))
+        exit()
+    input_file = args.input_file
+
+    if not input_file.endswith(".csv"):
+            print("Input file '{}' have comma seperated values and a .csv extension".format(input_file))
+            exit()
+
+    if args.order:
+        order_file = args.order
+        try:
+            f = open(order_file, 'r')
+            f.close()
+        except OSError:
+            print("Order file '{}' not found".format(order_file))
+            exit()
+        
+        if not order_file.endswith(".csv"):
+            print("Order file '{}' have comma seperated values and a .csv extension".format(order_file))
+            exit()
+        
+    return input_file, order_file
+
+
+def prepareInput(order_file):
+    '''
+    
+    '''
+
+    order_file = open(order_file, 'r')
+    orders = order_file.readlines()
+    tree_order = orders[0].strip().split(',')
+    tree_order = [x.strip().lower() for x in tree_order]
+    if len(orders) >= 2:
+        conjugation_order = orders[1].strip().split(',')
+        conjugation_order = [x.strip().lower() for x in conjugation_order]
+
+    return tree_order, conjugation_order
+
+
+def buildFiles(input_file, tree_order, conjugation_order):
+    '''
+    
+    '''
+
     c2d = CSVtoDict(input_file=input_file, order=tree_order)
     dict_list, attr_dict_list = c2d.execute()
-    print("Progress [=>    ]",end='\r')
     tb = TreeBuilder(dict_list, "category_tree.json", tree_order)
-    print("Progress [==>   ]",end='\r')
     ob = OptionBuilder(attr_dict_list, tree_order)
-    print("Progress [===>  ]",end='\r')
-    
 
     c2d = CSVtoDict(input_file=input_file, order=conjugation_order)
     dict_list, attr_dict_list = c2d.execute()
-    print("Progress [====> ]",end='\r')
     tb = TreeBuilder(dict_list, "conjugation.json", conjugation_order)
-    print("Progress [=====>]",end='\r')
 
+
+def reorderJSON(conjugation_order):
+    '''
+    
+    '''
+    
     with open('JSON/conjugation.json', 'r') as f:
         f_str = f.read()
         d = json.loads(f_str)
@@ -71,13 +126,6 @@ def main():
     with open('JSON/conjugation.json', 'w') as f:
         json.dump(l, f, indent=4)
         f.close()
-
-    print("Progress [======]",end='\r')
-    print("Complete. See JSON folder.")
-
-    TESTS.runtests()
-
-
 
 
 if __name__ == "__main__":
