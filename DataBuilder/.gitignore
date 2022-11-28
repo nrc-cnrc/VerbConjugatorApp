@@ -11,6 +11,8 @@ __pycache__/
 # Distribution / packaging
 .Python
 JSON/
+ERRORS/
+langs/
 build/
 develop-eggs/
 dist/
