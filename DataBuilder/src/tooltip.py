@@ -2,10 +2,10 @@ import os
 import json
 
 
-def makeToolTips(tips):
-    if not os.path.exists('JSON/'):
-            os.makedirs('JSON/')
-    output_file = "JSON/tooltip.json"
+def makeToolTips(tips, path):
+    if not os.path.exists(path):
+            os.makedirs(path)
+    output_file = path+"tooltip.json"
 
     tooltips = []
     for t in tips:

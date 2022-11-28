@@ -4,7 +4,7 @@ import sys
 
 class OptionBuilder:
 
-    def __init__(self, attr_dict_list, app_order):
+    def __init__(self, attr_dict_list, app_order, path):
         """
         Class creates individual JSON files containing all elements of the individual options, 
         with no duplicates
@@ -16,6 +16,8 @@ class OptionBuilder:
         self.attr_dict_list = attr_dict_list
         self.attrs = {}
         self.app_order = app_order
+        self.path = path
+
         self.removeDupes()
         self.writeAttr()
 
@@ -42,9 +44,9 @@ class OptionBuilder:
         Creates each file using the attr dictionary where each key has a set of unique values.
         Files are saved to the 'data' folder.
         """
-        if not os.path.exists('JSON/'):
-            os.makedirs('JSON/')
-        major_output_file = "JSON/information.json"
+        if not os.path.exists(self.path):
+            os.makedirs(self.path)
+        major_output_file = self.path+"information.json"
         major = {}
         for attr in self.attrs:
             if self.app_order:

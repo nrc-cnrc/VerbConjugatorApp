@@ -1,6 +1,0 @@
-The following paths produce multiple conjugations: 
-------------------------------------------------------------------------- 
-| preverb  |  tense  |  mode  |  subject  |  object | verb ex. | conj ex. | 
- -------------------------------------------------------------------------
-| mode_ind | subject_3' | object_3' | wâpamvta,wâpamvta,wâpamvta | kîwâpameyiwa & kîwâpamikoyiwa | 
--------------------------------------------------------------------------

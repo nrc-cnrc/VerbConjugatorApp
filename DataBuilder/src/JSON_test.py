@@ -11,18 +11,18 @@ paths_with_duplicates = []
 class TESTS:
 
     @staticmethod
-    def runtests():
+    def runtests(path):
         """
         Function calls test functions and passes named files. To test on different files of the same format,
         change the arguments in the function calls.
         """
 
         print("\n-------\nTESTING INFORMATION\n-------")
-        TESTS.information_tests("JSON/information.json")
-        TESTS.conjugation_tests("JSON/conjugation.json")
+        TESTS.information_tests(path+"information.json", path)
+        TESTS.conjugation_tests(path+"conjugation.json", path)
 
     @staticmethod
-    def information_tests(file_name):
+    def information_tests(file_name, path):
         '''
         Tests the information file to relay descriptive information of the items inside.
         Checks for duplicate item ids, and duplicate item (translation,base) pairs.
@@ -45,7 +45,7 @@ class TESTS:
         for cat in json_file:
             
             print("* {} has ({}) unique options.".format(cat['name'].upper(), len(cat['children'])))
-        print("\nSee JSON/information.json file for all unique option(s).\n")
+        print("\nSee "+path+"information.json file for all unique option(s).\n")
 
         
         for cat in json_file:
@@ -112,7 +112,7 @@ class TESTS:
             print("For more details, see the ERRORS/duplicate_trans_base.txt file.")
 
     @staticmethod
-    def conjugation_tests(file_name):
+    def conjugation_tests(file_name, path):
         '''
         Tests the conjugation.json tree file to find errors around duplicate paths. 
         A duplicate path is one that is not unique, and results in more than one conjugation.
@@ -138,7 +138,7 @@ class TESTS:
         if not_unique != -1:
             for key in json_file[0]:
                 TESTS.recurse_tree(json_file[0][key], [key])
-            g = open('JSON/information.json', 'r')
+            g = open(path+'information.json', 'r')
             json_informationfile = json.load(g)
             g.close()
 

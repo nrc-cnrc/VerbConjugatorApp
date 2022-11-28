@@ -6,7 +6,7 @@ import numpy
 
 class TreeBuilder:
 
-    def __init__(self, input_dict, output_file, keys):
+    def __init__(self, input_dict, output_file, keys, path):
         """Class takes a list of dictionaries and creates a tree data structure through dictionaries.
         Calls tree builder function.
 
@@ -18,6 +18,7 @@ class TreeBuilder:
         self.input_dict = input_dict
         self.output_file = output_file
         self.keys = keys
+        self.path = path
         self.toTree()
         self.duplicates = set()
         
@@ -36,10 +37,10 @@ class TreeBuilder:
         for verb in self.input_dict: # Going through each dictionary in new list
             self.recursiveTree(tree, verb, 0)
 
-        if not os.path.exists('JSON'):
-            os.makedirs('JSON')
+        if not os.path.exists(self.path):
+            os.makedirs(self.path)
 
-        self.output_file = 'JSON/' + self.output_file
+        self.output_file = self.path + self.output_file
         with open(self.output_file, 'w') as json_file:
             json.dump(tree, json_file,indent=4, sort_keys=True)
 
