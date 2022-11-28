@@ -22,7 +22,7 @@
               <ion-icon class ="bottom" name="search-circle-sharp"></ion-icon>
               <ion-icon class ="top" name="search-circle-outline"></ion-icon>
             </div>
-            <ion-label style="font-style: italic; padding-top: 5px;">{{selectedOptions[item.name].base |titlecase}}   </ion-label><ion-label>{{selectedOptions[item.name].translation |titlecase}}</ion-label>
+            <ion-label style="font-style: italic; padding-top: 5px;">{{selectedOptions[item.name].base |uppercase}}   </ion-label><ion-label>{{selectedOptions[item.name].translation |titlecase}}</ion-label>
           </ion-item>
           </div>
         </ion-card>
@@ -34,7 +34,7 @@
         </div>
         <!-- <div *ngIf="show_result"> -->
           <div [hidden] = "!show_result">
-          <p class="result" id="result">{{result}}</p>
+          <p class="result" id="result">{{result |uppercase}}</p>
         </div>
 
       </ion-col>

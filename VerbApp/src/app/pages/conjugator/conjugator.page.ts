@@ -206,8 +206,10 @@ export class ConjugatorPage implements OnInit {
     for (let r = 0; r < results.length; r++){
       let rstr = results[r].toString();
       rstr = rstr.replace(/'/g, '"');
-      console.log("rstr", rstr);
-      coloured += rstr;
+      let upper = rstr.toUpperCase();
+      console.log("upper", upper);
+      
+      coloured += upper;
       // coloured += this.colourCode(rstr);
       // coloured += "<br>"
 

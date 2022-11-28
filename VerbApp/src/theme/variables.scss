@@ -89,47 +89,26 @@
     --ion-color-background-tint: #f9f7f3;
 
 
-		--ion-color-verb: #221150;
-		--ion-color-verb-rgb: 34,17,80;
-		--ion-color-verb-contrast: #FFFFFF;
-		--ion-color-verb-contrast-rgb: 255,255,255;
-		--ion-color-verb-shade: #24154B;
-		--ion-color-verb-tint: #1F0C54;
+		--ion-color-verb: #ff0000;
+		--ion-color-verb-rgb: 255,0,0;
+		--ion-color-verb-contrast: #000000;
+		--ion-color-verb-contrast-rgb: 0,0,0;
+		--ion-color-verb-shade: #F20C0C;
+		--ion-color-verb-tint: #FF0000;
 
-		--ion-color-preverb: #5f187f;
-		--ion-color-preverb-rgb: 95,24,127;
-		--ion-color-preverb-contrast: #FFFFFF;
-		--ion-color-preverb-contrast-rgb: 255,255,255;
-		--ion-color-preverb-shade: #5C1F77;
-		--ion-color-preverb-tint: #611086;
-
-		--ion-color-tense: #982d80;
-		--ion-color-tense-rgb: 152,45,128;
-		--ion-color-tense-contrast: #000000;
-		--ion-color-tense-contrast-rgb: 0,0,0;
-		--ion-color-tense-shade: #8E367A;
-		--ion-color-tense-tint: #A12385;
-
-		--ion-color-mode: #d3436e;
-		--ion-color-mode-rgb: 211,67,110;
-		--ion-color-mode-contrast: #000000;
-		--ion-color-mode-contrast-rgb: 0,0,0;
-		--ion-color-mode-shade: #C74E72;
-		--ion-color-mode-tint: #DE3769;
-
-		--ion-color-subject: #f8765c;
-		--ion-color-subject-rgb: 248,118,92;
+		--ion-color-subject: #0000ff;
+		--ion-color-subject-rgb: 0,0,255;
 		--ion-color-subject-contrast: #000000;
 		--ion-color-subject-contrast-rgb: 0,0,0;
-		--ion-color-subject-shade: #EF7B64;
-		--ion-color-subject-tint: #FE7155;
+		--ion-color-subject-shade: #0C0CF2;
+		--ion-color-subject-tint: #0000FF;
 
-		--ion-color-object: #febb81;
-		--ion-color-object-rgb: 254,187,129;
-		--ion-color-object-contrast: #000000;
-		--ion-color-object-contrast-rgb: 0,0,0;
-		--ion-color-object-shade: #F7BB87;
-		--ion-color-object-tint: #FFBA80;
+		--ion-color-option: #ffffff;
+		--ion-color-option-rgb: 255,255,255;
+		--ion-color-option-contrast: #000000;
+		--ion-color-option-contrast-rgb: 0,0,0;
+		--ion-color-option-shade: #FFFFFF;
+		--ion-color-option-tint: #FFFFFF;
 }
 
 .ion-color-verb {
@@ -141,33 +120,6 @@
 	--ion-color-tint: var(--ion-color-verb-tint);
 }
 
-.ion-color-preverb {
-	--ion-color-base: var(--ion-color-preverb);
-	--ion-color-base-rgb: var(--ion-color-preverb-rgb);
-	--ion-color-contrast: var(--ion-color-preverb-contrast);
-	--ion-color-contrast-rgb: var(--ion-color-preverb-contrast-rgb);
-	--ion-color-shade: var(--ion-color-preverb-shade);
-	--ion-color-tint: var(--ion-color-preverb-tint);
-}
-
-.ion-color-tense {
-	--ion-color-base: var(--ion-color-tense);
-	--ion-color-base-rgb: var(--ion-color-tense-rgb);
-	--ion-color-contrast: var(--ion-color-tense-contrast);
-	--ion-color-contrast-rgb: var(--ion-color-tense-contrast-rgb);
-	--ion-color-shade: var(--ion-color-tense-shade);
-	--ion-color-tint: var(--ion-color-tense-tint);
-}
-
-.ion-color-mode {
-	--ion-color-base: var(--ion-color-mode);
-	--ion-color-base-rgb: var(--ion-color-mode-rgb);
-	--ion-color-contrast: var(--ion-color-mode-contrast);
-	--ion-color-contrast-rgb: var(--ion-color-mode-contrast-rgb);
-	--ion-color-shade: var(--ion-color-mode-shade);
-	--ion-color-tint: var(--ion-color-mode-tint);
-}
-
 .ion-color-subject {
 	--ion-color-base: var(--ion-color-subject);
 	--ion-color-base-rgb: var(--ion-color-subject-rgb);
@@ -177,12 +129,12 @@
 	--ion-color-tint: var(--ion-color-subject-tint);
 }
 
-.ion-color-object {
-	--ion-color-base: var(--ion-color-object);
-	--ion-color-base-rgb: var(--ion-color-object-rgb);
-	--ion-color-contrast: var(--ion-color-object-contrast);
-	--ion-color-contrast-rgb: var(--ion-color-object-contrast-rgb);
-	--ion-color-shade: var(--ion-color-object-shade);
-	--ion-color-tint: var(--ion-color-object-tint);
+.ion-color-option {
+	--ion-color-base: var(--ion-color-option);
+	--ion-color-base-rgb: var(--ion-color-option-rgb);
+	--ion-color-contrast: var(--ion-color-option-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-option-contrast-rgb);
+	--ion-color-shade: var(--ion-color-option-shade);
+	--ion-color-tint: var(--ion-color-option-tint);
 }
 
