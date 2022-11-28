@@ -22,11 +22,16 @@ def main():
         JSON_path = "JSON/"
         colour_path = ""
     if args.order:
-        tree_order, conjugation_order = prepareInput(order_file)
+        tree_order, conjugation_order, colour_info = prepareInput(order_file)
     if args.tooltip:
         makeToolTips(tree_order, JSON_path)
     if args.colour:
-        ColourSelector(tree_order, colour_path)
+        if colour_info:
+            if len(colour_info) == 1 and "#" not in colour_info[0]:
+                colour_info = colour_info[0]
+            ColourSelector(tree_order, colour_path,colour_info)
+        else:
+            ColourSelector(tree_order, colour_path)
 
 
     buildFiles(input_file, tree_order, conjugation_order, JSON_path)
@@ -34,8 +39,8 @@ def main():
 
 
     print("Complete. See JSON folder.")
-
-    TESTS.runtests(JSON_path)
+    if args.test:
+        TESTS.runtests(JSON_path)
 
 
 def parseArgs():
@@ -51,6 +56,7 @@ def parseArgs():
     parser.add_argument("-tt", "--tooltip", dest="tooltip", default=False, help="Autogenerate tooltip json file", action="store_true")
     parser.add_argument("-c", "--colour", dest="colour", default=False, help="Autogenerate colours in scss file", action="store_true")
     parser.add_argument("--auto-place", dest="autoplace", default=False, help="Automatically places variable.scss and JSON folders in correct paths", action="store_true")
+    parser.add_argument("--test", dest="test", default=False, help="Runs basic tests about the created JSON files.", action="store_true")
 
     args = parser.parse_args()
 
@@ -98,6 +104,8 @@ def prepareInput(order_file):
     '''
     
     '''
+    conjugation_order = None
+    colour_info = None
 
     order_file = open(order_file, 'r')
     orders = order_file.readlines()
@@ -106,8 +114,11 @@ def prepareInput(order_file):
     if len(orders) >= 2:
         conjugation_order = orders[1].strip().split(',')
         conjugation_order = [x.strip().lower() for x in conjugation_order]
+    if len(orders) >= 3:
+        colour_info = orders[2].strip().split(',')
+        colour_info = [x.strip().lower() for x in colour_info]
 
-    return tree_order, conjugation_order
+    return tree_order, conjugation_order, colour_info
 
 
 def buildFiles(input_file, tree_order, conjugation_order, JSON_path):

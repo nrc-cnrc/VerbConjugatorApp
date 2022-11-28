@@ -17,11 +17,18 @@ class ColourSelector:
         self.hex_colours = hex_colours
         self.path = path
 
+
+
         if not self.hex_colours:
             self.chooseColours(len(self.categories))
 
         elif isinstance(self.hex_colours, str):
             self.chooseColours(len(self.categories), self.hex_colours)
+
+        else:
+            if len(self.categories) > len(self.hex_colours):
+                print("ERROR: {} colours provided but {} colours are required. SeaBorn palette 'rockert_r' will be used instead.".format(len(self.hex_colours), len(self.categories)))
+                self.chooseColours(len(self.categories))
 
         content = self.buildSCSSContents()
         self.writeToSCSS(content)
@@ -34,7 +41,8 @@ class ColourSelector:
         try:
             colours = sns.color_palette(palette, quant)
         except:
-            print("ERROR: '{}' is not a Seaborn palette. Palette 'rocker_r' used instead.\nSee https://seaborn.pydata.org/tutorial/color_palettes.html for more info on Seaborn Palettes. ")
+            print("ERROR: '{}' is not a Seaborn palette. Palette 'rocker_r' used instead.\nSee https://seaborn.pydata.org/tutorial/color_palettes.html for more info on Seaborn Palettes.".format(palette))
+            colours = sns.color_palette("rocket_r", quant)
         sns.palplot(colours)
         self.hex_colours = list(colours.as_hex())
 
@@ -66,7 +74,7 @@ class ColourSelector:
             tint = rgb2hex(tint[0], tint[1], tint[2], normalised=True)
             root['tint']['hex'] = root['tint']['hex'].format(cat, tint)
             
-            shade = hls2rgb(c[0], c[1], c[2]-.1)
+            shade = hls2rgb(c[0], c[1], max(c[2]-.1, 0))
             shade = rgb2hex(shade[0], shade[1], shade[2], normalised=True)
             root['shade']['hex'] = root['shade']['hex'].format(cat, shade)
 
