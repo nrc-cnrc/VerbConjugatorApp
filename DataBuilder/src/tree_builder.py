@@ -6,7 +6,7 @@ import numpy
 
 class TreeBuilder:
 
-    def __init__(self, input_dict, output_file, keys, path):
+    def __init__(self, input_dict, output_file, keys, path, case="l"):
         """Class takes a list of dictionaries and creates a tree data structure through dictionaries.
         Calls tree builder function.
 
@@ -19,6 +19,7 @@ class TreeBuilder:
         self.output_file = output_file
         self.keys = keys
         self.path = path
+        self.case = case
         self.toTree()
         self.duplicates = set()
         
@@ -62,7 +63,13 @@ class TreeBuilder:
         
         if verb[self.keys[index]] not in tree: # If this node is not currently at this level, add it
             if index == (len(self.keys) - 1): # if current level is the last level
-                tree.append(verb[self.keys[index]]) # add it to the last level list
+                if self.case == "u":
+                    base = verb[self.keys[index]].upper()
+                elif self.case == "t":
+                    base = verb[self.keys[index]][0].upper()+verb[self.keys[index]][1:]
+                else:
+                    base = verb[self.keys[index]]
+                tree.append(base) # add it to the last level list
                 return # move on to next verb
 
             elif index == (len(self.keys) - 2): # else if current level is second last level

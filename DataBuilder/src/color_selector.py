@@ -47,6 +47,16 @@ class ColourSelector:
         self.hex_colours = list(colours.as_hex())
 
 
+    def contrast(self, hex_str):
+
+        (R, G, B) = (hex_str[1:3], hex_str[3:5], hex_str[5:])
+
+        if 1 - (int(R, 16) * 0.299 + int(G, 16) * 0.587 + int(B, 16) * 0.114) / 255< 0.5:
+            return "#000"
+        else: 
+            return "#fff"
+
+
     def buildSCSSContents(self):
         '''
         
@@ -64,9 +74,9 @@ class ColourSelector:
             formatrgb = "{},{},{}".format(rgb[0],rgb[1],rgb[2])
             root["color"]["rgb"] = root["color"]["rgb"].format(cat, formatrgb)
 
-
-            root["contrast"]["hex"] = root["contrast"]["hex"].format(cat, '#000000')
-            root["contrast"]["rgb"] = root["contrast"]["rgb"].format(cat, '0,0,0')
+            contrast_colour = self.contrast(colour)
+            root["contrast"]["hex"] = root["contrast"]["hex"].format(cat, contrast_colour)
+            root["contrast"]["rgb"] = root["contrast"]["rgb"].format(cat, hex2rgb(contrast_colour))
 
             c = rgb2hls(rgb[0], rgb[1], rgb[2], normalised=False)
             tint = hls2rgb(c[0], c[1], min(c[2]+.1,1,1))
