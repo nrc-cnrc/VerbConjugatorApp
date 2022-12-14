@@ -115,7 +115,15 @@ export class ConjugatorPage implements OnInit {
       n = this.selectedPath[prev_pos].getChild(selected.id);
     }
     this.updateNodePath(n, pos);
-    this.updateInformation(index+1, pos)
+    console.log("index", index);
+    console.log("this.information.length", this.information.length);
+    if (index+1 >= this.information.length){
+      this.Conjugate();
+    }
+    else{
+      this.updateInformation(index+1, pos);
+    }
+    
   }
 
 
@@ -206,12 +214,10 @@ export class ConjugatorPage implements OnInit {
     for (let r = 0; r < results.length; r++){
       let rstr = results[r].toString();
       rstr = rstr.replace(/'/g, '"');
-      let upper = rstr.toUpperCase();
-      console.log("upper", upper);
       
-      coloured += upper;
+      coloured += rstr;
       // coloured += this.colourCode(rstr);
-      // coloured += "<br>"
+      coloured += "<br>";
 
     }
     

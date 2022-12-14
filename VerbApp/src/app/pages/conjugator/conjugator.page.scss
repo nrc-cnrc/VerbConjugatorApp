@@ -5,9 +5,13 @@
   font-size: 250%;
   letter-spacing: 2px;
   text-align: center;
-  padding-bottom: 40%;
+  padding-bottom: 5%;
   padding-top: 5%;
   margin:0%;
+}
+
+ion-popover{
+  --backdrop-opacity: 0.6;
 }
 
 ion-item{
@@ -85,7 +89,8 @@ ion-card-content{
 }
 
 ion-card{
-  margin: 8px 8px;
+  margin: 12px 12px;
+  border-radius: 10px;
 }
 
 ion-button{
