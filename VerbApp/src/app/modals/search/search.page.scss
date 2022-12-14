@@ -92,36 +92,28 @@ ion-item.active-item{
     margin: 10px 0px !important;
 }
 
-ion-footer{
-    padding: 5px;
-}
+// ion-footer{
+//     padding: 5px;
+    // text-align: center;
+// }
 
 ion-header{
     padding: 2% 5%;
 }
 
-ion-button.cancel{
-    color: white;
-    font-weight: bold;
-    --border-color: white !important;
-    --border-width: 2px !important;
-    --border-radius: 0 !important;
-    width: 45%;
-    font-size: 20px;
-    text-transform:none!important;
-    height: 80%;
-    background-color: var(--holder) ;
-}
+// .btn-wrapper{
+//     text-align: center;
+// }
 
-ion-button.select{
-    background-color: white;
+ion-button.cancel{
+    --background: white !important;
+    --background-hover: #EDEDED;
+    --background-hover-opacity: 1 !important;
     font-weight: bold;
-    width: 45%;
-    height: 80%;
-    margin-left: 7%;
     font-size: 20px;
     text-transform:none!important;
     color: var(--holder);
+    float: right;
 }
 
 div.left ion-label{

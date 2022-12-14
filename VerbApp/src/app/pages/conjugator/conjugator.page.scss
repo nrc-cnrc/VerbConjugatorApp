@@ -89,15 +89,24 @@ ion-card-content{
 }
 
 ion-card{
-  margin: 12px 12px;
+  margin: 12px;
   border-radius: 10px;
+  box-shadow: none;
+}
+
+ion-card.active{
+  margin: 5px;
+  box-shadow:5px 10px 18px #888888;
 }
 
 ion-button{
   height: 80px;
   width: 160px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
+  --background:#211C1E;
+  color:var(--ion-color-background);
+  text-transform:none!important;
 }
 
 .error{

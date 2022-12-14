@@ -30,6 +30,9 @@ export class ConjugatorPage implements OnInit {
   selectedValues: any[];
   morph_colours = {"verb": "#db5f57", "person":"#5f57db", "tense": "#57db5f", "preverb": "#d3db57", "spelling": "blue", "mode":"#57d3db"}
   automaticClose = false;
+
+
+  currentIndex = 0;
   information: Array<grammarCat> = [];
   myFunInformation$ = new BehaviorSubject(this.information);
   selectedOptions: { [id: string]: { translation, id, base } } = {};
@@ -115,12 +118,12 @@ export class ConjugatorPage implements OnInit {
       n = this.selectedPath[prev_pos].getChild(selected.id);
     }
     this.updateNodePath(n, pos);
-    console.log("index", index);
-    console.log("this.information.length", this.information.length);
     if (index+1 >= this.information.length){
+      this.currentIndex = -1;
       this.Conjugate();
     }
     else{
+      this.currentIndex = index + 1;
       this.updateInformation(index+1, pos);
     }
     
@@ -247,7 +250,7 @@ export class ConjugatorPage implements OnInit {
           this.selectedOptions[whichSearch].base = dataReturned.data.base;
           this.updateDisabled(whichSearch,index);
           this.updatePath(whichSearch,index, dataReturned.data);
-          let id = this.information[index + 1].name;
+          // let id = this.information[index + 1].name;
           // this.scroll(id);
         }
       }
@@ -305,6 +308,7 @@ export class ConjugatorPage implements OnInit {
     this.information[0].disabled=false;
     this.result = '';
     this.error = '';
+    this.currentIndex = 0;
     this.show_result = false;
     this.show_error = true;
     this.scrollToTop();

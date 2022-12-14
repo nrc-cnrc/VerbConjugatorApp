@@ -51,7 +51,8 @@ export class SearchPage implements OnInit {
       this.selectedItem = '';
       this.selectedItemID = '';
     }
-    this.selectAbled()
+    this.selectAbled();
+    this.closeModalWithData(); 
     
   }
 
