@@ -42,7 +42,7 @@ This project uses the following packages:
 ## Make Your Own App - Quick Start
 
 ### Assumptions 
-This quick start guide assumes you have installed docker and docker-compose and have a working familiarity with the command line. 
+This quick start guide assumes you have installed docker, docker-compose, python3, and pip3 and have a working familiarity with the command line. 
 
 
 -----------
@@ -96,6 +96,29 @@ c. Navigate to the DataBuilder directory
 
 ``cd DataBuilder``
 
-d. Install
+d. Install python requirements
+
+``pip install -r requirements.txt``
+
+e. Create and autoplace JSON files using the following command
+
+``python src/main.py -f langs/[your language]/[your language file].csv -o langs/[your language]/[your order file].csv -tt -c --auto-place``
+
+replacing [your language] with the folder you created in step 3.a, [your language file] with the file in step 1, and [your order file] with the file created in step 1.
+
+For example, to build the French example, this command is ran:
+``python src/main.py -f langs/french/inputfile_fr.csv -o langs/french/order_fr.csv -tt -c --auto-place``
+
+### Step 4: Spin up your new conjugation website
+a. Navigate to the ./VerbApp directory
+``cd ./VerbApp``
+
+b. Build and spin up the web application using docker-compose
+`` docker-compose up --build ``
+
+c. Open your preferred website and navigate to ``localhost:8080`` to see your website.
+
+### Congrats! You just created your own Verb App. 
+For more personalization options, see the READMEs in the DataBuilder and VerbApp directories. [NOT AVAILABLE YET]
 
 
