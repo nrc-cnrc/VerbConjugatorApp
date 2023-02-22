@@ -1,13 +1,15 @@
 .result {
   color: white;
-  font: bold 70px Century Gothic, Arial;
+  font: bold Century Gothic, Arial;
   text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
-  font-size: 250%;
   letter-spacing: 2px;
   text-align: center;
-  padding-bottom: 40%;
-  padding-top: 5%;
-  margin:0%;
+  font-size: min(48px,max(5vw,22px));
+  margin:15px;
+}
+
+ion-popover{
+  --backdrop-opacity: 0.6;
 }
 
 ion-item{
@@ -19,12 +21,6 @@ ion-item{
   padding: 0px 15px !important;
 }
 
-.title {
-  font-size: 22px;
-  width: 50%;
-  color: white !important;
-}
-
 ion-icon {
   margin: 10px !important;
   font-size: 48px;
@@ -32,7 +28,6 @@ ion-icon {
   fill: white;
   // -webkit-filter: drop-shadow( 0 0 6px rgba(0, 0, 0, 1));
   // filter: drop-shadow( 0 0 3px rgba(0, 0, 0, 1));
-  
 }
 
 ion-icon:hover{
@@ -54,24 +49,31 @@ ion-icon:hover{
   fill: black;
 }
 
+div.selectedoption{
+  padding: 15px;
+  width: 100%;
+}
+
+ion-label.base{
+  font-weight:bold;
+  padding-bottom:5px;
+  padding-right: 3px;
+  padding-left:3px;
+}
+
+ion-label.translation{
+  font-style: italic;
+  padding-right: 3px;
+  padding-left:3px;
+}
+
 ion-label{
-  font-size: 16pt !important;
+  font-size: min(16pt,max(3vb,12pt)) !important;
   font-family: Helvetica;
   letter-spacing: 0.03em;
   color: white !important;
-  padding-left:5%;
-  width: 20px !important;
   font-weight: bold;
   text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
-}
-
-ion-label.english{
-  font-weight:bold;
-}
-
-ion-label.ling{
-  font-style: italic;
-  float: left;
 }
 
 ion-item.child{
@@ -85,14 +87,24 @@ ion-card-content{
 }
 
 ion-card{
-  margin: 8px 8px;
+  margin: 12px;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+ion-card.active{
+  margin: 5px;
+  box-shadow:5px 10px 18px #888888;
 }
 
 ion-button{
   height: 80px;
   width: 160px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
+  --background:#211C1E;
+  color:var(--ion-color-background);
+  text-transform:none!important;
 }
 
 .error{
@@ -108,10 +120,38 @@ ion-content{
   
 }
 
+ion-text{
+  display:none;
+}
+
+ion-text.active{
+  display: initial;
+  font-weight: bold;
+  text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
+  color: white !important;
+  font-size: min(18pt,max(7vi,12pt));
+}
+
 ion-card-title{
   font-weight: bold;
   text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
   letter-spacing: 2px !important;
   font-family: 'IBM Plex Sans',sans-serif;
-  font-size: 22pt !important;
+  // font-size: 22pt !important;
+  font-size: min(24pt,max(9vi,12pt));
+  width: 100% !important;
+  color: white !important;
+}
+
+ion-card-title.active{
+  font-size: min(30pt,max(10vi,12pt));
+}
+
+ion-card-title.chosen{
+  font-size: min(20pt,max(8vi,12pt));
+}
+
+div.titlecard{
+  width: 100%;
+  padding-left: 15px;
 }

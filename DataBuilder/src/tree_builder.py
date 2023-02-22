@@ -6,7 +6,7 @@ import numpy
 
 class TreeBuilder:
 
-    def __init__(self, input_dict, output_file, keys):
+    def __init__(self, input_dict, output_file, keys, path, case="l"):
         """Class takes a list of dictionaries and creates a tree data structure through dictionaries.
         Calls tree builder function.
 
@@ -18,6 +18,8 @@ class TreeBuilder:
         self.input_dict = input_dict
         self.output_file = output_file
         self.keys = keys
+        self.path = path
+        self.case = case
         self.toTree()
         self.duplicates = set()
         
@@ -32,14 +34,15 @@ class TreeBuilder:
         tree = {}
         if not self.keys:
             self.keys = list(self.input_dict[0].keys())
-
+        if len(self.keys) == 1:
+            tree = []
         for verb in self.input_dict: # Going through each dictionary in new list
             self.recursiveTree(tree, verb, 0)
 
-        if not os.path.exists('JSON'):
-            os.makedirs('JSON')
+        if not os.path.exists(self.path):
+            os.makedirs(self.path)
 
-        self.output_file = 'JSON/' + self.output_file
+        self.output_file = self.path + self.output_file
         with open(self.output_file, 'w') as json_file:
             json.dump(tree, json_file,indent=4, sort_keys=True)
 
@@ -61,7 +64,33 @@ class TreeBuilder:
         
         if verb[self.keys[index]] not in tree: # If this node is not currently at this level, add it
             if index == (len(self.keys) - 1): # if current level is the last level
-                tree.append(verb[self.keys[index]]) # add it to the last level list
+                if self.case == "u":
+                    base = verb[self.keys[index]].upper()
+                elif self.case == "t":
+                    base = verb[self.keys[index]][0].upper()+verb[self.keys[index]][1:]
+                else:
+                    base = verb[self.keys[index]]
+                
+                # if len(tree) != 0 and "text" in verb:
+                #     if verb["text"].startswith("ê-"):
+                #         if not (tree[0].startswith("ki") or tree[0].startswith("ni")) and "2" in verb['concept']:
+                #             tree.insert(0, base)
+                #         else:
+                #             tree.insert(1,base)
+                #     elif not (base.startswith("ki") or base.startswith("ni")) and "2" in verb['concept']:
+                #         tree.append(base)
+                #     else:
+                #         tree.insert(0,base)
+                    
+                        
+                # else:
+                # if "text" in verb:
+                #     if not base.startswith("<SPAN>"):
+                #         base = base[0].upper() + base[1:].lower()
+
+                tree.append(base) # add it to the last level list
+                # tree.sort()
+                
                 return # move on to next verb
 
             elif index == (len(self.keys) - 2): # else if current level is second last level

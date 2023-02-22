@@ -37,8 +37,10 @@ RUN npm install
 # Copy app contents from the root directory to app directory.
 COPY ./ /app/
 
+
 # Translation of ng build –prod. It creates a www folder of our project, which we will be using to deploy to nginx.
 RUN npm run-script build
+
 
 #FROM here is the base image to run application (nginx)
 FROM nginx:alpine
@@ -46,5 +48,14 @@ FROM nginx:alpine
 # Remove everything from nginx html and replace it with app build www/ folder
 RUN rm -rf /usr/share/nginx/html/*
 
+
+
+
+RUN rm -rf /usr/share/nginx/html/* && rm -rf /etc/nginx/nginx.conf
+COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /app/www/ /usr/share/nginx/html/
-# COPY ./.nginx/nginx.conf /etc/nginx/nginx.conf
+
+
+
+
+

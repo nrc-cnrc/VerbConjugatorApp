@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AccordianComponent } from './accordian/accordian.component';
 import { IonicModule } from '@ionic/angular';
 
 
 
 @NgModule({
-  declarations: [AccordianComponent],
+  declarations: [],
   imports: [
     CommonModule, 
     IonicModule
   ], 
-  exports: [AccordianComponent]
+  exports: []
 })
 export class SharedComponentsModule {}
