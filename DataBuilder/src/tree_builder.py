@@ -34,7 +34,8 @@ class TreeBuilder:
         tree = {}
         if not self.keys:
             self.keys = list(self.input_dict[0].keys())
-
+        if len(self.keys) == 1:
+            tree = []
         for verb in self.input_dict: # Going through each dictionary in new list
             self.recursiveTree(tree, verb, 0)
 
@@ -69,7 +70,27 @@ class TreeBuilder:
                     base = verb[self.keys[index]][0].upper()+verb[self.keys[index]][1:]
                 else:
                     base = verb[self.keys[index]]
+                
+                # if len(tree) != 0 and "text" in verb:
+                #     if verb["text"].startswith("ê-"):
+                #         if not (tree[0].startswith("ki") or tree[0].startswith("ni")) and "2" in verb['concept']:
+                #             tree.insert(0, base)
+                #         else:
+                #             tree.insert(1,base)
+                #     elif not (base.startswith("ki") or base.startswith("ni")) and "2" in verb['concept']:
+                #         tree.append(base)
+                #     else:
+                #         tree.insert(0,base)
+                    
+                        
+                # else:
+                # if "text" in verb:
+                #     if not base.startswith("<SPAN>"):
+                #         base = base[0].upper() + base[1:].lower()
+
                 tree.append(base) # add it to the last level list
+                # tree.sort()
+                
                 return # move on to next verb
 
             elif index == (len(self.keys) - 2): # else if current level is second last level

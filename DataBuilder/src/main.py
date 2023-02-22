@@ -129,11 +129,11 @@ def buildFiles(input_file, tree_order, conjugation_order, JSON_path):
     c2d = CSVtoDict(input_file=input_file, order=tree_order)
     dict_list, attr_dict_list = c2d.execute()
     tb = TreeBuilder(dict_list, "category_tree.json", tree_order, JSON_path)
-    ob = OptionBuilder(attr_dict_list, tree_order, JSON_path, case="l")
+    ob = OptionBuilder(attr_dict_list, tree_order, JSON_path, case="t")
 
     c2d = CSVtoDict(input_file=input_file, order=conjugation_order)
     dict_list, attr_dict_list = c2d.execute()
-    tb = TreeBuilder(dict_list, "conjugation.json", conjugation_order, JSON_path, case="l")
+    tb = TreeBuilder(dict_list, "conjugation.json", conjugation_order, JSON_path, case="t")
 
 
 def reorderJSON(conjugation_order, path):

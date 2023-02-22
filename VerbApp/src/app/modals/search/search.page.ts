@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController, Platform } from '@ionic/angular';
 import * as Information from '../../../assets/JSON/information.json';
+import { VerbTooltipPage } from '../../modals/verb-tooltip/verb-tooltip.page';
 
 
 @Component({
@@ -27,13 +28,8 @@ export class SearchPage implements OnInit {
   constructor(private modalController: ModalController) {}
 
   ngOnInit() {
-    console.log("this.options", this.options);
+
     this.matches = this.options;
-    if (this.conj_type == "subject" || this.conj_type == "object"){
-      this.matches.sort((a, b) => (a.id > b.id) ? 1 : -1);
-    }else{
-      this.matches.sort((a, b) => (a.translation > b.translation) ? 1 : -1);
-    }
     this.formatSelected();
     for (let item of this.matches){
       if (item.type_color == ""){
@@ -130,6 +126,23 @@ export class SearchPage implements OnInit {
     } else {
       this.matches = this.options;
     }
+  }
+
+  async openModalToolTip(whichtip) {
+    // with data
+    const modal = await this.modalController.create({
+      
+      component: VerbTooltipPage,
+      componentProps: {
+        'conj_type':whichtip
+      }
+      
+    });
+    modal.onWillDismiss().then(dataReturned => {
+    });
+
+    return await modal.present().then(_ => {
+    });
   }
 }
 

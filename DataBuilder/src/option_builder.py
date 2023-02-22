@@ -90,14 +90,15 @@ class OptionBuilder:
 
     def orderOptions(self, attrdicts):
         orders = {"concept":
-        ["1sgnone", "1sgni3sg", "1sg3sg", 
-        "2sgnone", "2sgni3sg", "2sg3sg",
-        "3sgnone", "3sgni3sg", "3sg3'",
-        "1plnone", "1plni3sg", "1pl3sg",
-        "2plnone", "2plni3sg", "2pl3sg",
-        "3plnone", "3plni3sg", "3pl3'",
-        "2inone", "2ini3sg", "2i3sg",
-        "3'none", "3'ni3sg", "3'3'"]
+        ["none1sg", "ni3sg1sg", "vaitni3sg1sg", "1sg3sg", 
+        "none2sg", "ni3sg2sg", "vaitni3sg2sg", "2sg3sg",
+        "none3sg", "ni3sg3sg", "vaitni3sg3sg", "3sg3'",
+        "none1pl", "ni3sg1pl", "vaitni3sg1pl", "1pl3sg",
+        "none2pl", "ni3sg2pl", "vaitni3sg2pl", "2pl3sg",
+        "none3pl", "ni3sg3pl", "vaitni3sg3pl", "3pl3'",
+        "none2i", "ni3sg2i", "vaitni3sg2i", "2i3sg",
+        "none3'", "ni3sg3'","vaitni3sg3'", "3'3'",
+        "onone", "opnone", "o'none", "o'pnone"]
         }
 
         if attrdicts["name"] in orders:
@@ -109,6 +110,8 @@ class OptionBuilder:
                         break
             neworder += attrdicts["children"]
             attrdicts["children"] = neworder
+        if attrdicts["name"] == "verb":
+            attrdicts["children"] = sorted(attrdicts["children"], key=lambda d: d['base']) 
 
         return attrdicts
        

@@ -89,26 +89,26 @@
     --ion-color-background-tint: #f9f7f3;
 
 
-		--ion-color-verb: #3e356b;
-		--ion-color-verb-rgb: 62,53,107;
-		--ion-color-verb-contrast: #fff;
-		--ion-color-verb-contrast-rgb: (255, 255, 255);
-		--ion-color-verb-shade: #433C63;
-		--ion-color-verb-tint: #382C73;
+		--ion-color-verb: #f4865e;
+		--ion-color-verb-rgb: 244,134,94;
+		--ion-color-verb-contrast: #000;
+		--ion-color-verb-contrast-rgb: (0, 0, 0);
+		--ion-color-verb-shade: #EB8A66;
+		--ion-color-verb-tint: #FC8155;
 
-		--ion-color-tense: #357ba3;
-		--ion-color-tense-rgb: 53,123,163;
-		--ion-color-tense-contrast: #fff;
-		--ion-color-tense-contrast-rgb: (255, 255, 255);
-		--ion-color-tense-shade: #3F7898;
-		--ion-color-tense-tint: #2A7DAD;
+		--ion-color-subject: #ca1a50;
+		--ion-color-subject-rgb: 202,26,80;
+		--ion-color-subject-contrast: #fff;
+		--ion-color-subject-contrast-rgb: (255, 255, 255);
+		--ion-color-subject-shade: #BE2554;
+		--ion-color-subject-tint: #D50E4B;
 
-		--ion-color-subject: #4bc2ad;
-		--ion-color-subject-rgb: 75,194,173;
-		--ion-color-subject-contrast: #000;
-		--ion-color-subject-contrast-rgb: (0, 0, 0);
-		--ion-color-subject-shade: #57B5A5;
-		--ion-color-subject-tint: #3ECEB4;
+		--ion-color-option: #601f52;
+		--ion-color-option-rgb: 96,31,82;
+		--ion-color-option-contrast: #fff;
+		--ion-color-option-contrast-rgb: (255, 255, 255);
+		--ion-color-option-shade: #59254E;
+		--ion-color-option-tint: #661855;
 }
 
 .ion-color-verb {
@@ -120,15 +120,6 @@
 	--ion-color-tint: var(--ion-color-verb-tint);
 }
 
-.ion-color-tense {
-	--ion-color-base: var(--ion-color-tense);
-	--ion-color-base-rgb: var(--ion-color-tense-rgb);
-	--ion-color-contrast: var(--ion-color-tense-contrast);
-	--ion-color-contrast-rgb: var(--ion-color-tense-contrast-rgb);
-	--ion-color-shade: var(--ion-color-tense-shade);
-	--ion-color-tint: var(--ion-color-tense-tint);
-}
-
 .ion-color-subject {
 	--ion-color-base: var(--ion-color-subject);
 	--ion-color-base-rgb: var(--ion-color-subject-rgb);
@@ -136,5 +127,14 @@
 	--ion-color-contrast-rgb: var(--ion-color-subject-contrast-rgb);
 	--ion-color-shade: var(--ion-color-subject-shade);
 	--ion-color-tint: var(--ion-color-subject-tint);
+}
+
+.ion-color-option {
+	--ion-color-base: var(--ion-color-option);
+	--ion-color-base-rgb: var(--ion-color-option-rgb);
+	--ion-color-contrast: var(--ion-color-option-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-option-contrast-rgb);
+	--ion-color-shade: var(--ion-color-option-shade);
+	--ion-color-tint: var(--ion-color-option-tint);
 }
 

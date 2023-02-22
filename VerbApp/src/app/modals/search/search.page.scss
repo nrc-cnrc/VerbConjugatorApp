@@ -114,6 +114,7 @@ ion-button.cancel{
     text-transform:none!important;
     color: var(--holder);
     float: right;
+    margin: 10px;
 }
 
 div.left ion-label{
@@ -166,3 +167,31 @@ div.right{
     width: 70%;
     height: 100%;
 }
+
+
+.overlapping {
+    position: relative;
+}
+
+.desous{
+    position: absolute;
+}
+
+.desus{
+    color: black;
+    fill: black;
+}
+
+ion-icon {
+    margin: 10px !important;
+    font-size: 48px;
+    color: white;
+    fill: white;
+    // -webkit-filter: drop-shadow( 0 0 6px rgba(0, 0, 0, 1));
+    // filter: drop-shadow( 0 0 3px rgba(0, 0, 0, 1));
+}
+
+ion-icon:hover{
+    border-radius: 50%;
+    box-shadow: 0 0 0 7px rgba($color: #2B2B2B, $alpha: 0.1) inset;
+  }

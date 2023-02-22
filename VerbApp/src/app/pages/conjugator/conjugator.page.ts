@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import {Clipboard} from '@angular/cdk/clipboard';
 import { ModalController } from '@ionic/angular';
 import { DataService } from '../../services/data.service';
 import { grammarCatItem } from '../../models/grammar-cat-item.model';
@@ -118,12 +119,11 @@ export class ConjugatorPage implements OnInit {
       n = this.selectedPath[prev_pos].getChild(selected.id);
     }
     this.updateNodePath(n, pos);
+    this.currentIndex = index + 1;
     if (index+1 >= this.information.length){
-      this.currentIndex = -1;
       this.Conjugate();
     }
     else{
-      this.currentIndex = index + 1;
       this.updateInformation(index+1, pos);
     }
     
@@ -225,9 +225,8 @@ export class ConjugatorPage implements OnInit {
     }
     
     document.getElementById("result").innerHTML = coloured;
-    console.log(document.getElementById("result").innerHTML);
     this.result = coloured;
-    this.scroll("result");
+    this.scroll("clear");
     // this.scrollToBottom();
   }
 
