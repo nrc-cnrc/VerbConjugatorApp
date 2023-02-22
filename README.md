@@ -22,6 +22,8 @@ Afterwards, open your preferred internet browser and navigate to the following U
 
 If successful, you should see the following page:
 
+![image](https://user-images.githubusercontent.com/22920735/220707021-6e7778c1-eca7-40dd-8766-7d021d194f3d.png)
+
 
 
 ### Packages
