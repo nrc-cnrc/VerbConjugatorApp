@@ -55,20 +55,23 @@ div.selectedoption{
 }
 
 ion-label.base{
-  font-weight:bold;
+  // font-weight:bold;
+  font-size: min(18pt,max(4vb,14pt)) !important;
   padding-bottom:5px;
   padding-right: 3px;
   padding-left:3px;
 }
 
 ion-label.translation{
-  font-style: italic;
+  // font-style: italic;
+  font-size: min(15pt,max(3vb,12pt)) !important;
   padding-right: 3px;
   padding-left:3px;
+  padding-top: 5px;
 }
 
 ion-label{
-  font-size: min(16pt,max(3vb,12pt)) !important;
+  // font-size: min(16pt,max(3vb,12pt)) !important;
   font-family: Helvetica;
   letter-spacing: 0.03em;
   color: white !important;

@@ -10,13 +10,13 @@
   <ion-searchbar (keyup) = getResults($event) autocapitalize="none" show-cancel="true" class="ion-no-padding" color="white"></ion-searchbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="black">
 
-  <ion-list class="body" color="white" lines="inset">
+  <ion-list class="body" color="white" lines="full" [inset]="true">
     <ion-item button (click)=selectItem(item) class="entry" color="white" *ngFor='let item of matches' detail="false" [class.active-item] = "selectedItemID === item.id">
       <div class=right>
-        <ion-label class="ion-text-wrap top" color="{{item.type_color}}">{{item.base}}</ion-label>  
-        <ion-label class="ion-text-wrap bottom" color="{{item.type_color}}">{{item.translation}}</ion-label>
+        <ion-label class="ion-text-wrap top" color="{{item.type_color}}"><pre>{{item.base}}</pre></ion-label>  
+        <ion-label class="ion-text-wrap bottom" color="{{item.type_color}}"><pre>{{item.translation}}</pre></ion-label>
       </div>
     </ion-item>
   </ion-list>

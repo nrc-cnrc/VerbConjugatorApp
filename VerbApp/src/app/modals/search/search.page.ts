@@ -32,6 +32,7 @@ export class SearchPage implements OnInit {
     this.matches = this.options;
     this.formatSelected();
     for (let item of this.matches){
+      console.log(item);
       if (item.type_color == ""){
         item.type_color = this.conj_type;
       }
