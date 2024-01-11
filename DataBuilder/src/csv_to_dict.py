@@ -43,7 +43,8 @@ class CSVtoDict:
         f = open(self.input_file, 'r')
         text = f.readlines()
         
-        lines = [line.lower() for line in text]
+        lines = [line for line in text]
+        # lines = [line.lower() for line in text]
         lines = [re.sub(r" ,", ",", line) for line in lines]
         lines = [re.sub(r", ", ",", line) for line in lines]
         self.input_file = self.input_file[:self.input_file.find(".csv")] + "_temp.csv"
@@ -101,7 +102,7 @@ class CSVtoDict:
             for o in primary:
                 if o not in headers:
                     print("------------------")
-                    print("[FATAL ERROR]\n{} - Invalid column name. Check order.csv file.".format(o))
+                    print("[FATAL ERROR]\n{} - Invalid column name. Check order file.".format(o))
                     mispelt = list()
                     for h in headers:
                         if textdistance.levenshtein(o, h) <=2:
