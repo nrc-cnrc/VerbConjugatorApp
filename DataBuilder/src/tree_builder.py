@@ -19,7 +19,7 @@ class TreeBuilder:
         self.output_file = output_file
         self.keys = keys
         self.path = path
-        self.case = case
+        self.case = "s"
         self.toTree()
         self.duplicates = set()
         
@@ -44,7 +44,7 @@ class TreeBuilder:
 
         self.output_file = self.path + self.output_file
         with open(self.output_file, 'w') as json_file:
-            json.dump(tree, json_file,indent=4, sort_keys=True)
+            json.dump(tree, json_file, sort_keys=True)
 
         return
 
