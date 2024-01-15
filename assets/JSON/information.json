@@ -1,0 +1,333 @@
+[
+    {
+        "name": "verb",
+        "children": [
+            {
+                "base": "A\u0301JET",
+                "id": "A\u0301JET",
+                "translation": "Wipe it",
+                "type": "transitive"
+            },
+            {
+                "base": "C\u0301A\u0301NEL",
+                "id": "C\u0301A\u0301NEL",
+                "translation": "Move",
+                "type": "intransitive"
+            },
+            {
+                "base": "C\u0301C\u0301SA\u0301LEK\u0331EN\u0331",
+                "id": "C\u0301C\u0301SA\u0301LEK\u0331EN\u0331",
+                "translation": "Follow",
+                "type": "intransitive"
+            },
+            {
+                "base": "C\u0301EK\u0301ET",
+                "id": "C\u0301EK\u0301ET",
+                "translation": "Burn it",
+                "type": "transitive"
+            },
+            {
+                "base": "C\u0301\u023a",
+                "id": "C\u0301\u023a",
+                "translation": "Work",
+                "type": "intransitive"
+            },
+            {
+                "base": "C\u0301\u023aSET",
+                "id": "C\u0301\u023aSET",
+                "translation": "Make self",
+                "type": "intransitive"
+            },
+            {
+                "base": "DILEM",
+                "id": "DILEM",
+                "translation": "Sing",
+                "type": "intransitive"
+            },
+            {
+                "base": "DIU\u00b8I\u00b8E\u023d",
+                "id": "DIU\u00b8I\u00b8E\u023d",
+                "translation": "Pray",
+                "type": "intransitive"
+            },
+            {
+                "base": "ELK\u0331ELO\u00b8",
+                "id": "ELK\u0331ELO\u00b8",
+                "translation": "Buy",
+                "type": "intransitive"
+            },
+            {
+                "base": "EMET",
+                "id": "EMET",
+                "translation": "Sit",
+                "type": "intransitive"
+            },
+            {
+                "base": "EN\u00b8A\u0301",
+                "id": "EN\u00b8A\u0301",
+                "translation": "Come",
+                "type": "intransitive"
+            },
+            {
+                "base": "EX\u0166INEN\u0331",
+                "id": "EX\u0166INEN\u0331",
+                "translation": "Shave",
+                "type": "intransitive"
+            },
+            {
+                "base": "HI\u00b8ELE\u023b",
+                "id": "HI\u00b8ELE\u023b",
+                "translation": "Happy",
+                "type": "intransitive"
+            },
+            {
+                "base": "IK\u0331OST",
+                "id": "IK\u0331OST",
+                "translation": "Dodge it",
+                "type": "transitive"
+            },
+            {
+                "base": "ITET",
+                "id": "ITET",
+                "translation": "Sleep",
+                "type": "intransitive"
+            },
+            {
+                "base": "I\u00b8A\u0301N\u023bES",
+                "id": "I\u00b8A\u0301N\u023bES",
+                "translation": "Brave",
+                "type": "intransitive"
+            },
+            {
+                "base": "I\u00b8IYME\u00b8",
+                "id": "I\u00b8IYME\u00b8",
+                "translation": "Clean",
+                "type": "intransitive"
+            },
+            {
+                "base": "JE\u023eOSTEL",
+                "id": "JE\u023eOSTEL",
+                "translation": "Hug",
+                "type": "intransitive"
+            },
+            {
+                "base": "KEWEN\u0331",
+                "id": "KEWEN\u0331",
+                "translation": "Howl",
+                "type": "intransitive"
+            },
+            {
+                "base": "KIQET",
+                "id": "KIQET",
+                "translation": "Bite",
+                "type": "intransitive"
+            },
+            {
+                "base": "QENET",
+                "id": "QENET",
+                "translation": "Look at it",
+                "type": "transitive"
+            },
+            {
+                "base": "QENO\u023d",
+                "id": "QENO\u023d",
+                "translation": "Gaze",
+                "type": "intransitive"
+            },
+            {
+                "base": "SA\u0301UT",
+                "id": "SA\u0301UT",
+                "translation": "Lie down",
+                "type": "intransitive"
+            },
+            {
+                "base": "SIX\u0331EN\u0331",
+                "id": "SIX\u0331EN\u0331",
+                "translation": "Wade",
+                "type": "intransitive"
+            },
+            {
+                "base": "S\u0301A\u0301MET",
+                "id": "S\u0301A\u0301MET",
+                "translation": "Dry it",
+                "type": "transitive"
+            },
+            {
+                "base": "W\u0331EC\u0301ET",
+                "id": "W\u0331EC\u0301ET",
+                "translation": "Wake it",
+                "type": "transitive"
+            },
+            {
+                "base": "W\u0331ITEN\u0331",
+                "id": "W\u0331ITEN\u0331",
+                "translation": "Jump",
+                "type": "intransitive"
+            },
+            {
+                "base": "W\u0331QET",
+                "id": "W\u0331QET",
+                "translation": "Pull it",
+                "type": "transitive"
+            },
+            {
+                "base": "W\u0331TK\u0331ET",
+                "id": "W\u0331TK\u0331ET",
+                "translation": "Close it",
+                "type": "transitive"
+            },
+            {
+                "base": "XA\u0301C\u0301ET",
+                "id": "XA\u0301C\u0301ET",
+                "translation": "Dry it",
+                "type": "transitive"
+            },
+            {
+                "base": "YA\u0301 \u0327",
+                "id": "YA\u0301 \u0327",
+                "translation": "Go",
+                "type": "intransitive"
+            },
+            {
+                "base": "\u023bENA\u0301N\u0331ET",
+                "id": "\u023bENA\u0301N\u0331ET",
+                "translation": "Help it",
+                "type": "transitive"
+            },
+            {
+                "base": "\u023bONEN\u0331ET",
+                "id": "\u023bONEN\u0331ET",
+                "translation": "Run",
+                "type": "intransitive"
+            },
+            {
+                "base": "\u023dEDO\u20adEN\u0331",
+                "id": "\u023dEDO\u20adEN\u0331",
+                "translation": "Snore",
+                "type": "intransitive"
+            },
+            {
+                "base": "\u023d\u023eET",
+                "id": "\u023d\u023eET",
+                "translation": "Cut it",
+                "type": "transitive"
+            },
+            {
+                "base": "\u20adELET",
+                "id": "\u20adELET",
+                "translation": "Cook it",
+                "type": "transitive"
+            }
+        ]
+    },
+    {
+        "name": "tense",
+        "children": [
+            {
+                "translation": "Future",
+                "base": "SE \u0327",
+                "id": "fut"
+            },
+            {
+                "translation": "Past",
+                "base": "LE \u0327",
+                "id": "past"
+            },
+            {
+                "translation": "Present",
+                "base": "-",
+                "id": "prs"
+            }
+        ]
+    },
+    {
+        "name": "subject",
+        "children": [
+            {
+                "base": "\u023dTE",
+                "id": "1pl",
+                "translation": "We"
+            },
+            {
+                "base": "SEN",
+                "id": "1sg",
+                "translation": "I"
+            },
+            {
+                "base": "SW\u0331 HA\u0301LE",
+                "id": "2pl",
+                "translation": "You folks"
+            },
+            {
+                "base": "SW\u0331",
+                "id": "2sg",
+                "translation": "You"
+            },
+            {
+                "base": "SW\u0331",
+                "id": "2sg",
+                "translation": "You"
+            },
+            {
+                "base": "ES",
+                "id": "3pl",
+                "translation": "They"
+            },
+            {
+                "base": "-",
+                "id": "3pl",
+                "translation": "They"
+            },
+            {
+                "base": "ES",
+                "id": "3sg",
+                "translation": "S/he/it"
+            },
+            {
+                "base": "-",
+                "id": "3sg",
+                "translation": "S/he/it"
+            }
+        ]
+    },
+    {
+        "name": "object",
+        "children": [
+            {
+                "base": "OL\u00b8W\u0331",
+                "id": "1pl",
+                "translation": "Us"
+            },
+            {
+                "base": "S",
+                "id": "1sg",
+                "translation": "Me"
+            },
+            {
+                "base": "SE HA\u0301LE",
+                "id": "2pl",
+                "translation": "You folks"
+            },
+            {
+                "base": "SE",
+                "id": "2sg",
+                "translation": "You"
+            },
+            {
+                "base": "",
+                "id": "3pl",
+                "translation": "Them"
+            },
+            {
+                "base": "",
+                "id": "3sg",
+                "translation": "Her/Him/It"
+            },
+            {
+                "base": "",
+                "id": "none",
+                "translation": "No object"
+            }
+        ]
+    }
+]
