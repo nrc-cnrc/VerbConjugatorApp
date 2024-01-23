@@ -3,7 +3,7 @@ import os, json
 import codecs
 import sys
 import fileinput
-import textdistance
+import textdistance, re
 
 class CSVtoDict:
 
@@ -41,9 +41,12 @@ class CSVtoDict:
 
     def cleanData(self):
         f = open(self.input_file, 'r')
-        text = f.read()
+        text = f.readlines()
         
-        lines = [line.lower() for line in text]
+        lines = [line for line in text]
+        # lines = [line.lower() for line in text]
+        lines = [re.sub(r" ,", ",", line) for line in lines]
+        lines = [re.sub(r", ", ",", line) for line in lines]
         self.input_file = self.input_file[:self.input_file.find(".csv")] + "_temp.csv"
         with open(self.input_file, 'w') as out:
             out.writelines(lines)
@@ -99,7 +102,7 @@ class CSVtoDict:
             for o in primary:
                 if o not in headers:
                     print("------------------")
-                    print("[FATAL ERROR]\n{} - Invalid column name. Check order.csv file.".format(o))
+                    print("[FATAL ERROR]\n{} - Invalid column name. Check order file.".format(o))
                     mispelt = list()
                     for h in headers:
                         if textdistance.levenshtein(o, h) <=2:

@@ -4,41 +4,61 @@
     <ion-row class="ion-no-margin ion-no-padding">
       <ion-col class="ion-no-margin ion-no-padding ion-text-center" size-sm="8" offset-sm="2" size-md="6" offset-md="3" size-xl="4" offset-xl="4">
 
-        <ion-card *ngFor="let item of information; let i = index;" color="{{item.name}}" lines="none" detail="false" no-padding>
+        <ion-card *ngFor="let item of information; let i = index;" [class.active]="currentIndex == i" color="{{item.name}}" lines="none" detail="false" disabled="{{item.disabled}}" no-padding>
           <!-- <div *ngSwitchCase="item.cat.length > 10 && item.name != 'verb'"> -->
           <div>
           <ion-card-content id="{{item.name}}">
             <ion-item color="{{item.name}}" lines="none">
-              <div class="overlapping">
+              <!-- <div id=alltooltip class="overlapping" style="margin-right: 10px;">
                 <ion-icon  id="tooltip" class ="bottom" name="help-circle-sharp" ></ion-icon>
                 <ion-icon (click)="openModalToolTip(item.name)" class ="top" name="help-circle-outline" ></ion-icon>
+              </div> -->
+              <div class="titlecard">
+                <ion-text [class.active]="currentIndex == i">Choose a </ion-text>
+                <ion-card-title [class.active]="currentIndex == i" [class.chosen]="currentIndex > i" class="title">{{item.name | titlecase}}</ion-card-title>
               </div>
-              <ion-card-title class="title">{{item.name | titlecase}}</ion-card-title>
             </ion-item>
           </ion-card-content>
 
           <ion-item (click)="openModalSearch(item.name, i)"  color="{{item.name}}" class="selected" disabled="{{item.disabled}}">
-            <div class="overlapping" slot="end">  
+            <div class="overlapping" slot="end" style="margin-left: 10px;">  
               <ion-icon class ="bottom" name="search-circle-sharp"></ion-icon>
               <ion-icon class ="top" name="search-circle-outline"></ion-icon>
             </div>
-            <ion-label style="font-style: italic; padding-top: 5px;">{{selectedOptions[item.name].base |titlecase}}   </ion-label><ion-label>{{selectedOptions[item.name].translation |titlecase}}</ion-label>
+            <div class="selectedoption">
+              <ion-label class="base">{{selectedOptions[item.name].base}}  </ion-label>
+              <ion-label class="translation">{{selectedOptions[item.name].translation }}</ion-label>
+            </div>
           </ion-item>
           </div>
         </ion-card>
   
-        <ion-button (click)=reset()>RESET</ion-button> <ion-button (click)=Conjugate()>CONJUGATE</ion-button>
+        
         <!-- <div *ngIf="show_error"> -->
           <div [hidden] = "!show_error">
           <p class="error" id="error">{{error}}</p>
         </div>
         <!-- <div *ngIf="show_result"> -->
-          <div [hidden] = "!show_result">
+          <!-- <div [hidden] = "!show_result">
           <p class="result" id="result">{{result}}</p>
-        </div>
+          <ion-button (click)=reset()>CLEAR</ion-button>
+        </div> -->
 
+      </ion-col>
+      
+    </ion-row>
+  </ion-grid>
+  <div [hidden] = "!show_result">
+    <p class="result" id="result">{{result}}</p>
+  </div>
+  
+  <ion-grid class="ion-no-margin ion-no-padding justify-content-center">
+    <ion-row class="ion-no-margin ion-no-padding">
+      <ion-col class="ion-no-margin ion-no-padding ion-text-center" size-sm="8" offset-sm="2" size-md="6" offset-md="3" size-xl="4" offset-xl="4">
+        <ion-button [hidden] = "!show_result" id="clear" (click)=reset()>CLEAR</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
+  
 
 </ion-content>

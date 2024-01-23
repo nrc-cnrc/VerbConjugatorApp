@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import {Clipboard} from '@angular/cdk/clipboard';
 import { ModalController } from '@ionic/angular';
 import { DataService } from '../../services/data.service';
 import { grammarCatItem } from '../../models/grammar-cat-item.model';
@@ -30,6 +31,9 @@ export class ConjugatorPage implements OnInit {
   selectedValues: any[];
   morph_colours = {"verb": "#db5f57", "person":"#5f57db", "tense": "#57db5f", "preverb": "#d3db57", "spelling": "blue", "mode":"#57d3db"}
   automaticClose = false;
+
+
+  currentIndex = 0;
   information: Array<grammarCat> = [];
   myFunInformation$ = new BehaviorSubject(this.information);
   selectedOptions: { [id: string]: { translation, id, base } } = {};
@@ -115,7 +119,14 @@ export class ConjugatorPage implements OnInit {
       n = this.selectedPath[prev_pos].getChild(selected.id);
     }
     this.updateNodePath(n, pos);
-    this.updateInformation(index+1, pos)
+    this.currentIndex = index + 1;
+    if (index+1 >= this.information.length){
+      this.Conjugate();
+    }
+    else{
+      this.updateInformation(index+1, pos);
+    }
+    
   }
 
 
@@ -206,17 +217,16 @@ export class ConjugatorPage implements OnInit {
     for (let r = 0; r < results.length; r++){
       let rstr = results[r].toString();
       rstr = rstr.replace(/'/g, '"');
-      console.log("rstr", rstr);
+      
       coloured += rstr;
       // coloured += this.colourCode(rstr);
-      // coloured += "<br>"
+      coloured += "<br>";
 
     }
     
     document.getElementById("result").innerHTML = coloured;
-    console.log(document.getElementById("result").innerHTML);
     this.result = coloured;
-    this.scroll("result");
+    this.scroll("clear");
     // this.scrollToBottom();
   }
 
@@ -239,7 +249,7 @@ export class ConjugatorPage implements OnInit {
           this.selectedOptions[whichSearch].base = dataReturned.data.base;
           this.updateDisabled(whichSearch,index);
           this.updatePath(whichSearch,index, dataReturned.data);
-          let id = this.information[index + 1].name;
+          // let id = this.information[index + 1].name;
           // this.scroll(id);
         }
       }
@@ -297,6 +307,7 @@ export class ConjugatorPage implements OnInit {
     this.information[0].disabled=false;
     this.result = '';
     this.error = '';
+    this.currentIndex = 0;
     this.show_result = false;
     this.show_error = true;
     this.scrollToTop();
