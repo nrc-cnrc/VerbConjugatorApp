@@ -21,3 +21,4 @@ jobs:
           uses: JamesIves/github-pages-deploy-action@v3
           with:
             folder: VerbApp/www
+            token:  ${{ github.token }}
