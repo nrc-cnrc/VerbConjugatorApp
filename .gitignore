@@ -129,6 +129,40 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# Default files
 DataBuilder/JSON
 VerbApp/src/assets/JSON/*
 DataBuilder/*.csv
+
+# Ionic Default .gitignore
+VerbApp/.angular/cache
+VerbApp/DS_Store
+
+VerbApp/*~
+VerbApp/*.sw[mnpcod]
+VerbApp/.tmp
+VerbApp/*.tmp
+VerbApp/*.tmp.*
+VerbApp/*.sublime-project
+VerbApp/*.sublime-workspace
+VerbApp/.DS_Store
+VerbApp/Thumbs.db
+VerbApp/UserInterfaceState.xcuserstate
+VerbApp/$RECYCLE.BIN/
+
+VerbApp/*.log
+VerbApp/log.txt
+VerbApp/npm-debug.log*
+
+VerbApp/.idea
+VerbApp/.ionic
+VerbApp/.sass-cache
+VerbApp/.sourcemaps
+VerbApp/.versions
+VerbApp/.vscode
+VerbApp/coverage
+VerbApp/dist
+VerbApp/node_modules
+VerbApp/platforms
+VerbApp/plugins
+VerbApp/www
