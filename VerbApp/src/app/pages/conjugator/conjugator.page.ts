@@ -313,5 +313,11 @@ export class ConjugatorPage implements OnInit {
     this.scrollToTop();
   }
 
+  playSound(){
+    let audio = new Audio();
+    audio.src = "../../../assets/audio/boing.wav"
+    audio.load();
+    audio.play();
+  }
 
 }

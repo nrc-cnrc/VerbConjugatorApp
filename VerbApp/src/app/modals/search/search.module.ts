@@ -17,4 +17,12 @@ import { SearchPage } from './search.page';
   ],
   declarations: [SearchPage]
 })
-export class SearchPageModule {}
+export class SearchPageModule {
+
+  playSound(){
+    let audio = new Audio();
+    audio.src = "../../../assets/audio/boing.wav"
+    audio.load();
+    audio.play();
+  }
+}

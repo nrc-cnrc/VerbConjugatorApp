@@ -49,7 +49,18 @@
     </ion-row>
   </ion-grid>
   <div [hidden] = "!show_result">
-    <p class="result" id="result">{{result}}</p>
+
+  <ion-grid class="ion-no-margin ion-no-padding justify-content-center">
+    <ion-row class="ion-no-margin ion-no-padding ion-align-items-center">
+      <ion-col class="ion-no-margin ion-no-padding ion-text-center" float-right>
+        <ion-icon name="volume-low-outline" class="audio-icon" (click)="playSound()">Play Sound</ion-icon>
+      </ion-col>
+      <ion-col class="ion-no-margin ion-no-padding ion-text-center">
+        <p class="result" id="result">{{result}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    <!-- <p class="result" id="result">{{result}}</p> -->
   </div>
   
   <ion-grid class="ion-no-margin ion-no-padding justify-content-center">
