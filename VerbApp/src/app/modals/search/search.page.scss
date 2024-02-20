@@ -42,6 +42,7 @@ ion-searchbar{
     height: 50px;
 };
 
+
 ion-item.entry{
     background-color: white;
     --inner-padding-end: 0px;
@@ -159,6 +160,8 @@ div.right .top{
     margin: 5px 0 0 0;
     line-height: 1.1;
     font-style: bold;
+    display:flex;
+    align-items: center;
 }
 
 
@@ -219,5 +222,6 @@ ion-icon:hover{
 .audio-icon {
     color: black;
     fill: black;
-    float: left;
+    // float: right;
+    font-size: 24px;
   }

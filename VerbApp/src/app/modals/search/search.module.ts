@@ -19,10 +19,4 @@ import { SearchPage } from './search.page';
 })
 export class SearchPageModule {
 
-  playSound(){
-    let audio = new Audio();
-    audio.src = "../../../assets/audio/boing.wav"
-    audio.load();
-    audio.play();
-  }
 }

@@ -38,7 +38,16 @@ export class SearchPage implements OnInit {
       }
     }
   }
-
+  // Plays the corresponding sound for a term
+  playSound(event){
+    // event.preventDefault();
+    event.stopPropagation();
+    let audio = new Audio();
+    audio.src = "../../../assets/audio/boing.wav"
+    audio.load();
+    audio.play();
+  }
+  
   // Logs clicked verb
   selectItem(v) {
     if(this.selectedItemID != v.id){
@@ -145,6 +154,7 @@ export class SearchPage implements OnInit {
     return await modal.present().then(_ => {
     });
   }
+
 }
 
 
