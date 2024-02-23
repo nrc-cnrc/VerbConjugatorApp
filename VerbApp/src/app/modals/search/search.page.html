@@ -1,11 +1,12 @@
 <meta charset="UTF-8">
 <ion-header>
   <ion-toolbar color="{{conj_type}}">
+    <ion-buttons slot="primary">
+      <ion-button (click)="openModalToolTip(conj_type)">
+        <ion-icon slot="icon-only" name="help-circle" class="help-icon">Open Help Modal</ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title class="ion-no-padding" text-center>Choose a {{conj_type | titlecase}}</ion-title>
-    <div id=alltooltip class="overlapping" style="margin-right: 10px;" slot="end">
-        <ion-icon  id="tooltip" class ="desous" name="help-circle-sharp" ></ion-icon>
-        <ion-icon (click)="openModalToolTip(conj_type)" class ="desus" name="help-circle-outline" ></ion-icon>
-    </div>
   </ion-toolbar>
   <ion-searchbar (keyup) = getResults($event) autocapitalize="none" show-cancel="true" class="ion-no-padding" color="white"></ion-searchbar>
 </ion-header>
@@ -14,10 +15,11 @@
   <ion-list class="body" color="white" lines="full" [inset]="true">
     <ion-item button (click)=selectItem(item) class="entry" color="white" *ngFor='let item of matches' detail="false" [class.active-item] = "selectedItemID === item.id">
       <div class=right>
-        <ion-label class="ion-text-wrap top" color="{{item.type_color}}">{{item.base}}
-          <ion-icon *ngIf="item.base" name="volume-low-outline" class="audio-icon" (click)="playSound($event)">Play Sound</ion-icon>
-        </ion-label>  
-
+        <div class="text-with-audio">
+          <ion-label class="ion-text-wrap top" color="{{item.type_color}}">{{item.base}}</ion-label> 
+          <!-- <fa-icon *ngIf="item.base" [icon]="['fas', 'volume-high']" class="audio-icon" background-color="{{item.type_color}}" (click)="playSound($event)"></fa-icon> -->
+          <ion-icon *ngIf="item.base" name="volume-high" class="audio-icon" (click)="playSound($event)" background-color="{{item.type_color}}">Play Sound</ion-icon>
+        </div>
         <ion-label class="ion-text-wrap bottom" color="{{item.type_color}}">{{item.translation}}</ion-label>
       </div>
     </ion-item>

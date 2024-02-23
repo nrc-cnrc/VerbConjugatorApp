@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 // import {Clipboard} from '@angular/cdk/clipboard';
 import { ModalController } from '@ionic/angular';
 import { DataService } from '../../services/data.service';
@@ -32,7 +32,6 @@ export class ConjugatorPage implements OnInit {
   morph_colours = {"verb": "#db5f57", "person":"#5f57db", "tense": "#57db5f", "preverb": "#d3db57", "spelling": "blue", "mode":"#57d3db"}
   automaticClose = false;
 
-
   currentIndex = 0;
   information: Array<grammarCat> = [];
   myFunInformation$ = new BehaviorSubject(this.information);
@@ -43,7 +42,6 @@ export class ConjugatorPage implements OnInit {
 
   ngOnInit() {
     this.information = JSON.parse(JSON.stringify(this.service.setinformation));
-
     this.myFunInformation$.subscribe(data =>{
       this.information = data;
     });
@@ -60,8 +58,6 @@ export class ConjugatorPage implements OnInit {
     });
     return 
   };
-
-
 
   getContent() {
     return document.querySelector('ion-content');
@@ -319,5 +315,7 @@ export class ConjugatorPage implements OnInit {
     audio.load();
     audio.play();
   }
+
+
 
 }

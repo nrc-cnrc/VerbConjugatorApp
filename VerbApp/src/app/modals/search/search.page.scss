@@ -12,17 +12,18 @@ ion-list{
     --border-color:#797979
 }
 
+ion-list.body{
+    margin: 20px;
+}
+
 ion-title{
     font-size: 24px !important;
-    padding: 5% 0 2% 0;
+    margin: 20px 25px;
     color: white !important;
     font-weight: bold;
     text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
 }
 
-ion-toolbar{
-    padding: 5px 15px;
-}
 
 ion-header{
     background-color: white;
@@ -31,11 +32,11 @@ ion-header{
 }
 
 ion-searchbar{
-    margin: 5px 5%;
+    margin: 5px 25px;
     border: 2px solid lightgrey;
     border-radius: 10px;
     color: white;
-    width: 90%;
+    width: auto;
     ion-icon{
             color:white !important;
     }
@@ -127,8 +128,15 @@ ion-button.cancel{
     color: var(--holder);
     float: right;
     margin: 10px;
+
+    
 }
 
+// ion-icon.cancel:hover{
+//     border-radius: 50%;
+//     box-shadow: 0 0 0 7px rgba($color: #2B2B2B, $alpha: 0.1) inset;
+//   }
+  
 div.left ion-label{
     bottom:0;
     position:absolute;
@@ -160,8 +168,7 @@ div.right .top{
     margin: 5px 0 0 0;
     line-height: 1.1;
     font-style: bold;
-    display:flex;
-    align-items: center;
+
 }
 
 
@@ -205,23 +212,54 @@ pre{
     fill: black;
 }
 
-ion-icon {
-    margin: 10px !important;
-    font-size: 48px;
-    color: white;
-    fill: white;
-    // -webkit-filter: drop-shadow( 0 0 6px rgba(0, 0, 0, 1));
-    // filter: drop-shadow( 0 0 3px rgba(0, 0, 0, 1));
-}
+// ion-icon {
+//     margin: 10px !important;
+//     font-size: 48px;
+//     color: white;
+//     fill: white;
+//     // -webkit-filter: drop-shadow( 0 0 6px rgba(0, 0, 0, 1));
+//     // filter: drop-shadow( 0 0 3px rgba(0, 0, 0, 1));
+// }
 
-ion-icon:hover{
+// ion-icon:hover{
+//     border-radius: 50%;
+//     box-shadow: 0 0 0 7px rgba($color: #2B2B2B, $alpha: 0.1) inset;
+//   }
+
+  // AUDIO ICON
+.audio-icon {
+    // background-color: #BDBDBD; // For background = grey
+    background-color: var(--holder); // For background = same as text
     border-radius: 50%;
-    box-shadow: 0 0 0 7px rgba($color: #2B2B2B, $alpha: 0.1) inset;
+    padding: 0.3em;
+    color: white;
+    opacity: 0.8;
+    margin: 10px;
+    // float: right;
+    font-size: 15px;
+
   }
 
-.audio-icon {
-    color: black;
-    fill: black;
-    // float: right;
-    font-size: 24px;
+  
+  .text-with-audio {
+    display:flex;
+    align-items: center;
+  }
+
+  // HELP ICON
+  .help-icon {
+    color: white; 
+    border-radius: 50%;
+    padding: 0.3em;
+    opacity: 0.8;
+    margin: 10px;
+  }
+
+  .icon-shadow {
+    box-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075);
   }

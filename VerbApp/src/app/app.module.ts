@@ -15,11 +15,17 @@ import { Network } from '@awesome-cordova-plugins/network/ngx';
 // import { IonicStorageModule } from '@ionic/storage';
 import { HttpClientModule } from '@angular/common/http';
 
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+
 @NgModule({
     declarations: [AppComponent],
     // imports: [AppRoutingModule, BrowserModule, IonicModule.forRoot(), HttpClientModule,
     //   IonicStorageModule.forRoot(), FormsModule, RouterModule],
-    imports: [AppRoutingModule, BrowserModule, IonicModule.forRoot(), HttpClientModule, FormsModule, RouterModule],
+    imports: [AppRoutingModule, BrowserModule, IonicModule.forRoot(), HttpClientModule, FormsModule, RouterModule, FontAwesomeModule],
     providers: [
         StatusBar,
         SplashScreen,
@@ -27,4 +33,10 @@ import { HttpClientModule } from '@angular/common/http';
     ],
     bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+
+	constructor(library: FaIconLibrary) { 
+		library.addIconPacks(fas, fab, far);
+	}
+
+}

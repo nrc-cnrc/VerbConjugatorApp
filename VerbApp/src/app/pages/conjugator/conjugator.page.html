@@ -22,8 +22,10 @@
 
           <ion-item (click)="openModalSearch(item.name, i)"  color="{{item.name}}" class="selected" disabled="{{item.disabled}}">
             <div class="overlapping" slot="end" style="margin-left: 10px;">  
-              <ion-icon class ="bottom" name="search-circle-sharp"></ion-icon>
-              <ion-icon class ="top" name="search-circle-outline"></ion-icon>
+              <!-- <fa-icon [icon]="['fas', 'magnifying-glass']" class="search-icon" color="{{item.name}}"></fa-icon> -->
+              <!-- <ion-icon class ="bottom" name="search-circle-sharp"></ion-icon>
+              <ion-icon class ="top" name="search-circle-outline"></ion-icon> -->
+              <ion-icon class ="search-icon icon-shadow" name="search-outline" color="{{item.name}}"></ion-icon>
             </div>
             <div class="selectedoption">
               <ion-label class="base">{{selectedOptions[item.name].base}}  </ion-label>
@@ -52,11 +54,13 @@
 
   <ion-grid class="ion-no-margin ion-no-padding justify-content-center">
     <ion-row class="ion-no-margin ion-no-padding ion-align-items-center ion-justify-content-center">
-      <ion-col class="ion-no-margin ion-no-padding ion-text-center">
-        <ion-icon name="volume-low-outline" class="audio-icon" (click)="playSound()">Play Sound</ion-icon>
-      </ion-col>
-      <ion-col class="ion-no-margin ion-no-padding ion-text-center">
+      <ion-col class="ion-no-margin ion-no-padding ion-text-center" size="auto">
+        <!-- <ion-icon name="volume-high-outline" class="audio-icon" (click)="playSound()">Play Sound</ion-icon> -->
         <p class="result" id="result">{{result}}</p>
+      </ion-col>
+      <ion-col class="ion-no-margin ion-no-padding ion-text-center" size="auto">
+        <!-- <p class="result" id="result">{{result}}</p> -->
+        <ion-icon name="volume-high-outline" class="audio-icon icon-shadow" (click)="playSound()">Play Sound</ion-icon>
       </ion-col>
     </ion-row>
   </ion-grid>
