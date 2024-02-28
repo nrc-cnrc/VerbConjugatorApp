@@ -4,7 +4,8 @@
 
 ion-title{
     font-size: 24px !important;
-    padding: 5% 0 2% 0;
+    // padding: 5% 0 2% 0;
+    margin: 20px 25px;
     color: white !important;
     font-weight: bold;
     text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
@@ -12,7 +13,7 @@ ion-title{
 
 ion-toolbar{
     background-color: var(--ion-color-verb);
-    padding: 5px 15px;
+    // padding: 5px 15px;
 }
 
 ion-header{
@@ -66,7 +67,7 @@ ion-content{
 }
 
 .description{
-    padding: 5%;
+    margin: 25px;
     font-weight: bold;
     font-size: 14pt;
 }

@@ -175,46 +175,43 @@ div.titlecard{
   padding-left: 15px;
 }
 
-  // SEARCH ICON
-  .search-icon { 
-    background-color: white;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 100px;
-    vertical-align: middle;
-    padding: 16px;
-  }
+// SEARCH ICON
+.search-icon { 
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100px;
+  vertical-align: middle;
+  padding: 16px;
+}
 
-  .icon-shadow {
-    box-shadow:
-    0 1px 1px hsl(0deg 0% 0% / 0.075),
-    0 2px 2px hsl(0deg 0% 0% / 0.075),
-    0 4px 4px hsl(0deg 0% 0% / 0.075),
-    0 8px 8px hsl(0deg 0% 0% / 0.075),
-    0 16px 16px hsl(0deg 0% 0% / 0.075);
-  }
+.icon-shadow {
+  box-shadow:
+  0 1px 1px hsl(0deg 0% 0% / 0.075),
+  0 2px 2px hsl(0deg 0% 0% / 0.075),
+  0 4px 4px hsl(0deg 0% 0% / 0.075),
+  0 8px 8px hsl(0deg 0% 0% / 0.075),
+  0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
 
-  .search-icon:hover {
-    border-radius: 50%;
-    box-shadow: 0 0 0 7px rgba($color: #2B2B2B, $alpha: 0.1) inset;
-  
-  }
+.search-icon:hover {
+  border-radius: 50%;
+  box-shadow: 0 0 0 7px rgba($color: #2B2B2B, $alpha: 0.1) inset;
 
-  .audio-icon {
-    color: white;
-    // fill: black;
-    // float: left;
+}
 
-    background-color: #000000;
-    opacity: 0.6;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 100px;
-    vertical-align: middle;
-    padding: 6px;
-  }
 
+// AUDIO ICON
+.audio-icon {
+  color: #ffffff;
+  background-color: #343a40;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100px;
+  vertical-align: middle;
+  padding: 8px;
+}

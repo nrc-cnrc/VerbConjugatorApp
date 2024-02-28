@@ -96,27 +96,14 @@ ion-item.active-item{
     box-shadow: 0px 0 2px black;
     padding: 0 5px !important;
     --min-height: 60px;
-    height: 10%;
+    // height: 10%; // Is there a reason for this? 
     background-color: var(--holder);
 }
-
-
-// .body {
-//     margin: 10px !important;
-// }
-
-// ion-footer{
-//     padding: 5px;
-    // text-align: center;
-// }
 
 ion-header{
     padding: 2% 5%;
 }
 
-// .btn-wrapper{
-//     text-align: center;
-// }
 
 ion-button.cancel{
     --background: white !important;
@@ -127,7 +114,7 @@ ion-button.cancel{
     text-transform:none!important;
     color: var(--holder);
     float: right;
-    margin: 10px;
+    margin: 15px 25px;
 
     
 }
@@ -233,9 +220,8 @@ pre{
     border-radius: 50%;
     padding: 0.3em;
     color: white;
-    opacity: 0.8;
+    opacity: 0.7;
     margin: 10px;
-    // float: right;
     font-size: 15px;
 
   }
