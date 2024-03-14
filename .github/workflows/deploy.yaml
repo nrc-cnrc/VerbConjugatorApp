@@ -2,7 +2,7 @@ name: Deploy Site
 on:
   push:
     branches:
-      - main
+      - auto_deploy
 jobs:
   build-and-deploy:
     #concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
@@ -18,6 +18,7 @@ jobs:
             npm install
             ionic build --prod  
         - name: Deploy 🚀
-          uses: JamesIves/github-pages-deploy-action@v4
+          uses: JamesIves/github-pages-deploy-action@v3
           with:
             folder: VerbApp/www
+            token:  ${{ github.token }}
