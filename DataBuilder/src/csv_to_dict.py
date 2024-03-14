@@ -43,7 +43,7 @@ class CSVtoDict:
         f = open(self.input_file, 'r')
         text = f.readlines()
         
-        lines = [line for line in text]
+        lines = [line.lower() for line in text]
         # lines = [line.lower() for line in text]
         lines = [re.sub(r" ,", ",", line) for line in lines]
         lines = [re.sub(r", ", ",", line) for line in lines]
