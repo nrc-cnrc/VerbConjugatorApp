@@ -8,13 +8,18 @@ import { SearchPageRoutingModule } from './search-routing.module';
 
 import { SearchPage } from './search.page';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SearchPageRoutingModule
+    SearchPageRoutingModule,
+    FontAwesomeModule
   ],
   declarations: [SearchPage]
 })
-export class SearchPageModule {}
+export class SearchPageModule {
+
+}

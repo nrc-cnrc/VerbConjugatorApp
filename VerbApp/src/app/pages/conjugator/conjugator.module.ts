@@ -13,6 +13,8 @@ import { VerbTooltipPage } from '../../modals/verb-tooltip/verb-tooltip.page';
 import { SearchPage } from '../../modals/search/search.page';
 import { SearchPageModule } from 'src/app/modals/search/search.module';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -21,7 +23,8 @@ import { SearchPageModule } from 'src/app/modals/search/search.module';
         ConjugatorPageRoutingModule,
         SharedComponentsModule,
         VerbTooltipPageModule,
-        SearchPageModule
+        SearchPageModule,
+        FontAwesomeModule
     ],
     declarations: [ConjugatorPage]
 })
