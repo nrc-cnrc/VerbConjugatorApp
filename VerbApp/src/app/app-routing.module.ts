@@ -22,6 +22,14 @@ const routes: Routes = [
     path: 'search',
     loadChildren: () => import('./modals/search/search.module').then( m => m.SearchPageModule)
   },
+  {
+    path: 'history',
+    loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
+  },
+  {
+    path: 'history',
+    loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
+  },
 ];
 
 @NgModule({

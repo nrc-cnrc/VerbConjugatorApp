@@ -1,17 +1,32 @@
 <ion-tabs>
 
-  <ion-tab-bar slot="top" class="background">
-
-    <ion-tab-button tab="about">
-      <ion-label>About</ion-label>
-    </ion-tab-button>
+  <ion-tab-bar slot="bottom" class="background">
 
     <ion-tab-button tab="conjugator">
-      <ion-label>Conjugator</ion-label>
+      <div class="menu-button">
+        <div class="menu-icon">
+          <ion-icon name="search-outline"></ion-icon>
+        </div>
+        <ion-label>Conjugator</ion-label>
+      </div>
+    </ion-tab-button>
+
+    <ion-tab-button tab="history">
+      <div class="menu-button">
+        <div class="menu-icon">
+          <ion-icon name="time-outline"></ion-icon>
+        </div>
+        <ion-label>History</ion-label>
+      </div>
     </ion-tab-button>
 
     <ion-tab-button tab="instructions">
-      <ion-label>How To Use</ion-label>
+      <div class="menu-button">
+        <div class="menu-icon">
+          <ion-icon name="information-circle-outline"></ion-icon>
+        </div>
+        <ion-label>Info</ion-label>
+      </div>
     </ion-tab-button>
 
   </ion-tab-bar>
