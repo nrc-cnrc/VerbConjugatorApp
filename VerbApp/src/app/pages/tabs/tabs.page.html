@@ -1,6 +1,40 @@
-<ion-tabs>
+<ion-tabs *ngIf="!isDesktop">
 
   <ion-tab-bar slot="bottom" class="background">
+
+    <ion-tab-button tab="conjugator">
+      <div class="menu-button">
+        <div class="menu-icon">
+          <ion-icon name="search-outline"></ion-icon>
+        </div>
+        <ion-label>Conjugator</ion-label>
+      </div>
+    </ion-tab-button>
+
+    <ion-tab-button tab="history">
+      <div class="menu-button">
+        <div class="menu-icon">
+          <ion-icon name="time-outline"></ion-icon>
+        </div>
+        <ion-label>History</ion-label>
+      </div>
+    </ion-tab-button>
+
+    <ion-tab-button tab="instructions">
+      <div class="menu-button">
+        <div class="menu-icon">
+          <ion-icon name="information-circle-outline"></ion-icon>
+        </div>
+        <ion-label>Info</ion-label>
+      </div>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
+
+<ion-tabs *ngIf="isDesktop">
+
+  <ion-tab-bar slot="top" class="background">
 
     <ion-tab-button tab="conjugator">
       <div class="menu-button">
