@@ -55,3 +55,46 @@ ion-icon {
   color: white;
 }
 
+.desktop {
+  ion-router-outlet {
+    margin-top: 75px;
+    margin-bottom: 56px;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+    margin-left: 20px;
+  }
+  .logo {
+    max-height: 40px;
+  }
+
+  ion-toolbar {
+    --background: #555555;
+  }
+
+  .link {
+    --color: var(--ion-color-light);
+    font-size: 1rem;
+  }
+
+  .active-link {
+    // --color: var(--ion-color-primary);
+    font-weight: bold;
+  }
+}
+
+.footer {
+  width: 100%;
+  color: #fff;
+  font-weight: light;
+  font-size: .8rem;
+  background: #555555;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+}

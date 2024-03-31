@@ -32,7 +32,7 @@
   </ion-tab-bar>
 </ion-tabs>
 
-<ion-tabs *ngIf="isDesktop">
+<!-- <ion-tabs *ngIf="isDesktop">
 
   <ion-tab-bar slot="top" class="background">
 
@@ -64,4 +64,40 @@
     </ion-tab-button>
 
   </ion-tab-bar>
-</ion-tabs>
+</ion-tabs> -->
+
+<div *ngIf="isDesktop" class="desktop">
+  <ion-header mode="ios">
+    <ion-toolbar>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="3">
+          <!-- <img src="./assets/logo.webp" class="logo ion-text-left"> -->
+          <div class="title">
+            Conjugator App
+          </div>
+        </ion-col>
+        <ion-col size="9">
+          <div class="navbar" class="ion-text-right">
+            <ion-button fill="clear" routerLink="/tabs/conjugator" routerDirection="root" routerLinkActive="active-link"
+              class="link">
+              Conjugator
+            </ion-button>
+            <ion-button fill="clear" routerLink="/tabs/history" routerDirection="root" routerLinkActive="active-link"
+              class="link">
+              History
+            </ion-button>
+            <ion-button fill="clear" routerLink="/tabs/instructions" routerDirection="root" routerLinkActive="active-link"
+              class="link">
+              Info
+            </ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-router-outlet class="desktop-wrapper"></ion-router-outlet>
+
+  <div class="footer">
+    <span>Conjugation App Footer</span>
+  </div>
