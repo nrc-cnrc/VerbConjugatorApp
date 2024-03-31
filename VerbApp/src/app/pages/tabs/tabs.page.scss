@@ -22,7 +22,8 @@ ion-tab-button.tab-selected {
 ion-tab-bar {
     --border: none;
     // padding-bottom: 1%;
-    --ion-background-color: var(--ion-color-background) !important;
+    // --ion-background-color: var(--ion-color-background) !important;
+    --ion-background-color: #555555 !important;
     min-height: 76px;
 }
 
