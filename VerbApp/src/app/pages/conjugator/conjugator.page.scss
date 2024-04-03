@@ -1,7 +1,8 @@
-
 :root{
   --holder: #FFFFFF;
+  --main-font-color: #171D1B;
 }
+
 
 .result {
   color: white;
@@ -24,11 +25,11 @@ ion-item{
 }
 
 .selected{
-  padding: 0px 15px !important;
+  // padding: 0px 15px !important;
+  width: fit-content;
 }
 
 ion-icon {
-  margin: 10px !important;
   font-size: 48px;
   color: white;
   fill: white;
@@ -43,9 +44,21 @@ ion-icon:hover{
 
 }
 
+.icon-col {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-left: 10px;
 
+}
+
+.content-col {
+  display: flex;
+  align-items: center;
+}
 .overlapping {
-  position: relative;
+  // position: relative;
+  max-height: fit-content;
 }
 
 .bottom{
@@ -57,35 +70,45 @@ ion-icon:hover{
   fill: black;
 }
 
-div.selectedoption{
-  padding: 15px;
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100px;
+}
+.selectedoption{
+  // padding: 15px;
+  display: flex;
+  flex-direction: column;
+  // row-gap: 10px;
   width: 100%;
+  height: fit-content;
+  // padding-left: 13px;
 }
 
 ion-label.base{
+  display: flex;
+  justify-content: start;
+  padding-left: 16px;
   // font-weight:bold;
-  font-size: min(18pt,max(4vb,14pt)) !important;
-  padding-bottom:5px;
-  padding-right: 3px;
-  padding-left:3px;
-  padding-top: 3px;
+  // font-size: min(18pt,max(4vb,14pt)) !important;
 }
 
 ion-label.translation{
+  display: flex;
+  justify-content: start;
+  padding-left: 16px;
+  color: black;
   // font-style: italic;
-  font-size: min(15pt,max(3vb,12pt)) !important;
-  padding-right: 3px;
-  padding-left:3px;
-  padding-top: 5px;
+  // font-size: min(15pt,max(3vb,12pt)) !important;
 }
 
 ion-label{
   // font-size: min(16pt,max(3vb,12pt)) !important;
-  font-family: Helvetica;
-  letter-spacing: 0.03em;
-  color: white !important;
-  font-weight: bold;
-  text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
+  // letter-spacing: 0.03em;
+  // color: white !important;
+  // font-weight: bold;
+  // text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
 }
 
 ion-item.child{
@@ -95,7 +118,21 @@ ion-item.child{
 }
 
 ion-card-content{
-  padding: 15px 15px 0px 15px !important;
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  
+}
+
+.card-text {
+  display: flex;
+  // align-items: center;
+  font-weight: 600;
+  color: black;
+  font-size: clamp(1rem, 0.9711rem + 0.1653vw, 1.25rem);
+  padding-top: 0;
 }
 
 ion-card{
@@ -105,7 +142,7 @@ ion-card{
 }
 
 ion-card.active{
-  margin: 5px;
+  // margin: 5px;
   // box-shadow:5px 10px 18px #888888;
   box-shadow:
   0 1px 1px hsl(0deg 0% 0% / 0.075),
@@ -145,43 +182,94 @@ ion-text{
 
 ion-text.active{
   display: initial;
-  font-weight: bold;
-  text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
-  color: white !important;
-  font-size: min(18pt,max(7vi,12pt));
+  // font-weight: bold;
+  // text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
+  // color: white !important;
+  // font-size: min(18pt,max(7vi,12pt));
 }
 
 ion-card-title{
-  font-weight: bold;
-  text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
-  letter-spacing: 2px !important;
-  font-family: 'IBM Plex Sans',sans-serif;
-  // font-size: 22pt !important;
-  font-size: min(24pt,max(9vi,12pt));
-  width: 100% !important;
-  color: white !important;
+  // font-weight: bold;
+  // text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
+  // letter-spacing: 2px !important;
+  // font-family: 'IBM Plex Sans',sans-serif;
+  // // font-size: 22pt !important;
+  // font-size: min(24pt,max(9vi,12pt));
+  // width: 100% !important;
+  // color: white !important;
 }
 
 ion-card-title.active{
-  font-size: min(30pt,max(10vi,12pt));
+  // font-size: min(30pt,max(10vi,12pt));
 }
 
 ion-card-title.chosen{
-  font-size: min(20pt,max(8vi,12pt));
+  // font-size: min(20pt,max(8vi,12pt));
 }
 
-div.titlecard{
-  width: 100%;
+.card-text {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: black;
+  font-size: clamp(1rem, 0.9711rem + 0.1653vw, 1.25rem);
+  padding-top: 0;
+}
+
+.card-type-text {
+  white-space: pre;
+}
+
+ion-text.instruction-text {
+  // display: flex;
+}
+
+.titlecard{
+  // width: 100%;
   padding-left: 15px;
 }
+
+.item-icon-wrapper{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 100%;
+  margin-left: 20px;
+
+  .item-icon {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    font-size: 1rem;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.item-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-end-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 // SEARCH ICON
 .search-icon { 
   background-color: white;
-  width: 24px;
-  height: 24px;
+  width: 1.5vw;
+  height: 1.5vw;
   border-radius: 50%;
-  text-align: center;
+  text-align: end;
   line-height: 100px;
   vertical-align: middle;
   padding: 16px;
