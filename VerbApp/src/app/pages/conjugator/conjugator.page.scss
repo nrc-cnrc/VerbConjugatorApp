@@ -26,17 +26,12 @@ ion-item{
   --padding-start:0px;
 }
 
-.selected{
-  // padding: 0px 15px !important;
-  width: fit-content;
+ion-item::part(native) {
+  background-color: transparent;
 }
+.selected{
+  width: fit-content;
 
-ion-icon {
-  // font-size: 48px;
-  // color: white;
-  // fill: white;
-  // -webkit-filter: drop-shadow( 0 0 6px rgba(0, 0, 0, 1));
-  // filter: drop-shadow( 0 0 3px rgba(0, 0, 0, 1));
 }
 
 
@@ -152,6 +147,7 @@ ion-card{
   margin: 12px;
   border-radius: 10px;
   box-shadow: none;
+  background-color: color-mix(in srgb,var(--ion-color-base),#fff 15%);
 }
 
 ion-card.active{
@@ -254,7 +250,7 @@ ion-text.instruction-text {
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: color-mix(in srgb,var(--ion-color-shade),#000 30%);
     border-radius: 50%;
     color: white;
     font-size: 1rem;

@@ -14,7 +14,8 @@
                         <ion-col size="auto">
                           <!-- Left icon representing the type of card (e.g., "V" for verb) -->
                           <div class="item-icon-wrapper">
-                            <ion-badge class="item-icon" color="{{item.name}}-shade'" >
+                            <!-- <ion-badge class="item-icon" color="{{item.name}}-shade" > -->
+                            <ion-badge class="item-icon" color="'{{item.name}}'">
                               {{item.name[0] | titlecase}}
                             </ion-badge>
                           </div>
@@ -40,7 +41,7 @@
                   </ion-col>
                   <!-- Search icon on the right end of the card -->
                   <ion-col class="icon-col" size="auto">
-                    <ion-item (click)="openModalSearch(item.name, i)"  color="{{item.name}}" class="selected" disabled="{{item.disabled}}">
+                    <ion-item lines="none" (click)="openModalSearch(item.name, i)"  color="{{item.name}}" class="selected" disabled="{{item.disabled}}">
                       <div class="search-icon-wrapper">  
                         <ion-icon class ="search-icon" name="search-outline"></ion-icon>
                       </div>
