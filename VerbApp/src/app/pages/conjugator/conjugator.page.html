@@ -24,12 +24,17 @@
                         <ion-col size="auto">
                           <div class="text-wrapper">
                             <ion-card-content id="{{item.name}}" class="card-text">
-                              <ion-text [class.active]="currentIndex == i" class="instruction-text">Choose a&nbsp;</ion-text>
-                              <!-- <ion-card-title [class.active]="currentIndex == i" [class.chosen]="currentIndex > i" class="title">{{item.name | titlecase}}</ion-card-title> -->
+                              <!-- Instruction for types that begin with a consonant (e.g., 'Verb') -->
+                              <ion-text *ngIf="!['a', 'e', 'i', 'o', 'u'].includes(item.name[0])" [class.active]="currentIndex == i" class="instruction-text">
+                                Choose a&nbsp;
+                              </ion-text>
+                              <!-- Instruction text formatting for types that begin with a vowel (e.g., 'Option') -->
+                              <ion-text *ngIf="['a', 'e', 'i', 'o', 'U'].includes(item.name[0])" [class.active]="currentIndex == i" class="instruction-text">
+                                Choose an&nbsp;
+                              </ion-text>
                               <div class="card-type-text" [class.active]="currentIndex == i" [class.chosen]="currentIndex > i">{{item.name | titlecase}}</div>
-
                             </ion-card-content>
-                            <!-- User selection -->
+                            <!-- User selections -->
                             <div class="selectedoption">
                               <ion-label class="base">{{selectedOptions[item.name].base}}  </ion-label>
                               <ion-label class="translation">{{selectedOptions[item.name].translation }}</ion-label>
