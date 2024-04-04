@@ -41,14 +41,9 @@
                   <!-- Search icon on the right end of the card -->
                   <ion-col class="icon-col" size="auto">
                     <ion-item (click)="openModalSearch(item.name, i)"  color="{{item.name}}" class="selected" disabled="{{item.disabled}}">
-                      <!-- <div class="overlapping" slot="end" style="margin-left: 10px;">   -->
-                      <div class="overlapping">  
-                        <ion-icon class ="search-icon" name="search-outline" color="{{item.name}}"></ion-icon>
+                      <div class="search-icon-wrapper">  
+                        <ion-icon class ="search-icon" name="search-outline"></ion-icon>
                       </div>
-                      <!-- <div class="selectedoption">
-                        <ion-label class="base">{{selectedOptions[item.name].base}}  </ion-label>
-                        <ion-label class="translation">{{selectedOptions[item.name].translation }}</ion-label>
-                      </div> -->
                     </ion-item>
                   </ion-col>
                 </ion-row>

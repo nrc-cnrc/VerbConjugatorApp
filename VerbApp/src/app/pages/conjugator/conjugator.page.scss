@@ -32,9 +32,9 @@ ion-item{
 }
 
 ion-icon {
-  font-size: 48px;
-  color: white;
-  fill: white;
+  // font-size: 48px;
+  // color: white;
+  // fill: white;
   // -webkit-filter: drop-shadow( 0 0 6px rgba(0, 0, 0, 1));
   // filter: drop-shadow( 0 0 3px rgba(0, 0, 0, 1));
 }
@@ -58,10 +58,21 @@ ion-icon:hover{
   display: flex;
   align-items: center;
 }
-.overlapping {
-  // position: relative;
-  max-height: fit-content;
+.search-icon-wrapper {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vw;
+  width: 5vw;
+  border-radius: 50%;
+  // SEARCH ICON
+  .search-icon { 
+    color: black;
+  }
 }
+
+
 
 .bottom{
   position: absolute;
@@ -76,7 +87,7 @@ ion-icon:hover{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100px;
+  min-height: 50px;
 }
 .selectedoption{
   // padding: 15px;
@@ -265,17 +276,6 @@ ion-text.instruction-text {
 }
 
 
-// SEARCH ICON
-.search-icon { 
-  background-color: white;
-  width: 1.5vw;
-  height: 1.5vw;
-  border-radius: 50%;
-  text-align: end;
-  line-height: 100px;
-  vertical-align: middle;
-  padding: 16px;
-}
 
 .icon-shadow {
   box-shadow:
