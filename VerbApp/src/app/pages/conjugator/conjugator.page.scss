@@ -58,12 +58,15 @@ ion-icon:hover{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 5vw;
-  width: 5vw;
+  height: 2em;
+  width: 2em;
   border-radius: 50%;
   // SEARCH ICON
   .search-icon { 
     color: black;
+  }
+  ion-icon {
+    font-size: 1em;
   }
 }
 
