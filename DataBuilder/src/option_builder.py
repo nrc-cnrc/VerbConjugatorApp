@@ -53,21 +53,6 @@ class OptionBuilder:
                     continue
             tojson = {"name":attr, "children":[]}
             for value in self.attrs[attr]:
-                # if "base" in value:
-                #     if self.case == "u":
-                #         value["base"] = value["base"].upper()
-                #     elif self.case == "t":
-                #         if len(value["base"])>1:
-                #             value["base"] = value["base"][0].upper() + value["base"][1:]
-                #         elif len(value["base"])==1:
-                #             value["base"] = value["base"].upper()
-                # if "translation" in value:
-                #     if len(value["translation"])>1:
-                #             value["translation"] = value["translation"][0].upper() + value["translation"][1:]
-                #     if len(value["translation"]) == 1:
-                #         value["translation"] = value["translation"].upper()
-                #     value["translation"] = re.sub(r" i ", r" I ", value["translation"])
-                #     value["translation"] = re.sub(r" i$", r" I", value["translation"])
                 tojson["children"].append(value)
             newlist = sorted(tojson["children"], key=lambda k: k['id']) 
             tojson["children"] = newlist
@@ -85,7 +70,7 @@ class OptionBuilder:
             major = list(major.values())
 
         with open(major_output_file, 'w') as json_file:
-            json.dump(major, json_file,indent=4)
+            json.dump(major, json_file,indent=4,ensure_ascii=False)
 
 
     def orderOptions(self, attrdicts, orders=None):
