@@ -4,7 +4,7 @@ import sys
 
 class OptionBuilder:
 
-    def __init__(self, attr_dict_list, app_order, path, case="l"):
+    def __init__(self, attr_dict_list, app_order, path):
         """
         Class creates individual JSON files containing all elements of the individual options, 
         with no duplicates
@@ -17,7 +17,6 @@ class OptionBuilder:
         self.attrs = {}
         self.app_order = app_order
         self.path = path
-        self.case = case
         self.removeDupes()
         self.writeAttr()
 
@@ -54,21 +53,21 @@ class OptionBuilder:
                     continue
             tojson = {"name":attr, "children":[]}
             for value in self.attrs[attr]:
-                if "base" in value:
-                    if self.case == "u":
-                        value["base"] = value["base"].upper()
-                    elif self.case == "t":
-                        if len(value["base"])>1:
-                            value["base"] = value["base"][0].upper() + value["base"][1:]
-                        elif len(value["base"])==1:
-                            value["base"] = value["base"].upper()
-                if "translation" in value:
-                    if len(value["translation"])>1:
-                            value["translation"] = value["translation"][0].upper() + value["translation"][1:]
-                    if len(value["translation"]) == 1:
-                        value["translation"] = value["translation"].upper()
-                    value["translation"] = re.sub(r" i ", r" I ", value["translation"])
-                    value["translation"] = re.sub(r" i$", r" I", value["translation"])
+                # if "base" in value:
+                #     if self.case == "u":
+                #         value["base"] = value["base"].upper()
+                #     elif self.case == "t":
+                #         if len(value["base"])>1:
+                #             value["base"] = value["base"][0].upper() + value["base"][1:]
+                #         elif len(value["base"])==1:
+                #             value["base"] = value["base"].upper()
+                # if "translation" in value:
+                #     if len(value["translation"])>1:
+                #             value["translation"] = value["translation"][0].upper() + value["translation"][1:]
+                #     if len(value["translation"]) == 1:
+                #         value["translation"] = value["translation"].upper()
+                #     value["translation"] = re.sub(r" i ", r" I ", value["translation"])
+                #     value["translation"] = re.sub(r" i$", r" I", value["translation"])
                 tojson["children"].append(value)
             newlist = sorted(tojson["children"], key=lambda k: k['id']) 
             tojson["children"] = newlist
@@ -88,7 +87,8 @@ class OptionBuilder:
         with open(major_output_file, 'w') as json_file:
             json.dump(major, json_file,indent=4)
 
-    def orderOptions(self, attrdicts):
+
+    def orderOptions(self, attrdicts, orders=None):
         orders = {"concept":
         ["none1sg", "ni3sg1sg", "vaitni3sg1sg", "1sg3sg", 
         "none2sg", "ni3sg2sg", "vaitni3sg2sg", "2sg3sg",
