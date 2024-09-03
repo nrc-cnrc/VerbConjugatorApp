@@ -8,6 +8,7 @@ import sys
 import json
 from arg_parsing import ArgParsing
 from file_read_write import FileReadWrite
+from result_builder import ResultBuilder
 
 
 class DataBuilder:
@@ -100,7 +101,9 @@ class DataBuilder:
 
         c2d = CSVtoDict(input_file=input_file, order=conjugation_order)
         dict_list, attr_dict_list = c2d.execute()
-        print(dict_list[0],attr_dict_list[0])
+        rb = ResultBuilder(attr_dict_list, dict_list,self.result, self.delimiter)
+        dict_list,ordered_by = rb.execute()
+        conjugation_order[-1] = ordered_by
         conjugation_tree = TreeBuilder(dict_list, "conjugation.json", conjugation_order, JSON_path)
 
 
