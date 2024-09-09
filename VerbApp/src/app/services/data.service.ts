@@ -4,6 +4,7 @@ import * as Information from '../../assets/JSON/information.json';
 import * as JSONTree from '../../assets/JSON/category_tree.json';
 import { grammarCat } from '../models/grammar-cat.model';
 import { grammarCatItem } from '../models/grammar-cat-item.model';
+import {ResultMorpheme, ResultMorphemeNameIndex, Result, Results} from '../models/result.model';
 import { Tree } from 'src/app/models/tree.model';
 import { node } from "../models/node.model";
 
@@ -13,10 +14,10 @@ import { node } from "../models/node.model";
 })
 export class DataService {
 
-  JsonTree = JSONTree['default'];
-  conjugation_info = Conjugation['default']
-  conjugations = this.conjugation_info[1]  // conjugation tree
-  conj_order = this.conjugation_info[0]  // level order of conjugation tree
+  JsonTree_info = JSONTree['default'];
+  conjugations = Conjugation['default']
+  JsonTree = this.JsonTree_info[1]
+  conj_order = this.JsonTree_info[0]  // level order of conjugation tree
   setinformation: Array<grammarCat> = [];
 
   tree = new Tree(new node('root'));
@@ -59,7 +60,10 @@ export class DataService {
     });
   }
 
+
+
   buildTree(tree, upper_node){
+    // If the section given is a list/array, this is the final level of the tree/is the leafs
     if(Array.isArray(tree)){
       tree.forEach(id  =>{
         let n_level_node = new node(id);
@@ -67,9 +71,13 @@ export class DataService {
       })
       return;
     }
+    // Otherwise, it is still a node level
     Object.keys(tree).forEach(id => {
+      // for each key at this level, create a node
       let n_level_node = new node(id);
+      // the previous node is the parent node
       upper_node.addChild(n_level_node);
+      // If there is information below this node
       if (typeof tree[id] !== 'undefined' &&  typeof tree[id] != "string"){
         this.buildTree(tree[id],n_level_node);
       }
@@ -78,31 +86,21 @@ export class DataService {
    }
 
   
-  conjugate(chosenIds) {
-    let results = [];
-    console.log("chosenIds", chosenIds);
-    console.log("typeof chosenIds", typeof chosenIds);
-    let current_tree = this.conjugations;
-    
-    for (let item of this.conj_order){ // for each category type item
-      console.log("current item", item);
-      if (item == this.conj_order[this.conj_order.length-1]){ //if its the last item, its the conjugation
-        console.log("item", item);
-        results.push(current_tree); //return the current value at the last level
-        break;  
-      }
-       for (let key of Object.keys(current_tree)){ //otherwise go through the current tree level
-        console.log("key", key, "item", item, "chosenIds[item]", chosenIds[item]);
-         if (key == chosenIds[item].id){ // if the leaf node is the same value as the chosen value
-            current_tree = current_tree[key]; // start the next level of the tree
-         }
-       }
+  conjugate(nodePath) {
+    const results: Results = [];
+
+    let final_node = nodePath[this.conj_order[this.conj_order.length-2]]
+    let result_ids = final_node.getChildren()
+
+    for (let id in result_ids){
+      let result: Result;
+      result = this.conjugations[result_ids[id]["id"]]
+      results.push(result)
     }
-  
-    console.log("conjugation results", results);
+    console.log("results", results);
     return results;
   }
-  
+
 }
 
 

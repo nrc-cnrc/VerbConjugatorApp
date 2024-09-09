@@ -1,4 +1,6 @@
 
+import {Results} from "./result.model";
+
 export class node{
     private id: string;
     private parent: node;
