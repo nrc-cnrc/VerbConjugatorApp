@@ -131,7 +131,7 @@ dmypy.json
 
 # Default files
 DataBuilder/JSON
-VerbApp/src/assets/JSON/*
+VerbApp/src/assets/JSON
 DataBuilder/*.csv
 
 # Ionic Default .gitignore
