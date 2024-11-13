@@ -1,9 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 // import {Clipboard} from '@angular/cdk/clipboard';
 import { ModalController } from '@ionic/angular';
-import { DataService } from '../../services/data.service';
+import { DataService } from '../../services/data/data.service';
 import { grammarCatItem } from '../../models/grammar-cat-item.model';
 import { grammarCat } from '../../models/grammar-cat.model';
+import { Results, Result, ResultMorpheme, ResultMorphemeNameIndex, TIERS } from '../../models/result.model';
 import { BehaviorSubject, Observable, timer } from 'rxjs';
 import { SearchPage } from '../../modals/search/search.page';
 import { node } from "../../models/node.model";
@@ -21,22 +22,18 @@ export class ConjugatorPage implements OnInit {
   public verb0: any;
   public selectedType: any;
 
-  open = '../../../assets/minusicon.png';
-  closed = '../../../assets/plusicon.png';
   error = '';
   show_result = false;
   show_error = false;
   result = '';
-  showVerb = '';
-  selectedValues: any[];
-  morph_colours = {"verb": "#db5f57", "person":"#5f57db", "tense": "#57db5f", "preverb": "#d3db57", "spelling": "blue", "mode":"#57d3db"}
-  automaticClose = false;
 
   currentIndex = 0;
   information: Array<grammarCat> = [];
+  results: Results = [];
   myFunInformation$ = new BehaviorSubject(this.information);
   selectedOptions: { [id: string]: { translation, id, base } } = {};
   selectedPath: { [id: string]: node} = {};
+  tier = TIERS[0];
 
   constructor(private modalController: ModalController, private service: DataService) { }
 
@@ -207,11 +204,11 @@ export class ConjugatorPage implements OnInit {
     this.error = '';
     this.show_result = true;
     this.show_error = false;
-    let results = this.service.conjugate(this.selectedOptions)[0];
-    console.log("results", results);
+    this.results = this.service.conjugate(this.selectedPath);
+    console.log("results", this.results);
     let coloured = '';
-    for (let r = 0; r < results.length; r++){
-      let rstr = results[r].toString();
+    for (let r = 0; r < this.results.length; r++){
+      let rstr = this.results[r].toString();
       rstr = rstr.replace(/'/g, '"');
       
       coloured += rstr;
@@ -220,11 +217,18 @@ export class ConjugatorPage implements OnInit {
 
     }
     
-    document.getElementById("result").innerHTML = coloured;
-    this.result = coloured;
+    // document.getElementById("result").innerHTML = coloured;
+    // this.result = coloured;
     this.scroll("clear");
     // this.scrollToBottom();
   }
+
+
+
+  formatResults(){
+    
+  }
+
 
   async openModalSearch(whichSearch, index) {
     const modal = await this.modalController.create({
@@ -275,39 +279,39 @@ export class ConjugatorPage implements OnInit {
   }
 
 
-  colourCode(conj_breakdown:string){
-    let coloured = '';
-    let in_pieces = JSON.parse(conj_breakdown);
-    for (let piece = 0; piece < in_pieces.length; piece ++){
-      if (in_pieces[piece][1] in this.morph_colours){
-        coloured += '<span style="color: '+ this.morph_colours[in_pieces[piece][1]]+'">'+in_pieces[piece][0]+'</span>';
-      } else{
-        coloured += '<span style="color: white">'+in_pieces[piece][0]+'</span>';
-      }
-    }
-    return coloured
-  }
+  // colourCode(conj_breakdown:string){
+  //   let coloured = '';
+  //   let in_pieces = JSON.parse(conj_breakdown);
+  //   for (let piece = 0; piece < in_pieces.length; piece ++){
+  //     if (in_pieces[piece][1] in this.morph_colours){
+  //       coloured += '<span style="color: '+ this.morph_colours[in_pieces[piece][1]]+'">'+in_pieces[piece][0]+'</span>';
+  //     } else{
+  //       coloured += '<span style="color: white">'+in_pieces[piece][0]+'</span>';
+  //     }
+  //   }
+  //   return coloured
+  // }
 
 
   ngOnDestory() {
     this.myFunInformation$.unsubscribe();
   }
 
-  reset(){
-    let key: string;
-    for(let i = 0; i < this.information.length; i ++){ // find all categories at a lower index
-      key = this.information[i].name; // get the name
-      this.selectedOptions[key] = {translation: '', id: '', base:''};  // reset so that there is no selected option at that name
-      this.information[i].disabled=true; // disable access
-    }
-    this.information[0].disabled=false;
-    this.result = '';
-    this.error = '';
-    this.currentIndex = 0;
-    this.show_result = false;
-    this.show_error = true;
-    this.scrollToTop();
-  }
+  // reset(){
+  //   let key: string;
+  //   for(let i = 0; i < this.information.length; i ++){ // find all categories at a lower index
+  //     key = this.information[i].name; // get the name
+  //     this.selectedOptions[key] = {translation: '', id: '', base:''};  // reset so that there is no selected option at that name
+  //     this.information[i].disabled=true; // disable access
+  //   }
+  //   this.information[0].disabled=false;
+  //   this.result = '';
+  //   this.error = '';
+  //   this.currentIndex = 0;
+  //   this.show_result = false;
+  //   this.show_error = true;
+  //   this.scrollToTop();
+  // }
 
   playSound(){
     let audio = new Audio();
