@@ -55,12 +55,19 @@
   <ion-grid class="ion-no-margin ion-no-padding justify-content-center">
     <ion-row class="ion-no-margin ion-no-padding ion-align-items-center ion-justify-content-center">
       <ion-col class="ion-no-margin ion-no-padding ion-text-center" size="auto">
-        <!-- <ion-icon name="volume-high-outline" class="audio-icon" (click)="playSound()">Play Sound</ion-icon> -->
-        <p class="result" id="result">{{result}}</p>
-      </ion-col>
-      <ion-col class="ion-no-margin ion-no-padding ion-text-center" size="auto">
-        <!-- <p class="result" id="result">{{result}}</p> -->
-        <ion-icon name="volume-high" class="audio-icon" (click)="playSound()">Play Sound</ion-icon>
+        <div *ngFor="let result of results">
+          <p class="result" id="result">
+        <app-result *ngIf="show_result"
+        [tier]="tier"
+        [data]="result"
+        ></app-result>
+      </p>
+      </div>
+        <!-- <p class="result" id="result"> hello
+          <ion-text *ngFor="let result of results;">
+             test
+          </ion-text>
+        </p> -->
       </ion-col>
     </ion-row>
   </ion-grid>

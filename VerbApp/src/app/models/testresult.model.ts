@@ -1,11 +1,3 @@
-// import {grammarCatItem} from "./grammar-cat-item.model";
-
-// export interface ResultInput {
-//     root: string;
-//     option: string;
-//     agent: string;
-//     patient: string;
-//   }
   
   export type ResultMorpheme = [
     text: string,

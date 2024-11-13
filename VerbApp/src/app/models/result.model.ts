@@ -1,29 +1,55 @@
 // import {grammarCatItem} from "./grammar-cat-item.model";
 
-// export interface ResultInput {
-//     root: string;
-//     option: string;
-//     agent: string;
-//     patient: string;
-//   }
-  
+  export interface Level {
+    breakdown: boolean;
+  }
+
+  export type TierNames = "display" | keyof Level;
+
+  export interface Tier {
+    name: TierNames;
+    separator: string;
+    key: ResultMorphemeNameIndex;
+    position: number;
+    // options: TierOptions;
+  };  
+
+  // export interface TierOptions {
+  //   language: "L1" | "L2";
+  //   showName?: boolean;
+  // }
+
+
+
+
   export type ResultMorpheme = [
-    breakdown: string,
-    label: string
+    value: string,
+    breakdown: string
   ];
   
   export enum ResultMorphemeNameIndex {
-    breakdown = 0,
-    label = 1,
+    value = 0,
+    breakdown = 1,
   }
   
   export type Result = ResultMorpheme[];
 
   export type Results = Result[];
-  
-//   export interface ResultObject {
-//     input: ResultInput;
-//     output: Result;
-//   }
-  
-//   export type Results = ResultObject[];
+
+
+  export const TIERS: Tier[] = [
+    {
+      name: "display",
+      key: ResultMorphemeNameIndex.value,
+      position: 0,
+      separator: "",
+      // options: _defaultOptions,
+    },
+    // {
+    //   name: "breakdown",
+    //   key: ResultMorphemeNameIndex.value,
+    //   position: 1,
+    //   separator: "-",
+    //   // options: _defaultOptions,
+    // },
+  ];
