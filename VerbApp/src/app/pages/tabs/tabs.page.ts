@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScreensizeService } from 'src/app/services/screensize/screensize.service';
 
 @Component({
   selector: 'app-tabs',
@@ -7,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabsPage implements OnInit {
 
-  constructor() { }
+  isDesktop: boolean;
+
+  constructor(private screensizeService: ScreensizeService) { 
+
+    this.screensizeService.isDesktopView().subscribe(isDesktop => {
+      // if (this.isDesktop && !isDesktop){
+      //   // Reload because routing is out of place
+      //   window.location.reload();
+      // }
+
+      this.isDesktop = isDesktop;
+    });
+  }
 
   ngOnInit() {
   }

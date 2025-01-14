@@ -1,4 +1,24 @@
-<ion-tabs>
+<ion-tabs *ngIf="!isDesktop">
+
+  <ion-tab-bar slot="bottom" class="background">
+
+    <ion-tab-button tab="about">
+      <ion-label>About</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="conjugator">
+      <ion-label>Conjugator</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="instructions">
+      <ion-label>How To Use</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+</ion-tabs>
+
+<ion-tabs *ngIf="isDesktop">
 
   <ion-tab-bar slot="top" class="background">
 
@@ -15,3 +35,7 @@
     </ion-tab-button>
 
   </ion-tab-bar>
+
+</ion-tabs>
+
+

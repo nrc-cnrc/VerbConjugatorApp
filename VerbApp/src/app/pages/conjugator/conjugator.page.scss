@@ -102,6 +102,7 @@ ion-card{
   margin: 12px;
   border-radius: 10px;
   box-shadow: none;
+  height: 16.66%;
 }
 
 ion-card.active{
@@ -215,3 +216,9 @@ div.titlecard{
   vertical-align: middle;
   padding: 8px;
 }
+
+
+ion-grid .main-grid{
+  max-height: 66.66%;
+}
+
