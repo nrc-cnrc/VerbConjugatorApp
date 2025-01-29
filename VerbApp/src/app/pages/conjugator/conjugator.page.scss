@@ -99,10 +99,10 @@ ion-card-content{
 }
 
 ion-card{
-  margin: 12px;
+  margin: 1%;
   border-radius: 10px;
   box-shadow: none;
-  height: 16.66%;
+  height: 15.5%;
 }
 
 ion-card.active{
@@ -137,7 +137,7 @@ ion-button{
 ion-content{
   --ion-background-color: var(--ion-color-background) !important;
   // --ion-background-color: transparent !important;
-  
+  --overflow: hidden !important;
 }
 
 ion-text{
@@ -146,10 +146,6 @@ ion-text{
 
 ion-text.active{
   display: initial;
-  font-weight: bold;
-  text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
-  color: white !important;
-  font-size: min(18pt,max(7vi,12pt));
 }
 
 ion-card-title{
@@ -157,18 +153,18 @@ ion-card-title{
   text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
   letter-spacing: 2px !important;
   font-family: 'IBM Plex Sans',sans-serif;
-  // font-size: 22pt !important;
-  font-size: min(24pt,max(9vi,12pt));
+  font-size: 1em;
   width: 100% !important;
   color: white !important;
 }
 
 ion-card-title.active{
-  font-size: min(30pt,max(10vi,12pt));
+  // font-size: min(30pt,max(10vi,12pt));
+  font-size: 1.2em;
 }
 
 ion-card-title.chosen{
-  font-size: min(20pt,max(8vi,12pt));
+  font-size: 1em;;
 }
 
 div.titlecard{
@@ -185,7 +181,7 @@ div.titlecard{
   text-align: center;
   line-height: 100px;
   vertical-align: middle;
-  padding: 16px;
+  padding: 2px;
 }
 
 .icon-shadow {
@@ -218,7 +214,29 @@ div.titlecard{
 }
 
 
-ion-grid .main-grid{
-  max-height: 66.66%;
+#main-grid{
+  height: 70% !important;
 }
 
+#result-grid{
+  height: 30% !important;
+}
+
+
+#result-box{
+  background-color: var(--ion-color-background-shade) !important;
+  border-color: var(--ion-color-background-contrast) !important;
+  box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.35);
+  height: 100%;
+  width: 98%;
+  border-radius: 5% 5% 0 0;
+  margin: 0 1%;
+}
+
+ion-col{
+  height: 100%;
+}
+
+ion-row{
+  height: 100%;
+}

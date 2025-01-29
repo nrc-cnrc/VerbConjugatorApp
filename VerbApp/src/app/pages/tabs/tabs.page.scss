@@ -3,23 +3,24 @@
 }
 
 ion-tab-button.tab-selected {
-    background-color: #211C1E;
+    background-color: white;
     ion-label {
-      color: white;
+      color: #555555;
     }
   }
 
 ion-tab-bar {
     --border: none;
     // padding-bottom: 1%;
-    --ion-background-color: var(--ion-color-background) !important;
+    // --ion-background-color: var(--ion-color-background) !important;
+    --ion-background-color: #555555;
 }
 
 ion-label{
     font-family: Arial;
     font-size: 18px;
     font-weight: bold;
-    color: #211C1E;
+    color: white;
 }
 
 
