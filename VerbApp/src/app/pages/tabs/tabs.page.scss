@@ -3,9 +3,12 @@
 }
 
 ion-tab-button.tab-selected {
-    background-color: white;
-    ion-label {
+    
+    ion-icon{
       color: #555555;
+      background-color: white;
+      width: 70%;
+      border-radius: 10px;
     }
   }
 
@@ -18,9 +21,13 @@ ion-tab-bar {
 
 ion-label{
     font-family: Arial;
-    font-size: 18px;
+    font-size: 1em;
     font-weight: bold;
     color: white;
+}
+
+ion-icon{
+  color:white;
 }
 
 

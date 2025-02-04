@@ -1,18 +1,24 @@
-<ng-container>
+<!-- <ng-container>
   <ng-container *ngFor="let morpheme of output; last as isLast">
     <span [ngClass]="morpheme[morphType]"><ion-text color="{{morpheme[morphType]}}">{{ morpheme[tier.key] }}</ion-text></span>
     <span *ngIf="!isLast" class="separator">{{ tier.separator }}</span>
   </ng-container>
   <ion-icon  name="volume-high" class="audio-icon" (click)="playSound()">Play Sound</ion-icon>
-</ng-container>
+</ng-container> -->
 
-<!-- 
-<ion-grid class="ion-no-margin ion-no-padding justify-content-center">
-  <ion-row class="ion-no-margin ion-no-padding ion-align-items-center ion-justify-content-center">
-    <ion-col class="ion-no-margin ion-no-padding ion-text-center" size="auto">
-      <p class="result" id="result">{{result}}</p>
-    </ion-col>
-    <ion-col class="ion-no-margin ion-no-padding ion-text-center" size="auto">
-    </ion-col>
-  </ion-row>
-</ion-grid> -->
+<ng-container>
+          <div class="top">
+            <ion-icon class="result-icon" name="volume-medium-outline" (click)="playSound()"></ion-icon>
+            <ion-icon class="result-icon" name="copy-outline"></ion-icon>
+          </div>
+          <div class="middle">
+            <p class="result" id="result">
+              <ng-container *ngFor="let morpheme of output; last as isLast">
+                <span [ngClass]="morpheme[morphType]"><ion-text color="{{morpheme[morphType]}}">{{ morpheme[tier.key] }}</ion-text></span>
+                <span *ngIf="!isLast" class="separator">{{ tier.separator }}</span>
+              </ng-container>
+            </p>
+          </div>
+          <div class="bottom"></div>
+          
+  <ng-container>

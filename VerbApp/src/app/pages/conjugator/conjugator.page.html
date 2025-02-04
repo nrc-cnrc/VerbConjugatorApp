@@ -39,11 +39,31 @@
     </ion-row>
   </ion-grid>
 
-  
-    <ion-grid id= "result-grid" class="ion-no-margin ion-no-padding justify-content-center">
-      <ion-row class="ion-no-margin ion-no-padding ion-align-items-center ion-justify-content-center">
+
+
+  <ion-grid id= "result-grid" class="ion-no-margin ion-no-padding justify-content-center">
+      <ion-row class="ion-no-margin ion-no-padding">
         <ion-col class="ion-no-margin ion-no-padding ion-text-center" size-sm="8" offset-sm="2" size-md="6" offset-md="3" size-xl="4" offset-xl="4">
           <div id="result-box">
+            <div style="height:100%; width: 100%;" *ngFor="let result of results">
+                <app-result *ngIf="show_result"
+                [tier]="tier"
+                [data]="result"
+                ></app-result>
+              </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+  
+    <!-- <ion-grid id= "result-grid" class="ion-no-margin ion-no-padding justify-content-center">
+      <ion-row class="ion-no-margin ion-no-padding">
+        <ion-col class="ion-no-margin ion-no-padding ion-text-center" size-sm="8" offset-sm="2" size-md="6" offset-md="3" size-xl="4" offset-xl="4">
+          <div id="result-box">
+            <ion-icon class="result-icon" name="volume-medium-outline"></ion-icon>
+            <ion-icon class="result-icon" name="copy-outline"></ion-icon>
             <div *ngFor="let result of results">
               <p class="result" id="result">
                 <app-result *ngIf="show_result"
@@ -55,16 +75,9 @@
           </div>
         </ion-col>
       </ion-row>
-    </ion-grid>
+    </ion-grid> -->
 
   
-  <!-- <ion-grid class="ion-no-margin ion-no-padding justify-content-center">
-    <ion-row class="ion-no-margin ion-no-padding">
-      <ion-col class="ion-no-margin ion-no-padding ion-text-center" size-sm="8" offset-sm="2" size-md="6" offset-md="3" size-xl="4" offset-xl="4">
-        <ion-button [hidden] = "!show_result" id="clear" (click)=reset()>CLEAR</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid> -->
   
 
 </ion-content>

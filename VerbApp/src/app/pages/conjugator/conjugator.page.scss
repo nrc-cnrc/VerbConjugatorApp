@@ -3,15 +3,17 @@
   --holder: #FFFFFF;
 }
 
-.result {
-  color: white;
-  font: bold Century Gothic, Arial;
-  text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
-  letter-spacing: 2px;
-  // text-align: right;
-  font-size: min(48px,max(5vw,22px));
-  margin:15px;
-}
+// .result {
+//   color: white;
+//   font: bold Century Gothic, Arial;
+//   text-shadow: 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;
+//   letter-spacing: 2px;
+//   // text-align: right;
+//   font-size: min(48px,max(5vw,22px));
+//   margin:15px;
+//   text-align: center;
+//   vertical-align: middle;
+// }
 
 
 ion-popover{
@@ -37,11 +39,11 @@ ion-icon {
 }
 
 
-ion-icon:hover{
-  border-radius: 50%;
-  box-shadow: 0 0 0 7px rgba($color: #2B2B2B, $alpha: 0.1) inset;
+// ion-icon:hover{
+//   border-radius: 50%;
+//   box-shadow: 0 0 0 7px rgba($color: #2B2B2B, $alpha: 0.1) inset;
 
-}
+// }
 
 
 .overlapping {
@@ -225,13 +227,30 @@ div.titlecard{
 
 #result-box{
   background-color: var(--ion-color-background-shade) !important;
-  border-color: var(--ion-color-background-contrast) !important;
-  box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.35);
+  // border-color: var(--ion-color-background-contrast) !important;
+  // border-width: 2px 2px 0 2px;
+  // border-style: ridge;
   height: 100%;
   width: 98%;
-  border-radius: 5% 5% 0 0;
+  border-radius: 10px 10px 0 0;
   margin: 0 1%;
 }
+
+// .result-icon{
+//   float: right;
+//   width: 20px;
+//   height: 20px;
+//   box-shadow: 0px 0px 1px 2px rgba(0,0,0,0.28);
+//   border-radius: 5px;
+//   background-color: #CCCAC6;
+//   color: var(--ion-color-background-contrast) !important;
+//   padding: 5px;
+//   margin: 10px 5px !important;
+// }
+
+// .result-icon:active {
+//   box-shadow: 0 0 0 0;
+// }
 
 ion-col{
   height: 100%;
