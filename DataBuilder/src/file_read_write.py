@@ -31,7 +31,7 @@ class FileReadWrite:
             None
         """
         with open(path, "w") as f:
-            json.dump(data, f)
+            json.dump(data, f,ensure_ascii=False)
 
 
 
@@ -74,11 +74,11 @@ class FileReadWrite:
         '''
         
         '''
-        with open(path+'conjugation.json', 'r') as f:
+        with open(path+'category_tree.json', 'r') as f:
             f_str = f.read()
             d = json.loads(f_str)
             l = [conjugation_order, d]
             f.close()
-        with open(path+'conjugation.json', 'w') as f:
+        with open(path+'category_tree.json', 'w') as f:
             json.dump(l, f,ensure_ascii=False)
             f.close()

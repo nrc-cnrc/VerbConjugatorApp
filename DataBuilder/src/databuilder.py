@@ -96,15 +96,15 @@ class DataBuilder:
 
         c2d = CSVtoDict(input_file=input_file, order=tree_order)
         dict_list, attr_dict_list = c2d.execute()
-        category_tree = TreeBuilder(dict_list, "category_tree.json", tree_order, JSON_path)
+        # category_tree = TreeBuilder(dict_list, "category_tree.json", conjugation_order, JSON_path)
         information = OptionBuilder(attr_dict_list, tree_order, JSON_path)
 
         c2d = CSVtoDict(input_file=input_file, order=conjugation_order)
         dict_list, attr_dict_list = c2d.execute()
         rb = ResultBuilder(attr_dict_list, dict_list,self.result, self.delimiter)
-        dict_list,ordered_by = rb.execute()
-        conjugation_order[-1] = ordered_by
-        conjugation_tree = TreeBuilder(dict_list, "conjugation.json", conjugation_order, JSON_path)
+        formatted = rb.execute()
+        conjugation_tree = TreeBuilder(dict_list, "category_tree.json", conjugation_order, JSON_path)
+        FileReadWrite.write_json(self.JSON_path+"conjugation.json",formatted)
 
 
 

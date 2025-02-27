@@ -1,14 +1,10 @@
 [
     {
-        "type": "verb",
-        "tip": "<p>Insert Verb Description</p>"
+        "type": "sentence",
+        "tip": "<p>Insert Sentence Description</p>"
     },
     {
-        "type": "subject",
-        "tip": "<p>Insert Subject Description</p>"
-    },
-    {
-        "type": "option",
-        "tip": "<p>Insert Option Description</p>"
+        "type": "reason",
+        "tip": "<p>Insert Reason Description</p>"
     }
 ]

@@ -44,7 +44,7 @@ class TreeBuilder:
 
         self.output_file = self.path + self.output_file
         with open(self.output_file, 'w') as json_file:
-            json.dump(tree, json_file, sort_keys=True)
+            json.dump(tree, json_file, sort_keys=True,ensure_ascii=False)
 
         return
 

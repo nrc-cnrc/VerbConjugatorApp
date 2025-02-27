@@ -1,826 +1,221 @@
 [
     {
-        "name": "verb",
+        "name": "sentence",
         "children": [
             {
-                "id": "abreger",
-                "translation": "Abridge",
-                "base": "ABREGER"
+                "id": "HÍSW̱KE ȻEN,S",
+                "base": "HÍSW̱KE ȻEN,S",
+                "translation": "Thank you for"
             },
             {
-                "id": "absoudre",
-                "translation": "Absolve",
-                "base": "ABSOUDRE"
+                "id": "HÍSW̱KE,E TŦE ",
+                "base": "HÍSW̱KE,E TŦE ",
+                "translation": "Thank you for the"
             },
             {
-                "id": "accroitre",
-                "translation": "Increase",
-                "base": "ACCROITRE"
+                "id": "HÍSW̱KE,E TŦEN,",
+                "base": "HÍSW̱KE,E TŦEN,",
+                "translation": "Thank you for your"
             },
             {
-                "id": "acheter",
-                "translation": "Buy",
-                "base": "ACHETER"
+                "id": "JI,IĆEȽ SEN ȻEN,S",
+                "base": "JI,IĆEȽ SEN ȻEN,S",
+                "translation": "I'm grateful that you"
             },
             {
-                "id": "acquerir",
-                "translation": "Acquire",
-                "base": "ACQUERIR"
+                "id": "JI,IĆEȽ SEN,E TŦE ",
+                "base": "JI,IĆEȽ SEN,E TŦE ",
+                "translation": "I'm grateful for the"
             },
             {
-                "id": "advenir",
-                "translation": "Happen",
-                "base": "ADVENIR"
+                "id": "JI,IĆEȽ SEN,E TŦEN,",
+                "base": "JI,IĆEȽ SEN,E TŦEN,",
+                "translation": "I'm grateful for your"
             },
             {
-                "id": "aimer",
-                "translation": "Love",
-                "base": "AIMER"
+                "id": "JI,IĆEȽ ȽTE ȻEN,S",
+                "base": "JI,IĆEȽ ȽTE ȻEN,S",
+                "translation": "We're grateful that you"
             },
             {
-                "id": "aliener",
-                "translation": "Alienate",
-                "base": "ALIENER"
+                "id": "JI,ISE SEN ȻEN,S",
+                "base": "JI,ISE SEN ȻEN,S",
+                "translation": "I'm grateful to you that you"
             },
             {
-                "id": "aller",
-                "translation": "Go",
-                "base": "ALLER"
+                "id": "JI,ISE SEN,E TŦE ",
+                "base": "JI,ISE SEN,E TŦE ",
+                "translation": "I'm grateful to you for the"
             },
             {
-                "id": "amuir",
-                "translation": "Mute",
-                "base": "AMUIR"
+                "id": "JI,ISE SEN,E TŦEN,",
+                "base": "JI,ISE SEN,E TŦEN,",
+                "translation": "I'm grateful to you for your"
             },
             {
-                "id": "apparoir",
-                "translation": "Appear",
-                "base": "APPAROIR"
-            },
-            {
-                "id": "appeler",
-                "translation": "Call",
-                "base": "APPELER"
-            },
-            {
-                "id": "assaillir",
-                "translation": "Assault",
-                "base": "ASSAILLIR"
-            },
-            {
-                "id": "asseoir",
-                "translation": "Sit",
-                "base": "ASSEOIR"
-            },
-            {
-                "id": "avoir",
-                "translation": "Have",
-                "base": "AVOIR"
-            },
-            {
-                "id": "battre",
-                "translation": "Beat",
-                "base": "BATTRE"
-            },
-            {
-                "id": "boire",
-                "translation": "Drink",
-                "base": "BOIRE"
-            },
-            {
-                "id": "bouillir",
-                "translation": "Boil",
-                "base": "BOUILLIR"
-            },
-            {
-                "id": "braire",
-                "translation": "Bray",
-                "base": "BRAIRE"
-            },
-            {
-                "id": "bruire",
-                "translation": "Hum",
-                "base": "BRUIRE"
-            },
-            {
-                "id": "brumasser",
-                "translation": "Mist",
-                "base": "BRUMASSER"
-            },
-            {
-                "id": "ceder",
-                "translation": "Cede",
-                "base": "CEDER"
-            },
-            {
-                "id": "celebrer",
-                "translation": "Celebrate",
-                "base": "CELEBRER"
-            },
-            {
-                "id": "chaloir",
-                "translation": "Heat",
-                "base": "CHALOIR"
-            },
-            {
-                "id": "choir",
-                "translation": "Fall",
-                "base": "CHOIR"
-            },
-            {
-                "id": "circoncire",
-                "translation": "Circumsize",
-                "base": "CIRCONCIRE"
-            },
-            {
-                "id": "clore",
-                "translation": "Close",
-                "base": "CLORE"
-            },
-            {
-                "id": "conclure",
-                "translation": "Conclude",
-                "base": "CONCLURE"
-            },
-            {
-                "id": "conduire",
-                "translation": "Drive",
-                "base": "CONDUIRE"
-            },
-            {
-                "id": "coudre",
-                "translation": "Sew",
-                "base": "COUDRE"
-            },
-            {
-                "id": "courir",
-                "translation": "Run",
-                "base": "COURIR"
-            },
-            {
-                "id": "craindre",
-                "translation": "Be afraid",
-                "base": "CRAINDRE"
-            },
-            {
-                "id": "cremer",
-                "translation": "Ice",
-                "base": "CREMER"
-            },
-            {
-                "id": "croire",
-                "translation": "Believe",
-                "base": "CROIRE"
-            },
-            {
-                "id": "croitre",
-                "translation": "Increase",
-                "base": "CROITRE"
-            },
-            {
-                "id": "cueillir",
-                "translation": "Pick",
-                "base": "CUEILLIR"
-            },
-            {
-                "id": "decevoir",
-                "translation": "Deceive",
-                "base": "DECEVOIR"
-            },
-            {
-                "id": "dechoir",
-                "translation": "Decline",
-                "base": "DECHOIR"
-            },
-            {
-                "id": "decreter",
-                "translation": "Decree",
-                "base": "DECRETER"
-            },
-            {
-                "id": "depecer",
-                "translation": "Dismember",
-                "base": "DEPECER"
-            },
-            {
-                "id": "devoir",
-                "translation": "Have to",
-                "base": "DEVOIR"
-            },
-            {
-                "id": "dire",
-                "translation": "Have tosay",
-                "base": "DIRE"
-            },
-            {
-                "id": "dissequer",
-                "translation": "Dissect",
-                "base": "DISSEQUER"
-            },
-            {
-                "id": "dissoudre",
-                "translation": "Disolve",
-                "base": "DISSOUDRE"
-            },
-            {
-                "id": "dormir",
-                "translation": "Sleep",
-                "base": "DORMIR"
-            },
-            {
-                "id": "echoir",
-                "translation": "Come due",
-                "base": "ECHOIR"
-            },
-            {
-                "id": "eclore",
-                "translation": "Bloom",
-                "base": "ECLORE"
-            },
-            {
-                "id": "ecrire",
-                "translation": "Write",
-                "base": "ECRIRE"
-            },
-            {
-                "id": "enfievrer",
-                "translation": "Have a fever",
-                "base": "ENFIEVRER"
-            },
-            {
-                "id": "envoyer",
-                "translation": "Have a feversend",
-                "base": "ENVOYER"
-            },
-            {
-                "id": "etre",
-                "translation": "Be",
-                "base": "ETRE"
-            },
-            {
-                "id": "execrer",
-                "translation": "Execute",
-                "base": "EXECRER"
-            },
-            {
-                "id": "extraire",
-                "translation": "Extract",
-                "base": "EXTRAIRE"
-            },
-            {
-                "id": "faillir",
-                "translation": "Bankrupt",
-                "base": "FAILLIR"
-            },
-            {
-                "id": "faire",
-                "translation": "Make",
-                "base": "FAIRE"
-            },
-            {
-                "id": "falloir",
-                "translation": "Have to",
-                "base": "FALLOIR"
-            },
-            {
-                "id": "ferir",
-                "translation": "Make",
-                "base": "FERIR"
-            },
-            {
-                "id": "finir",
-                "translation": "Finish",
-                "base": "FINIR"
-            },
-            {
-                "id": "fleurir",
-                "translation": "Flourish",
-                "base": "FLEURIR"
-            },
-            {
-                "id": "forclore",
-                "translation": "Foreclose",
-                "base": "FORCLORE"
-            },
-            {
-                "id": "frire",
-                "translation": "Fry",
-                "base": "FRIRE"
-            },
-            {
-                "id": "fuir",
-                "translation": "Run away",
-                "base": "FUIR"
-            },
-            {
-                "id": "gesir",
-                "translation": "Lie",
-                "base": "GESIR"
-            },
-            {
-                "id": "grasseyer",
-                "translation": "Speak with a uvulur r",
-                "base": "GRASSEYER"
-            },
-            {
-                "id": "hair",
-                "translation": "Hate",
-                "base": "HAIR"
-            },
-            {
-                "id": "harceler",
-                "translation": "Harass",
-                "base": "HARCELER"
-            },
-            {
-                "id": "hebeter",
-                "translation": "Stupefy",
-                "base": "HEBETER"
-            },
-            {
-                "id": "impetrer",
-                "translation": "Secure",
-                "base": "IMPETRER"
-            },
-            {
-                "id": "inclure",
-                "translation": "Include",
-                "base": "INCLURE"
-            },
-            {
-                "id": "integrer",
-                "translation": "Integrate",
-                "base": "INTEGRER"
-            },
-            {
-                "id": "interdire",
-                "translation": "Interject",
-                "base": "INTERDIRE"
-            },
-            {
-                "id": "jeter",
-                "translation": "Throw",
-                "base": "JETER"
-            },
-            {
-                "id": "leguer",
-                "translation": "Bequeth",
-                "base": "LEGUER"
-            },
-            {
-                "id": "leser",
-                "translation": "Injure",
-                "base": "LESER"
-            },
-            {
-                "id": "lever",
-                "translation": "Lift up",
-                "base": "LEVER"
-            },
-            {
-                "id": "lire",
-                "translation": "Read",
-                "base": "LIRE"
-            },
-            {
-                "id": "luire",
-                "translation": "Gleam",
-                "base": "LUIRE"
-            },
-            {
-                "id": "manger",
-                "translation": "Eat",
-                "base": "MANGER"
-            },
-            {
-                "id": "maudire",
-                "translation": "Curse",
-                "base": "MAUDIRE"
-            },
-            {
-                "id": "medire",
-                "translation": "Besmirch",
-                "base": "MEDIRE"
-            },
-            {
-                "id": "mener",
-                "translation": "Conduct",
-                "base": "MENER"
-            },
-            {
-                "id": "mentir",
-                "translation": "Lie",
-                "base": "MENTIR"
-            },
-            {
-                "id": "mettre",
-                "translation": "Put",
-                "base": "METTRE"
-            },
-            {
-                "id": "moudre",
-                "translation": "Grind",
-                "base": "MOUDRE"
-            },
-            {
-                "id": "mourir",
-                "translation": "Die",
-                "base": "MOURIR"
-            },
-            {
-                "id": "mouvoir",
-                "translation": "Move",
-                "base": "MOUVOIR"
-            },
-            {
-                "id": "naitre",
-                "translation": "Be born",
-                "base": "NAITRE"
-            },
-            {
-                "id": "nettoyer",
-                "translation": "Clean",
-                "base": "NETTOYER"
-            },
-            {
-                "id": "nuire",
-                "translation": "Harm",
-                "base": "NUIRE"
-            },
-            {
-                "id": "occire",
-                "translation": "Slay",
-                "base": "OCCIRE"
-            },
-            {
-                "id": "oindre",
-                "translation": "Anoint",
-                "base": "OINDRE"
-            },
-            {
-                "id": "ouir",
-                "translation": "Hear",
-                "base": "OUIR"
-            },
-            {
-                "id": "ouvrir",
-                "translation": "Open",
-                "base": "OUVRIR"
-            },
-            {
-                "id": "paitre",
-                "translation": "Graze",
-                "base": "PAITRE"
-            },
-            {
-                "id": "paraitre",
-                "translation": "Appear",
-                "base": "PARAITRE"
-            },
-            {
-                "id": "payer",
-                "translation": "Pay",
-                "base": "PAYER"
-            },
-            {
-                "id": "peler",
-                "translation": "Peel",
-                "base": "PELER"
-            },
-            {
-                "id": "peser",
-                "translation": "Weigh",
-                "base": "PESER"
-            },
-            {
-                "id": "placer",
-                "translation": "Place",
-                "base": "PLACER"
-            },
-            {
-                "id": "plaire",
-                "translation": "Please",
-                "base": "PLAIRE"
-            },
-            {
-                "id": "pleuvoir",
-                "translation": "Cry",
-                "base": "PLEUVOIR"
-            },
-            {
-                "id": "poindre",
-                "translation": "Dawn",
-                "base": "POINDRE"
-            },
-            {
-                "id": "pourvoir",
-                "translation": "Cater",
-                "base": "POURVOIR"
-            },
-            {
-                "id": "pouvoir",
-                "translation": "Be able to",
-                "base": "POUVOIR"
-            },
-            {
-                "id": "predire",
-                "translation": "Predict",
-                "base": "PREDIRE"
-            },
-            {
-                "id": "prendre",
-                "translation": "Take",
-                "base": "PRENDRE"
-            },
-            {
-                "id": "prevaloir",
-                "translation": "Prevail",
-                "base": "PREVALOIR"
-            },
-            {
-                "id": "prevoir",
-                "translation": "Preview",
-                "base": "PREVOIR"
-            },
-            {
-                "id": "promouvoir",
-                "translation": "Promote",
-                "base": "PROMOUVOIR"
-            },
-            {
-                "id": "querir",
-                "translation": "Quest",
-                "base": "QUERIR"
-            },
-            {
-                "id": "ravoir",
-                "translation": "Get back",
-                "base": "RAVOIR"
-            },
-            {
-                "id": "receper",
-                "translation": "Ratoon",
-                "base": "RECEPER"
-            },
-            {
-                "id": "recroitre",
-                "translation": "Grow again",
-                "base": "RECROITRE"
-            },
-            {
-                "id": "referencier",
-                "translation": "Reference",
-                "base": "REFERENCIER"
-            },
-            {
-                "id": "referer",
-                "translation": "Refer",
-                "base": "REFERER"
-            },
-            {
-                "id": "regler",
-                "translation": "Adjust",
-                "base": "REGLER"
-            },
-            {
-                "id": "regner",
-                "translation": "Reign",
-                "base": "REGNER"
-            },
-            {
-                "id": "renaitre",
-                "translation": "Be reborn",
-                "base": "RENAITRE"
-            },
-            {
-                "id": "repaitre",
-                "translation": "Regraze",
-                "base": "REPAITRE"
-            },
-            {
-                "id": "resoudre",
-                "translation": "Resolve",
-                "base": "RESOUDRE"
-            },
-            {
-                "id": "reveler",
-                "translation": "Reveal",
-                "base": "REVELER"
-            },
-            {
-                "id": "rire",
-                "translation": "Laugh",
-                "base": "RIRE"
-            },
-            {
-                "id": "rompre",
-                "translation": "Break up",
-                "base": "ROMPRE"
-            },
-            {
-                "id": "saillir",
-                "translation": "Salinate",
-                "base": "SAILLIR"
-            },
-            {
-                "id": "savoir",
-                "translation": "Know",
-                "base": "SAVOIR"
-            },
-            {
-                "id": "secher",
-                "translation": "Dry",
-                "base": "SECHER"
-            },
-            {
-                "id": "semer",
-                "translation": "Sow",
-                "base": "SEMER"
-            },
-            {
-                "id": "seoir",
-                "translation": "Suit",
-                "base": "SEOIR"
-            },
-            {
-                "id": "servir",
-                "translation": "Serve",
-                "base": "SERVIR"
-            },
-            {
-                "id": "sevrer",
-                "translation": "Sever",
-                "base": "SEVRER"
-            },
-            {
-                "id": "sourdre",
-                "translation": "Weld",
-                "base": "SOURDRE"
-            },
-            {
-                "id": "suffire",
-                "translation": "Suffer",
-                "base": "SUFFIRE"
-            },
-            {
-                "id": "suivre",
-                "translation": "Follow",
-                "base": "SUIVRE"
-            },
-            {
-                "id": "surseoir",
-                "translation": "Postpone",
-                "base": "SURSEOIR"
-            },
-            {
-                "id": "sursoir",
-                "translation": "Stay",
-                "base": "SURSOIR"
-            },
-            {
-                "id": "taire",
-                "translation": "Quieten",
-                "base": "TAIRE"
-            },
-            {
-                "id": "tendre",
-                "translation": "Reach out",
-                "base": "TENDRE"
-            },
-            {
-                "id": "tenir",
-                "translation": "Hold",
-                "base": "TENIR"
-            },
-            {
-                "id": "vaincre",
-                "translation": "Defeat",
-                "base": "VAINCRE"
-            },
-            {
-                "id": "valoir",
-                "translation": "Be worth",
-                "base": "VALOIR"
-            },
-            {
-                "id": "vetir",
-                "translation": "Clothe",
-                "base": "VETIR"
-            },
-            {
-                "id": "vivre",
-                "translation": "Live",
-                "base": "VIVRE"
-            },
-            {
-                "id": "voir",
-                "translation": "See",
-                "base": "VOIR"
-            },
-            {
-                "id": "vouloir",
-                "translation": "Want",
-                "base": "VOULOIR"
+                "id": "JI,ISE ȽTE ȻEN,S",
+                "base": "JI,ISE ȽTE ȻEN,S",
+                "translation": "We're grateful to you that you"
             }
         ]
     },
     {
-        "name": "subject",
+        "name": "reason",
         "children": [
             {
-                "id": "1-pl",
-                "translation": "We",
-                "base": ""
+                "id": ",ENÁ",
+                "base": ",ENÁ",
+                "translation": "coming"
             },
             {
-                "id": "1-sg",
-                "translation": "I",
-                "base": ""
+                "id": ",ENÁ I,ḰOḰEL",
+                "base": ",ENÁ I,ḰOḰEL",
+                "translation": "coming and speaking"
             },
             {
-                "id": "2-pl",
-                "translation": "You all",
-                "base": ""
+                "id": "ÁLEṈENEȻ",
+                "base": "ÁLEṈENEȻ",
+                "translation": "homelands"
             },
             {
-                "id": "2-sg",
-                "translation": "You",
-                "base": ""
+                "id": "DILEM",
+                "base": "DILEM",
+                "translation": "singing"
             },
             {
-                "id": "3-pl-f",
-                "translation": "They (f)",
-                "base": ""
+                "id": "ETIÁÁNEȻ",
+                "base": "ETIÁÁNEȻ",
+                "translation": "Here today"
             },
             {
-                "id": "3-pl-m",
-                "translation": "They (m)",
-                "base": ""
+                "id": "ÍY¸SĆÁ",
+                "base": "ÍY¸SĆÁ",
+                "translation": "good work"
             },
             {
-                "id": "3-sg-f",
-                "translation": "She",
-                "base": ""
+                "id": "ÍY¸SIȽEN",
+                "base": "ÍY¸SIȽEN",
+                "translation": "good food"
             },
             {
-                "id": "3-sg-m",
-                "translation": "He",
-                "base": ""
+                "id": "ÍY¸ȾÁLE",
+                "base": "ÍY¸ȾÁLE",
+                "translation": "goodheart"
             },
             {
-                "id": "3-sg-n",
-                "translation": "It",
-                "base": ""
-            }
-        ]
-    },
-    {
-        "name": "option",
-        "children": [
-            {
-                "id": "conditionnel-present",
-                "translation": "Conditionnel present",
-                "base": ""
+                "id": "ḰOḰEL",
+                "base": "ḰOḰEL",
+                "translation": "speaking"
             },
             {
-                "id": "imperatif-present",
-                "translation": "Imperatif present",
-                "base": ""
+                "id": "ḴEWEṈ",
+                "base": "ḴEWEṈ",
+                "translation": "baking"
             },
             {
-                "id": "indicatif-futur",
-                "translation": "Indicatif futur",
-                "base": ""
+                "id": "NESĆÁLEĆE",
+                "base": "NESĆÁLEĆE",
+                "translation": "my friends"
             },
             {
-                "id": "indicatif-imparfait",
-                "translation": "Indicatif imparfait",
-                "base": ""
+                "id": "ṈENE¸",
+                "base": "ṈENE¸",
+                "translation": "offspring"
             },
             {
-                "id": "indicatif-passe-simple",
-                "translation": "Indicatif passe simple",
-                "base": ""
+                "id": "PUS",
+                "base": "PUS",
+                "translation": "cat"
             },
             {
-                "id": "indicatif-present",
-                "translation": "Indicatif present",
-                "base": ""
+                "id": "PUSOȽ",
+                "base": "PUSOȽ",
+                "translation": "kitten"
             },
             {
-                "id": "participe-passe",
-                "translation": "Participe passe",
-                "base": ""
+                "id": "QÁLESTI",
+                "base": "QÁLESTI",
+                "translation": "hot tea"
             },
             {
-                "id": "subjonctif-imparfait",
-                "translation": "Subjonctif imparfait",
-                "base": ""
+                "id": "QELEṈSEN",
+                "base": "QELEṈSEN",
+                "translation": "Eagle"
             },
             {
-                "id": "subjonctif-present",
-                "translation": "Subjonctif present",
-                "base": ""
+                "id": "SĆÁÁNEW̱",
+                "base": "SĆÁÁNEW̱",
+                "translation": "Any salmon fish"
+            },
+            {
+                "id": "SĆȺ",
+                "base": "SĆȺ",
+                "translation": "work"
+            },
+            {
+                "id": "SDIWIEȽ",
+                "base": "SDIWIEȽ",
+                "translation": "prayer"
+            },
+            {
+                "id": "SILE",
+                "base": "SILE",
+                "translation": "grandparent"
+            },
+            {
+                "id": "SḰELḰEL",
+                "base": "SḰELḰEL",
+                "translation": "words"
+            },
+            {
+                "id": "SḴAXE",
+                "base": "SḴAXE",
+                "translation": "dog"
+            },
+            {
+                "id": "SMÍEŦ",
+                "base": "SMÍEŦ",
+                "translation": "deer"
+            },
+            {
+                "id": "SṈÁTW̱",
+                "base": "SṈÁTW̱",
+                "translation": "gift"
+            },
+            {
+                "id": "SȻESES",
+                "base": "SȻESES",
+                "translation": "update"
+            },
+            {
+                "id": "ŚÍEȽ",
+                "base": "ŚÍEȽ",
+                "translation": "Eldersibling/cousin"
+            },
+            {
+                "id": "ŚḰALEȻEN",
+                "base": "ŚḰALEȻEN",
+                "translation": "Feelings"
+            },
+            {
+                "id": "ŚW̱ELO₭E",
+                "base": "ŚW̱ELO₭E",
+                "translation": "family"
+            },
+            {
+                "id": "TÁĆELNOṈET",
+                "base": "TÁĆELNOṈET",
+                "translation": "managing to make it"
+            },
+            {
+                "id": "ȻENÁṈES",
+                "base": "ȻENÁṈES",
+                "translation": "helping me"
+            },
+            {
+                "id": "₭I¸ILEŚ",
+                "base": "₭I¸ILEŚ",
+                "translation": "dancing"
             }
         ]
     }
