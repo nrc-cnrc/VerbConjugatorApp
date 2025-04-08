@@ -10,6 +10,8 @@ contourpy==1.0.7
     # via matplotlib
 cycler==0.11.0
     # via matplotlib
+easydev==0.12.0
+    # via colormap
 fonttools==4.38.0
     # via matplotlib
 kiwisolver==1.4.4
