@@ -18,7 +18,7 @@
         <div class="text-with-audio">
           <ion-label class="ion-text-wrap top" color="{{item.type_color}}">{{item.base}}</ion-label> 
           <!-- <fa-icon *ngIf="item.base" [icon]="['fas', 'volume-high']" class="audio-icon" background-color="{{item.type_color}}" (click)="playSound($event)"></fa-icon> -->
-          <ion-icon *ngIf="item.base" name="volume-high" class="audio-icon" (click)="playSound($event)" background-color="{{item.type_color}}">Play Sound</ion-icon>
+          <ion-icon *ngIf="item.base" name="volume-high" class="audio-icon" (click)="playSound($event)">Play Sound</ion-icon>
         </div>
         <ion-label class="ion-text-wrap bottom" color="{{item.type_color}}">{{item.translation}}</ion-label>
       </div>
