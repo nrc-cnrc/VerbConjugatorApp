@@ -99,7 +99,7 @@ export class ConjugatorPage implements OnInit {
     selected is the selected option 
     */
 
-
+    console.log("SELECTED PATH",this.selectedPath);
     let prev_pos;
     let n;
 
@@ -166,6 +166,7 @@ export class ConjugatorPage implements OnInit {
     pos is the current category
      */
     this.selectedPath[pos] = n;
+
   }
 
 
@@ -212,7 +213,6 @@ export class ConjugatorPage implements OnInit {
       rstr = rstr.replace(/'/g, '"');
       
       coloured += rstr;
-      // coloured += this.colourCode(rstr);
       coloured += "<br>";
 
     }
@@ -279,20 +279,7 @@ export class ConjugatorPage implements OnInit {
   }
 
 
-  // colourCode(conj_breakdown:string){
-  //   let coloured = '';
-  //   let in_pieces = JSON.parse(conj_breakdown);
-  //   for (let piece = 0; piece < in_pieces.length; piece ++){
-  //     if (in_pieces[piece][1] in this.morph_colours){
-  //       coloured += '<span style="color: '+ this.morph_colours[in_pieces[piece][1]]+'">'+in_pieces[piece][0]+'</span>';
-  //     } else{
-  //       coloured += '<span style="color: white">'+in_pieces[piece][0]+'</span>';
-  //     }
-  //   }
-  //   return coloured
-  // }
-
-
+ 
   ngOnDestory() {
     this.myFunInformation$.unsubscribe();
   }
