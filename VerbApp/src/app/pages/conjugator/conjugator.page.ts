@@ -279,6 +279,7 @@ export class ConjugatorPage implements OnInit {
   }
 
 
+ 
   ngOnDestory() {
     this.myFunInformation$.unsubscribe();
   }

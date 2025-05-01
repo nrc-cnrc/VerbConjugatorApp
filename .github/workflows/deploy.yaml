@@ -1,24 +1,43 @@
-name: Deploy Site
+# template from https://github.com/JamesIves/github-pages-deploy-action/tree/dev
+
+name: Deployment
+
 on:
   push:
     branches:
-      - auto_deploy
+      - main
+
 jobs:
   build-and-deploy:
     #concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout 🛎️
-          uses: actions/checkout@v4
-          with:
-            persist-credentials: false
-        - name: Install and Build 🔧
-          run: |
-            cd VerbApp
-            npm install
-            ionic build --prod  
-        - name: Deploy 🚀
-          uses: JamesIves/github-pages-deploy-action@v3
-          with:
-            folder: VerbApp/www
-            token:  ${{ github.token }}
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          # Semantic version range syntax or exact version of a Python version
+          python-version: '3.8'
+
+      - name: Install and Build 🔧
+        run: |
+          pip install --upgrade pip==24.0
+          cd DataBuilder/
+          pip install -r requirements.txt
+          python src/main.py -f ../Data/inputfile.csv -o ../Data/order.csv -tt -c --auto-place
+          cd ../VerbApp
+          npm install
+          npm install -g ionic
+          ionic build --prod -- --base-href ./ --output-path=../deploy/
+
+
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          folder: deploy # The folder the action should deploy.
