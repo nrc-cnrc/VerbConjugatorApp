@@ -208,14 +208,7 @@ export class ConjugatorPage implements OnInit {
     this.results = this.service.conjugate(this.selectedPath);
     console.log("results", this.results);
     let coloured = '';
-    for (let r = 0; r < this.results.length; r++){
-      let rstr = this.results[r].toString();
-      rstr = rstr.replace(/'/g, '"');
-      
-      coloured += rstr;
-      coloured += "<br>";
-
-    }
+ 
     
     // document.getElementById("result").innerHTML = coloured;
     // this.result = coloured;

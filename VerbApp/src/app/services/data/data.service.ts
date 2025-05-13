@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as Conjugation from '../../../assets/JSON/conjugation.json';
 import * as Information from '../../../assets/JSON/information.json';
-import * as JSONTree from '../../../assets/JSON/category_tree.json';
+// import * as JSONTree from '../../../assets/JSON/category_tree.json';
 import { grammarCat } from '../../models/grammar-cat.model';
 import { grammarCatItem } from '../../models/grammar-cat-item.model';
 import {ResultMorpheme, ResultMorphemeNameIndex, Result, Results} from '../../models/result.model';
@@ -14,10 +14,10 @@ import { node } from "../../models/node.model";
 })
 export class DataService {
 
-  JsonTree_info = JSONTree['default'];
+  JsonTree_info = Conjugation['default'];
   conjugations = Conjugation['default']
   JsonTree = this.JsonTree_info[1]
-  conj_order = this.JsonTree_info[0]  // level order of conjugation tree
+  conj_order = this.JsonTree_info[0];  // level order of conjugation tree
   setinformation: Array<grammarCat> = [];
 
   tree = new Tree(new node('root'));
@@ -90,12 +90,18 @@ export class DataService {
     const results: Results = [];
 
     let final_node = nodePath[this.conj_order[this.conj_order.length-2]]
+    console.log("final_node",final_node);
     let result_ids = final_node.getChildren()
+    console.log("result_ids",result_ids);
 
     for (let id in result_ids){
-      let result: Result;
-      result = this.conjugations[result_ids[id]["id"]]
-      results.push(result)
+      let result: Result= [];
+      for (let i = 0; i < result_ids[id]["id"][1].length; i++){
+        let morph: ResultMorpheme = [result_ids[id]["id"][1][i],result_ids[id]["id"][2][i]];
+        result.push(morph);
+      };
+      console.log("result",result);
+      results.push(result);
     }
     return results;
   }

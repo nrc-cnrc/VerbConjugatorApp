@@ -48,7 +48,6 @@ class DataBuilder:
             #otherwise the default will be used
             else:
                 ColourSelector(tree_order, self.colour_path)
-
         self.buildFiles(input_file, tree_order, conjugation_order, self.JSON_path)
         FileReadWrite.reorderJSON(conjugation_order, self.JSON_path)
 
@@ -103,6 +102,7 @@ class DataBuilder:
         dict_list, attr_dict_list = c2d.execute()
         rb = ResultBuilder(attr_dict_list, dict_list,self.result, self.delimiter)
         dict_list,ordered_by = rb.execute()
+        print("dict_list[0]",dict_list[0])
         conjugation_order[-1] = ordered_by
         conjugation_tree = TreeBuilder(dict_list, "conjugation.json", conjugation_order, JSON_path)
 

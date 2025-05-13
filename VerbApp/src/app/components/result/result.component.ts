@@ -11,8 +11,9 @@ import {
   Tier,
  } from "../../models/result.model";
 
+ import { EveryVoiceService } from "@everyvoice/every-voice";
+
  import { AudioService } from '../../services/audio/audio.service';
- import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-result',
@@ -24,46 +25,30 @@ export class ResultComponent implements OnInit {
 
   @Input() data: Result;
   @Input() tier: Tier;
+  @Input() hasAudio = false;
 
   output: Result;
   morphType: number;
   audioExists: boolean = true;
   audioPath: string;
-  // observeAudio$ = new BehaviorSubject(this.audioExists);
+  rawText: string;
 
-  constructor(private audio_service: AudioService) { }
+
+  constructor(private audio_service: AudioService, public tts: EveryVoiceService) { }
 
   ngOnInit(): void {
     // Filter empty values and sort on position
     this.morphType = ResultMorphemeNameIndex.breakdown;
     this.output = this.data;
     console.log("this.output", this.output);
-    this.determineAudio();
-    // this.observeAudio$.next(this.audioExists);
+    this.rawText = this.output.map((m) => m[ResultMorphemeNameIndex.value]).join("");
+    console.log("this.rawText",this.rawText);
     }
 
-    determineAudio(){
-      let key = "";
-      for (let morpheme of this.output){
-        key += morpheme[this.tier.key];
-      }
-
-      let audio_path = this.audio_service.retrieveFileName(key)
-      console.log("result: audio_path",audio_path);
-      if (audio_path){
-        this.audioExists = false;
-        this.audioPath = audio_path;
-      }
-    }
-
-
-    playSound(){
-      let audio = new Audio();
-      audio.src = this.audioPath;
-      console.log("audio.src", audio.src);
-      audio.src = encodeURI(audio.src);
-      audio.load();
-      audio.play();
+    audio(){
+      console.log("playing audio");
+      this.tts.playSound(this.rawText);
+      
     }
 
 }
