@@ -11,7 +11,9 @@
 
 /* Core CSS required for Ionic components to work properly */
 @import "~@ionic/angular/css/core.css";
-
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import "@angular/material/theming";
+@include mat-core();
 /* Basic CSS for apps built with Ionic */
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
