@@ -47,7 +47,7 @@ export class ResultComponent implements OnInit {
 
     audio(){
       console.log("playing audio");
-      this.tts.playSound(this.rawText);
+      this.tts.playSound$(this.rawText).subscribe();
       
     }
 
