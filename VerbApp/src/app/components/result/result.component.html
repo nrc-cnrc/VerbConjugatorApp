@@ -2,8 +2,14 @@
   <ng-container *ngFor="let morpheme of output; last as isLast">
     <span [ngClass]="morpheme[morphType]"><ion-text color="{{morpheme[morphType]}}">{{ morpheme[tier.key] }}</ion-text></span>
     <span *ngIf="!isLast" class="separator">{{ tier.separator }}</span>
+    
   </ng-container>
-  <ion-icon  name="volume-high" class="audio-icon" (click)="playSound()">Play Sound</ion-icon>
+  <lib-every-voice
+        *ngIf="hasAudio"
+        [textToGenerate]="rawText"
+      ></lib-every-voice>
+  <!-- <ion-icon name="volume-high" class="audio-icon" (click)="audio()">Play Sound</ion-icon> -->
+  
 </ng-container>
 
 <!-- 

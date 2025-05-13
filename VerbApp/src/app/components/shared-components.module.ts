@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { ResultComponent } from './result/result.component';
+import { EveryVoiceModule } from "@everyvoice/every-voice";
 
 
 
@@ -9,7 +10,8 @@ import { ResultComponent } from './result/result.component';
   declarations: [ResultComponent,],
   imports: [
     CommonModule, 
-    IonicModule
+    IonicModule,
+    EveryVoiceModule.forChild()
   ], 
   exports: [ResultComponent,]
 })
