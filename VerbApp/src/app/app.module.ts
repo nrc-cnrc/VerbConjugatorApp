@@ -19,39 +19,33 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
-    declarations: [AppComponent],
-    // imports: [AppRoutingModule, BrowserModule, IonicModule.forRoot(), HttpClientModule,
-    //   IonicStorageModule.forRoot(), FormsModule, RouterModule],
-    imports: [
-        AppRoutingModule, 
-        BrowserModule, 
-        IonicModule.forRoot(), 
-        HttpClientModule, 
-        FormsModule, 
-        RouterModule, 
-        FontAwesomeModule,
-        EveryVoiceModule.forRoot({
-            apiUrl: "https://unbq-sgile-text-to-speech.hf.space/gradio_api/queue/", // 👈 your TTS backend endpoint
-            enableTTS: true, // 👈 set this to false if you want to disable your TTS in certain deployment environments. Note, if this is disabled, your EveryVoice components will not render and TTS will not be accessible from your application.
-            bearerToken: "", // 👈 OPTIONAL authentication token if required by your API. It will be treated as an Authorization Bearer token
-            speakerID: "tina", // 👈 OPTIONAL speaker id.
-            steps: 3, // 👈  OPTIONAL: number of diffusion steps
-          }),
-        ],
-    providers: [
-        StatusBar,
-        SplashScreen,
-        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, Network
-    ],
-    bootstrap: [AppComponent]
+  declarations: [AppComponent],
+  // imports: [AppRoutingModule, BrowserModule, IonicModule.forRoot(), HttpClientModule,
+  //   IonicStorageModule.forRoot(), FormsModule, RouterModule],
+  imports: [
+    AppRoutingModule,
+    BrowserModule,
+    IonicModule.forRoot(),
+    HttpClientModule,
+    FormsModule,
+    RouterModule,
+    FontAwesomeModule,
+    EveryVoiceModule.forRoot(environment.ttsConfig),
+  ],
+  providers: [
+    StatusBar,
+    SplashScreen,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Network,
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule {
-
-	constructor(library: FaIconLibrary) { 
-		library.addIconPacks(fas, fab, far);
-	}
-
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas, fab, far);
+  }
 }
