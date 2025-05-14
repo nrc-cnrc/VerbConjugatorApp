@@ -277,21 +277,21 @@ export class ConjugatorPage implements OnInit {
     this.myFunInformation$.unsubscribe();
   }
 
-  // reset(){
-  //   let key: string;
-  //   for(let i = 0; i < this.information.length; i ++){ // find all categories at a lower index
-  //     key = this.information[i].name; // get the name
-  //     this.selectedOptions[key] = {translation: '', id: '', base:''};  // reset so that there is no selected option at that name
-  //     this.information[i].disabled=true; // disable access
-  //   }
-  //   this.information[0].disabled=false;
-  //   this.result = '';
-  //   this.error = '';
-  //   this.currentIndex = 0;
-  //   this.show_result = false;
-  //   this.show_error = true;
-  //   this.scrollToTop();
-  // }
+  reset(){
+    let key: string;
+    for(let i = 0; i < this.information.length; i ++){ // find all categories at a lower index
+      key = this.information[i].name; // get the name
+      this.selectedOptions[key] = {translation: '', id: '', base:''};  // reset so that there is no selected option at that name
+      this.information[i].disabled=true; // disable access
+    }
+    this.information[0].disabled=false;
+    this.result = '';
+    this.error = '';
+    this.currentIndex = 0;
+    this.show_result = false;
+    this.show_error = true;
+    this.scrollToTop();
+  }
 
   playSound(){
     let audio = new Audio();

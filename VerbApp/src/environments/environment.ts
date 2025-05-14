@@ -9,12 +9,12 @@ export const environment = {
     enableTTS: true, // 👈 set this to false if you want to disable your TTS in certain deployment environments. Note, if this is disabled, your EveryVoice components will not render and TTS will not be accessible from your application.
     developmentBearerToken: "", // 👈 OPTIONAL authentication token if required by your API. It will be treated as an Authorization Bearer token
     speakerID: "tina", // 👈 OPTIONAL speaker id.
-    requiresAuth: false,
+    requiresAuth: true,
     diffusionSteps: 3, // 👈  OPTIONAL: number of diffusion steps
     middlewareEndpoint: "http://localhost:3000/tts",
-    domain: "",
-    clientId: "",
-    audience: "",
+    domain: "unbq-everyvoice.ca.auth0.com",
+    clientId: "7jLB2de2XqEGsAbXLEnUjB49P35r8gQH",
+    audience: "https://unbq.everyvoice.middleware.ca",
   },
 };
 
