@@ -13,6 +13,7 @@
 @import "~@ionic/angular/css/core.css";
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 @import "@angular/material/theming";
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @include mat-core();
 /* Basic CSS for apps built with Ionic */
 @import "~@ionic/angular/css/normalize.css";
