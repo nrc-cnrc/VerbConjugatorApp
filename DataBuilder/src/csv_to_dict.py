@@ -41,10 +41,10 @@ class CSVtoDict:
 
     def cleanData(self):
         f = open(self.input_file, 'r')
-        text = f.readlines()
-        
-        lines = [line.lower() for line in text]
-        # lines = [line.lower() for line in text]
+        firstline = f.readline()
+        firstline = firstline.lower()
+        lines = f.readlines()
+        lines = [firstline] + lines
         lines = [re.sub(r" ,", ",", line) for line in lines]
         lines = [re.sub(r", ", ",", line) for line in lines]
         self.input_file = self.input_file[:self.input_file.find(".csv")] + "_temp.csv"
